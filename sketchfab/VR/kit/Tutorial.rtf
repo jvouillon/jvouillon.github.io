@@ -1,0 +1,99 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 CourierNewPS-ItalicMT;\f2\fmodern\fcharset0 CourierNewPSMT;
+}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww24820\viewh15160\viewkind1
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\b\fs28 \cf0 A Gizmo for your VR Cardboard
+\b0 \
+First of all, even if I\'92m just mentioning iOS in the following text, I am pretty sure that you can achieve the same thing with your Android device.\
+\
+Today, it is very easy to experiment VR with a smartphone and a cardboard viewer. But once the device is inside the viewer, interaction and navigation become a problem.\
+\
+One simple solution, is to have a controller connected to your device, you can use without the need to look at it.\
+\
+
+\b 1 - The MakeyMakey
+\b0 \
+\
+The MakeyMakey (http://makeymakey.com) is a tiny, arduino based, board, which allows to connect, via USB, a computer to virtually anything, in order to create funny experiments.\
+\
+Moreover, the MakeyMakey can be plugged to your iOS device via an Apple\'92s USB Camera Adapter (Lightning or 30 pins) and can be seen as an external keyboard. However, to do so, you have to make some changes in the internal settings of the board, using the Arduino application (https://www.arduino.cc/en/Main/Software).\
+\
+Don\'92t worry, no need to be an electronic wizard! Eric Rosenbaum, co-inventor of the MakeyMakey, wrote a great post, detailing the steps to follow: http://www.makeymakey.com/forums/index.php?topic=5743.0. Note, that the url of the defitech.ch article, mentioned in the post, has changed: http://www.defitech.ch/handigeek.php?item=172.\
+\
+If the procedure went well, you should be able, for example, to navigate the lines of a note by touching simultaneously one of the arrows and the \'ab\'a0
+\i earth
+\i0 \'a0\'bb area from the front face. At last, don\'92t worry about the \'ab\'a0
+\i usb io board\'85
+\i0 \'bb error message popping out each time you connect your MakeyMakey: just dismiss it!\
+\
+
+\b 2 - The Gizmo
+\b0 \
+\
+To make a (quick and dirty) joystick from the MakeyMakey, you just need a solderable breadboard (recommended size 47mm x 95mm, which matches the size of the MakeyMakey), a 3x6 11mm straight pin header, a five-ways push button and of course some wire and a soldering iron.\
+\
+Position the 3 sets of pin header on the breadboard, in order to plug it on top of the MakeyMakey, then the push button. Now the game consists of appropriately connecting the pins of the connector to the pins of the push button. You can check the annotations of the model below for more precision.\
+\
+https://sketchfab.com/models/133659f0c8b149baa74d5c930c49ed47\
+\
+
+\b 3 - The Code
+\b0 \
+\
+Now it\'92s code time! First, copy and paste the exemplar code given on the Sketchfab viewer API page (https://sketchfab.com/developers/viewer) in a text file and save it as a html file.\
+\
+Start by adding the parameter 
+\f1\i cardboard : 1
+\f0\i0   at the end of the initialization, in order to have the stereoscopic view. For the sake of this tutorial I\'92m going to keep things simple. The idea is to intercept keystrokes, particularly W,S,A and D (and just because I wired my board this way!), to trigger actions like moving the camera forward, backward, and around the target. This can be achieved by inserting, where you can read the comments /
+\f2 / API is ready to use // Insert your code here
+\f0  the following code:\
+\
+
+\f1\i document.onkeypress = function(event)\{\
+var unicode=event.keyCode? event.keyCode : event.charCode;\
+\'85\
+\}
+\f0\i0 \
+\
+Each time a key is pressed, this function is called and the variable unicode set to the code of the key: 97 for A, 100 for D, 115 for S and 119 for W. So, by using a switch statement it is easy to associate a specific action to a key:\
+\
+
+\f1\i switch(unicode)\
+					\{\
+						case 119: //W - UP\
+							action\'85\
+						break;\
+						case 97: //A - DOWN\
+							action\'85\
+						break;\
+						case 115: //S - LEFT\
+							action\'85\
+						break;\
+						case 100: //D - RIGHT\
+							action\'85\
+						break;\
+						default:\
+							default action\
+						break;\
+\}\
+
+\f0\i0 \
+Because each action changes the camera position, the 
+\f1\i api.lookat( )
+\f0\i0  function must be called after the switch to have the view updated.\
+\
+One drawback, is that iOS does not allow key repeat, therefore you must repeatedly push the switch button to have a continuous movement.\
+However, you can get around this problem by putting the actions in a loop function and using the switch to set flags. In this case, a push starts the movement and another one stops it.\
+\
+You can test this example (https://dl.dropboxusercontent.com/u/15335326/Sketchfab/VR/index.html) and I encourage you to take a look at the source code which is largely commented. Not being a code \'91guru\'92, I\'92m pretty sure there are better ways to achieve the same results, so be indulgent! \
+\
+
+\b Conclusion
+\b0 :  \
+\
+In my opinion, the MakeyMakey is a great way to play around with VR experiments. Of course, because you must write your own html file, you can\'92t use this gizmo with the VR button from the Sketchfab 3D player. May be, it could be great to have some keyboard shortcuts wired in the player, in order to be used with such external device?\
+\
+}

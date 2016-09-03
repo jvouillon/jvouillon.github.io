@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Sketchfab Viewer API | VR + MakeyMakey</title>
+    <script type="text/javascript" src="https://gmskfstatic.test.edgekey.net/api/sketchfab-viewer-1.0.0.js"></script>
+	<style>
+	body{background:#666;margin:0;}
+	</style>
+</head>
+
+<body>
+    <iframe src="" id="api-frame" width="100%" height="800px" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+    <!-- Initialize the viewer -->
+    <script type="text/javascript">
+    var iframe = document.getElementById( 'api-frame' );
+    var version = '1.0.0';
+	var urlid = '847a5d2b3ad842c098a77c608ecb3201'; // set your's...
+    var client = new Sketchfab( version, iframe );
+	//***************************************
+	//
+	// Global variables for MakeyMakey
+	//
+	var eye=[-20,-20,-1]; // Camera starting position
+	var target=[0,0,1]; // Target position
+	var hAngle = 5*Math.PI/4; // Angle to move the camera around the target
+	//
+	//***************************************
+    client.init( urlid, {
+        success: function onSuccess( api ){
+            api.start();
+            api.addEventListener( 'viewerready', function() {
+				//******************************************************
+				//
+				// MakeyMakey
+				// This function intercepts the keystrokes
+				// and triggers actions depending on the key pressed...
+				//
+				document.onkeypress = function(event){
+					var unicode=event.keyCode? event.keyCode : event.charCode;
+
+					switch(unicode)
+					{
+						case 119: //W -> UP
+						// Going forward ie closer to the target...
+						eye[0] *= 0.97;
+						eye[1] *= 0.97;
+						eye[2] *= 0.97;
+						break;
+						case 97: //A -> DOWN
+						// Going backward ie away from the target...
+						eye[0] *= 1.03;
+						eye[1] *= 1.03;
+						eye[2] *= 1.03;
+						break;
+						case 115: //S -> LEFT
+						// Going to the left, around the target...
+						// just some basic trigonometry...
+						hAngle +=0.05;
+						var dist = Math.sqrt(eye[0]*eye[0]+eye[1]*eye[1]);
+						eye[0] = dist*Math.sin(hAngle);
+						eye[1] = dist*Math.cos(hAngle);
+						break;
+						case 100: //D -> RIGHT
+						// Going to the right, around the target...
+						hAngle -=0.05;
+						var dist = Math.sqrt(eye[0]*eye[0]+eye[1]*eye[1]);
+						eye[0] = dist*Math.sin(hAngle);
+						eye[1] = dist*Math.cos(hAngle);
+						break;
+						default:
+						break;
+					}
+					api.lookat(eye, target, 0 ); // update the view
+					// note: 0 = no animation
+					// otherwise too slow on smartphone...
+					// may be not yours, but mine's for sure...
+				}
+				//******************************************************
+                console.log( 'Viewer is ready' );
+				// at the beginning, just set the view, to my settings...
+				api.lookat(eye, target, 0 ); 
+            } );
+        },
+        error: function onError() {
+            console.log( 'Viewer error' );
+        },
+		camera: 0,
+		cardboard: 1 //******** stereoscopic view For MakeyMakey
+    } );
+    </script>
+</body>
+</html>

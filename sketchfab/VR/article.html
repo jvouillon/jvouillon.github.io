@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Sketchfab Tutorial MakeyMakey</title>
+	<style>
+	body{font-family:HelveticaNeue, Arial, sans-serif;font-size:16px;}
+	article{width:640px; margin:auto;}
+	pre{background:#ddd;padding:10px;}
+	figure{width:500px;padding:10px;border:1px solid #aaa;}
+	figcaption{font-size:12px;color:#666;margin-top:10px;}
+	img{width:500px;}
+	</style>
+</head>
+
+<body>
+	<article>	
+		<h1>A Gizmo for your VR Cardboard</h1>
+		<p>First of all, even if I’m just mentioning iOS in the following text, I am pretty sure that you can achieve the same thing with your Android device.</p>
+<figure>
+	<img src="images/iphone_makeymakey.jpg">
+	<figcaption> Cardboard, iPhone and the Gizmo inside its 3D printed case.
+	</figcaption>
+</figure>
+		<p>Today, it is very easy to experiment VR with a smartphone and a cardboard viewer. But once the device is inside the viewer, interaction and navigation become a problem.</p>
+
+		<p>One simple solution, is to have a controller connected to your device, you can use without the need to look at it.</p>
+
+		<h3>1 - The MakeyMakey</h3>
+
+		<p>The MakeyMakey (<a href="http://makeymakey.com" target="_blank">http://makeymakey.com</a>) is a tiny, arduino based, board, which allows to connect, via USB, a computer to virtually anything, in order to create funny experiments.</p>
+<figure>
+	<img src="images/makeymakey.jpg">
+	<figcaption> The MakeyMakey board.
+	</figcaption>
+</figure>
+
+		<p>Moreover, the MakeyMakey can be plugged to your iOS device via an Apple’s USB Camera Adapter (Lightning or 30 pins) and can be seen as an external keyboard. However, to do so, you have to make some changes in the internal settings of the board, using the Arduino application (<a href="https://www.arduino.cc/en/Main/Software" target="_blank">https://www.arduino.cc/en/Main/Software</a>).</p>
+
+		<p>Don’t worry, no need to be an electronic wizard! Eric Rosenbaum, co-inventor of the MakeyMakey, wrote a great post, detailing the steps to follow: <a href="http://www.makeymakey.com/forums/index.php?topic=5743.0" target="_blank">http://www.makeymakey.com/forums/index.php?topic=5743.0</a>. Note, that the url of the defitech.ch article, mentioned in the post, has changed: <a href="http://www.defitech.ch/handigeek.php?item=172" target="_blank">http://www.defitech.ch/handigeek.php?item=172</a>.</p>
+
+		<p>If the procedure went well, you should be able, for example, to navigate the lines of a note by touching simultaneously one of the arrows and the « <em>earth</em> » area from the front face. At last, don’t worry about the « <em>usb io board…</em>» error message popping out each time you connect your MakeyMakey: just dismiss it!</p>
+
+		<h3>2 - The Gizmo</h3>
+
+		<p>To make a (quick and dirty) joystick from the MakeyMakey, you just need a solderable breadboard (recommended size 47mm x 95mm, which matches the size of the MakeyMakey), a 3x6 11mm straight pin header, a five-ways push button and of course some wire and a soldering iron.</p>
+
+		<p>Position the 3 sets of pin header on the breadboard, in order to plug it on top of the MakeyMakey, then the push button. Now the game consists of appropriately connecting the pins of the connector to the pins of the push button. You can check the annotations of the model below for more precision.</p>
+
+		<iframe width="640" height="480" src="https://sketchfab.com/models/133659f0c8b149baa74d5c930c49ed47/embed" frameborder="0" allowfullscreen mozallowfullscreen="true" webkitallowfullscreen="true" onmousewheel=""></iframe><p style="font-size: 13px; font-weight: normal; margin: 5px; color: #4A4A4A;">
+    <a href="https://sketchfab.com/models/e00cd61c141a487c9c74a0e666e5c917?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">MakeyMakey Board</a>
+    by <a href="https://sketchfab.com/jvouillon?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">jvouillon</a>
+    on <a href="https://sketchfab.com?utm_medium=embed&utm_source=website&utm_campain=share-popup" target="_blank" style="font-weight: bold; color: #1CAAD9;">Sketchfab</a>
+</p>
+
+
+		<h3>3 - The Code</h3>
+
+		<p>Now it’s code time! First, copy and paste the exemplar code given on the Sketchfab viewer API page (<a href="https://sketchfab.com/developers/viewer" target="_blank">https://sketchfab.com/developers/viewer</a>) in a text file and save it as a html file.</p>
+
+		<p>Start by adding the parameter <code>cardboard : 1</code>  at the end of the initialization, in order to have the stereoscopic view. For the sake of this tutorial I’m going to keep things simple. The idea is to intercept keystrokes, particularly W,S,A and D (and just because I wired my board this way!), to trigger actions like moving the camera forward, backward, and around the target. This can be achieved by inserting, where you can read the comments <code>// API is ready to use // Insert your code here</code> the following code:</p>
+		<pre>
+document.onkeypress = function(event){
+	var unicode=event.keyCode? event.keyCode : event.charCode;
+	…
+}
+		</pre>
+		<p>Each time a key is pressed, this function is called and the variable unicode set to the code of the key: 97 for A, 100 for D, 115 for S and 119 for W. So, by using a switch statement it is easy to associate a specific action to a key:
+			<pre>
+switch(unicode){
+	case 119: //W - UP
+		action…
+		break;
+	case 97: //A - DOWN
+		action…
+		break;
+	case 115: //S - LEFT
+		action…
+		break;
+	case 100: //D - RIGHT
+		action…
+		break;
+	default:
+		default action
+		break;
+}
+			</pre>
+			<p>Because each action changes the camera position, the <code>api.lookat( )</code> function must be called after the switch to have the view updated.</p>
+
+			<p>One drawback, is that iOS does not allow key repeat, therefore you must repeatedly push the switch button to have a continuous movement.
+				However, you can get around this problem by putting the actions in a loop function and using the switch to set flags. In this case, a push starts the movement and another one stops it.</p>
+
+				<p>You can test this example (<a href="https://dl.dropboxusercontent.com/u/15335326/Sketchfab/VR/index.html" target="_blank">https://dl.dropboxusercontent.com/u/15335326/Sketchfab/VR/index.html</a>) and I encourage you to take a look at the source code which is largely commented. Not being a code ‘guru’, I’m pretty sure there are better ways to achieve the same results, so be indulgent!</p> 
+
+				<h3>Conclusion</h3>  
+
+				<p>In my opinion, the MakeyMakey is a great way to play around with VR experiments. Of course, because you must write your own html file, you can’t use this gizmo with the VR button from the Sketchfab 3D player. May be, it could be great to have some keyboard shortcuts wired in the player, in order to be used with such external device?</p>
+			</article>
+
+		</body>
+		</html>

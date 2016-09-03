@@ -1,0 +1,66 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf340
+{\fonttbl\f0\fnil\fcharset0 Verdana;}
+{\colortbl;\red255\green255\blue255;\red67\green67\blue67;}
+\margl1440\margr1440\vieww14580\viewh15820\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.makeymakey.com/forums/index.php?topic=5743.msg7113#msg7113"}}{\fldrslt 
+\b \cf2 how to connect your MaKey MaKey to an iPad}}
+\b \cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\b0\fs22 \cf2 \'ab 
+\b on:
+\b0  July 17, 2013, 03:34:39 PM \'bb\
+\pard\pardeftab720\partightenfactor0
+
+\fs24 \cf2 \
+So, I've been wanting to do this for a while. Finally, I've got a MaKey MaKey connected to an iPad, via the Apple Camera Connection Kit. The Camera Connection Kit is a little USB adapter for iPad: {\field{\*\fldinst{HYPERLINK "http://store.apple.com/us/product/MC531ZM/A/apple-ipad-camera-connection-kit"}}{\fldrslt http://store.apple.com/us/product/MC531ZM/A/apple-ipad-camera-connection-kit}}. \
+\
+Here's a Vine (short looping animation with sound) to show it working:\
+\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "https://vine.co/v/hmWp3qhqTOL"}}{\fldrslt \cf2 https://vine.co/v/hmWp3qhqTOL}}\
+\
+\'a0I used some code provided by the folks at defitech.ch, but I wanted to document the steps here in case that helps other people.\'a0 The main challenges are getting the iPad to recognize the MaKey MaKey through the camera connection kit adapter (this requires reprogramming the MaKey MaKey), and then making the iPad actually do something in response to keypresses (I made a little webpage that plays drum sounds and changes color when you press keys, shown in the Vine above).\
+\
+STUFF YOU NEED\
+A MaKey MaKey\
+an iPad\
+an Apple Camera Connection Kit\
+\
+REPROGRAMMING THE MAKEY MAKEY\
+\
+The basic problem, it turns out, is that there are a couple of USB settings inside the MaKey MaKey that need to be changed for the iPad to recognize it. The kind folks at Defitech provided their code with these changes here (in english at the bottom of the page):\
+\
+\pard\pardeftab720\partightenfactor0
+{\field{\*\fldinst{HYPERLINK "http://www.defitech.ch/handigeek/categories/didacticiel/un-contacteur-pour-ipad-avec-le-makey-makey"}}{\fldrslt \cf2 http://www.defitech.ch/handigeek/categories/didacticiel/un-contacteur-pour-ipad-avec-le-makey-makey}}\
+\
+I took me a while to figure out how to replicate what they did, so I'll try to explain here more fully. First of all, you will need to reprogram your MaKey MaKey using the Arduino software. If you haven't done this before, unfortunately there are a whole bunch of steps to get this set up, but they are covered in this tutorial: {\field{\*\fldinst{HYPERLINK "https://www.sparkfun.com/tutorials/388"}}{\fldrslt https://www.sparkfun.com/tutorials/388}}\
+\
+The critical changes they made are not just in the .ino file, though. The USB settings are in files inside the hardware folder, which they also provide in their download ( {\field{\*\fldinst{HYPERLINK "https://github.com/defitech/MaKeyMaKey/archive/master.zip"}}{\fldrslt https://github.com/defitech/MaKeyMaKey/archive/master.zip}} ). The hardware folder is what you are choosing when you choose "MaKey MaKey" in the "boards" menu in the Arduino software. So to make sure you use the defitech's modified hardware folder, you have to go the Arduino software's preferences panel, and change the "Sketchbook location." By default, it will point to a folder called "Arduino" in your documents folder. Instead you need to point it to a location inside the defitech download: inside the "firmware" folder, there's an "Arduino" folder, and that's one to choose.\
+\
+Once you've done this, you should be able to upload defitech's code to your MaKey MaKey. Then if you plug it into your iPad with the Camera Connection Kit, it should work (you can for example open up the notes app and press the spacebar). \
+\
+BUT! The next time you try to upload code to the MaKey MaKey, it will seem to not work. What you need to do is reset it just before it uploads, by briefly connecting the reset pin ("rst" on the back of the MaKey MaKey) to ground. \
+\
+If you're interested, here's a diff showing the exact set of changes that defitech made that make this work:\
+{\field{\*\fldinst{HYPERLINK "https://github.com/defitech/MaKeyMaKey/compare/sparkfun:master...master"}}{\fldrslt https://github.com/defitech/MaKeyMaKey/compare/sparkfun:master...master}}\
+\
+MAKING SOUNDS USING KEYPRESSES ON THE IPAD\
+\
+The problem, now, is that the iPad doesn't necessarily do anything in response to keypresses, aside from typing. I wanted it to make drum sounds, so I made a little javascript program that runs on a web page, to trigger sounds when you press a key (right now it responds to w,a,s,d,f):\
+\
+{\field{\*\fldinst{HYPERLINK "http://web.media.mit.edu/~ericr/audiotest/"}}{\fldrslt http://web.media.mit.edu/~ericr/audiotest/ }}\
+\
+The javascript audio libraries I tried (howler and soundmanager2) didn't work on the iPad, so I had to use some lower level code. You can "view source" on that page to see my code.\
+\
+ALSO TRY BLUETOOTH?\
+\
+Before doing this, I was able to use Sparkfun's Bluetooth add-on for MaKey MaKey ({\field{\*\fldinst{HYPERLINK "https://www.sparkfun.com/products/11378"}}{\fldrslt https://www.sparkfun.com/products/11378}}) to pair with an iPad.\'a0 But this was not as quick and responsive as I wanted, and the pairing process was a bit quirky, so I really wanted to get it connected with a wire.\
+\
+Good luck! let me know if you have any questions, and please share what you make.}
