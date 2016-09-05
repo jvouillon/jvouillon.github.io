@@ -4,6 +4,8 @@ function setup() {
 }
 
 function draw() {
+  background(255);
+  textSize(20);
   text(accelerationX, 10, 30);
   text(accelerationX, 10, 60);
 }
