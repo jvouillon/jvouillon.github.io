@@ -9,6 +9,6 @@ function draw() {
 
 function touchStarted(){
   background(random(255));
-  textSize(32);
-  text(touches.length, 10, 10);
+  textSize(100);
+  text(touches.length, 20, 50);
 }
