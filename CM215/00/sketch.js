@@ -1,11 +1,14 @@
-function setup() {
+ var posY;
+ 
+ function setup() {
  createCanvas(windowWidth,windowHeight); 
  
- var posY = 50;
+posY=50;
+
 }
 
 function draw() {
-  
+
 }
 
 function touchStarted() {
