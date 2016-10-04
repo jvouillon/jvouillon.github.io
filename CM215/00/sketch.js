@@ -14,8 +14,8 @@ function draw() {
 function touchStarted() {
   textSize(32);
   
-  text(touches[0].x, 100, 50);
-  text(touches[0].y, 200, 50);
+  text(touches[0].x, 100, posY);
+  text(touches[0].y, 200, posY);
   posY += 50;
   
 }
