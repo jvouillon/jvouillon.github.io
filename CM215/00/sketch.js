@@ -1,6 +1,7 @@
  function setup() {
  createCanvas(windowWidth,windowHeight);
  rectMode(CENTER);
+ fill(255,0,0);
 }
 
 function draw()
