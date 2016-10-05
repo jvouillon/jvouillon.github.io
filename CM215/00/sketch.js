@@ -1,21 +1,13 @@
- var posY;
- 
  function setup() {
  createCanvas(windowWidth,windowHeight); 
- 
-posY=50;
-
 }
 
-function draw() {
-
-}
+function draw()
+{}
 
 function touchStarted() {
-  textSize(40);
-  text(touches[0].id, 50, posY);
-  text(touches[0].x, 300, posY);
-  text(touches[0].y, 400, posY);
-  posY += 50;
-  
+ background(255);
+ textSize(50);
+ text(touches[0].x, 50, 50);
+ text(touches[0].y, 50, 100);
 }
