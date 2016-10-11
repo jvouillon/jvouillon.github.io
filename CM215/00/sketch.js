@@ -1,18 +1,20 @@
+var touchSize;
+
 document.ontouchmove = function(event) {
   event.preventDefault();
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  rectMode(CENTER);
+  ellipseMode(CENTER);
   stroke(0);
-  fill(255, 0, 0, 200);
   strokeWeight(5);
+  touchSize = 100;
 }
 
 function draw() {
   background(255);
-
+ fill(255, 0, 0);
   beginShape();
   for (var i = 0; i < touches.length; i++) {
     vertex(touches[i].x, touches[i].y);
@@ -20,9 +22,9 @@ function draw() {
   endShape(CLOSE)
 
 
-
+noFill();
   for (var i = 0; i < touches.length; i++) {
-    rect(touches[i].x, touches[i].y, 150, 150);
+    ellipse(touches[i].x, touches[i].y, touchSize, touchSize);
 
     if ((i + 1) < touches.length) {
       line(touches[i].x, touches[i].y, touches[i + 1].x, touches[i + 1].y);
