@@ -6,7 +6,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode(CENTER);
   stroke(0);
-  fill(255, 0, 0, 0.5);
+  fill(255, 0, 0, 200);
   strokeWeight(5);
 }
 
