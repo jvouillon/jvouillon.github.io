@@ -19,7 +19,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   x = windowWidth / 2;
   y = windowHeight / 2;
-backgroundColor = color(255,255,255);
+backgroundColor = color(255,200,200);
 }
 
 function draw() {
