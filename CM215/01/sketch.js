@@ -11,7 +11,7 @@ var vy = 0;
 var ax = 0;
 var ay = 0;
  
-var vMultiplier = 0.1; //0.007;
+var vMultiplier = 0.1; 
 var bMultiplier = 0.6;
 
 function setup() {
@@ -31,9 +31,9 @@ function draw() {
     ballMove();
     
     noStroke();
-    fill(200);
-    ellipse(x-5, y+5, 60, 60);
     fill(50);
+    ellipse(x-5, y+5, 60, 60);
+    fill(150);
     ellipse(x, y, 60, 60);
     fill(250);
     ellipse(x+15, y-15, 20, 20);
@@ -41,9 +41,11 @@ function draw() {
 
 function ballMove() {
 
-
-	vx = rotationY;
-	vy = rotationX
+  ax = rotationY;
+	ay = rotationX;
+	
+	vx += ax;
+	vy += ay;
 	
 	y = y + vy * vMultiplier; 
 	x = x + vx * vMultiplier;
