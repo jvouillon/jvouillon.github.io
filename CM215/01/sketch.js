@@ -32,12 +32,12 @@ function draw() {
     ballMove();
     
     noStroke();
-    fill(50);
-    ellipse(x-5, y+5, 60, 60);
+    fill(60);
+    ellipse(x, y+5, 60, 60);
     fill(150);
     ellipse(x, y, 60, 60);
-    fill(250);
-    ellipse(x+15, y-15, 20, 20);
+    fill(255);
+    ellipse(x+5, y-17, 20, 20);
 }
 
 function ballMove() {
