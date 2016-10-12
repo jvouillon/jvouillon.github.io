@@ -23,7 +23,7 @@ function setup() {
 
 function draw() {
     background(255);
-    stroke(0);
+    fill(0);
     textSize(50);
     text("Rx: " + round(rotationX), 20,20);
     text("Ry: " + round(rotationY), 20,80);
