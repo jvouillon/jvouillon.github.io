@@ -13,15 +13,17 @@ var ay = 0;
 var vMultiplier = 0.01;
 var bMultiplier = 0.6;
 
+var backgroundColor;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   x = windowWidth / 2;
   y = windowHeight / 2;
-
+backgroundColor = color(255,255,255);
 }
 
 function draw() {
-  background(255);
+  background(backgroundColor);
 
   ballMove();
 
@@ -65,10 +67,6 @@ function ballMove() {
 
 }
 
-function deviceTurned() {
-  fill(0);
-  textSize(50);
-  text("Rx: " + round(rotationX), 20, 20);
-  text("Ry: " + round(rotationY), 20, 80);
-  text("Rz: " + round(rotationZ), 20, 140);
+function deviceShaked() {
+  backgroundColor = color(random(0,255),random(0,255),random(0,255));
 }
