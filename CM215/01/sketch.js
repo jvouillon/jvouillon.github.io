@@ -18,7 +18,7 @@ function setup() {
     createCanvas(windowWidth, windowHeight);
     x = windowWidth / 2;
     y = windowHeight / 2;
-    fill(0);
+    
 }
 
 function draw() {
@@ -29,7 +29,14 @@ function draw() {
     text("Rz: " + round(rotationZ), 20,140);
     
     ballMove();
+    
+    noStroke();
+    fill(200);
+    ellipse(x-5, y+5, 60, 60);
+    fill(50);
     ellipse(x, y, 60, 60);
+    fill(250);
+    ellipse(x+15, y-15, 20, 20);
 }
 
 function ballMove() {
