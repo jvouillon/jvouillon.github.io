@@ -23,9 +23,11 @@ function setup() {
 
 function draw() {
     background(255);
-    text(ax, 20,20);
-    text(ay, 20,50);
-    ballMove();
+    textSize(50);
+    text("Rx: "+rotationX, 20,20);
+    text("Ry: "+rotationY, 20,80);
+    text("Rz: "+rotationZ, 20,140);
+    //ballMove();
     ellipse(x, y, 60, 60);
 }
 
@@ -35,7 +37,7 @@ function ballMove() {
 	ay = accelerationY;
 
 	vx = vx + 0; //ay;
-	vy = vy + ax;
+	vy = ax; // vy + ax
 	y = y + vy * vMultiplier; 
 	x = x + vx * vMultiplier;
 
