@@ -27,17 +27,17 @@ function draw() {
     text("Rx: " + round(rotationX), 20,20);
     text("Ry: " + round(rotationY), 20,80);
     text("Rz: " + round(rotationZ), 20,140);
-    //ballMove();
+    
+    ballMove();
     ellipse(x, y, 60, 60);
 }
 
 function ballMove() {
 
-	ax = accelerationX;
-	ay = accelerationY;
 
-	vx = vx + 0; //ay;
-	vy = ax; // vy + ax
+	vx = vx + rotationX;
+	vy = vy + rotationY
+	
 	y = y + vy * vMultiplier; 
 	x = x + vx * vMultiplier;
 
