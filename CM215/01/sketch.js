@@ -23,6 +23,7 @@ function setup() {
 
 function draw() {
     background(255);
+    stroke(0);
     textSize(50);
     text("Rx: " + round(rotationX), 20,20);
     text("Ry: " + round(rotationY), 20,80);
@@ -41,14 +42,14 @@ function draw() {
 
 function ballMove() {
 
-  ax = rotationY;
-	ay = rotationX;
+  ax = rotationY * vMultiplier;
+	ay = rotationX * vMultiplier;
 	
 	vx += ax;
 	vy += ay;
 	
-	y = y + vy * vMultiplier; 
-	x = x + vx * vMultiplier;
+	y = y + vy; 
+	x = x + vx;
 
 	// Bounce when touch the edge of the canvas
 	if (x < 0) { 
