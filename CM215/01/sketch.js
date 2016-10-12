@@ -16,13 +16,15 @@ var bMultiplier = 0.6;
 
 function setup() {
     createCanvas(displayWidth, displayHeight);
+    x = displayWidth / 2;
+    y = displayHeight / 2;
     fill(0);
 }
 
 function draw() {
     background(255);
     ballMove();
-    ellipse(x, y, 30, 30);
+    ellipse(x, y, 60, 60);
 }
 
 function ballMove() {
@@ -30,8 +32,8 @@ function ballMove() {
 	ax = accelerationX;
 	ay = accelerationY;
 
-	vx = vx + ay;
-	vy = vy + ax;
+	vx = vx + ax;
+	vy = vy + ay;
 	y = y + vy * vMultiplier; 
 	x = x + vx * vMultiplier;
 
