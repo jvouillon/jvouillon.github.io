@@ -34,8 +34,8 @@ function ballMove() {
 	ax = accelerationX;
 	ay = accelerationY;
 
-	vx = vx + ax;
-	vy = vy + ay;
+	vx = vx + 0; //ay;
+	vy = vy + ax;
 	y = y + vy * vMultiplier; 
 	x = x + vx * vMultiplier;
 
