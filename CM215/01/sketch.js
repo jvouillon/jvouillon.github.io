@@ -67,6 +67,6 @@ function ballMove() {
 
 }
 
-function deviceShaked() {
+function deviceShaken() {
   backgroundColor = color(random(0,255),random(0,255),random(0,255));
 }
