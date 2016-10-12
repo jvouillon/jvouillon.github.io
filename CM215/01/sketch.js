@@ -65,7 +65,7 @@ function ballMove() {
 
 }
 
-function deviceMoved() {
+function deviceTurned() {
   fill(0);
   textSize(50);
   text("Rx: " + round(rotationX), 20, 20);
