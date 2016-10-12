@@ -23,6 +23,8 @@ function setup() {
 
 function draw() {
     background(255);
+    text(ax, 20,20);
+    text(ay, 20,50);
     ballMove();
     ellipse(x, y, 60, 60);
 }
