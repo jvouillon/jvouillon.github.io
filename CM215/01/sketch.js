@@ -24,9 +24,9 @@ function setup() {
 function draw() {
     background(255);
     textSize(50);
-    text("Rx: "+round(rotationX), 20,20);
-    text("Ry: "+round(rotationY), 20,80);
-    text("Rz: "+round(rotationZ), 20,140);
+    text("Rx: " + round(rotationX), 20,20);
+    text("Ry: " + round(rotationY), 20,80);
+    text("Rz: " + round(rotationZ), 20,140);
     //ballMove();
     ellipse(x, y, 60, 60);
 }
