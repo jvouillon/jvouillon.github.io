@@ -15,9 +15,9 @@ var vMultiplier = 0.007;
 var bMultiplier = 0.6;
 
 function setup() {
-    createCanvas(displayWidth, displayHeight);
-    x = displayWidth / 2;
-    y = displayHeight / 2;
+    createCanvas(windowWidth, windowHeight);
+    x = windowWidth / 2;
+    y = windowHeight / 2;
     fill(0);
 }
 
