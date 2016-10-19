@@ -22,7 +22,8 @@ function setup() {
   x = windowWidth / 2;
   y = windowHeight / 2;
 
-  backgroundColor = color(255,200,200);
+  backgroundColor = color(255, 200, 200);
+  rectMode(CENTER);
 }
 
 function draw() {
@@ -41,39 +42,38 @@ function draw() {
   ellipse(x + 5, y - 17, 20, 20);
 }
 
-function drawInfos(){
+function drawInfos() {
   var mySize = 60
   textSize(mySize);
- 
-  
-  if(deviceRotationX<0){
+
+
+  if (deviceRotationX < 0) {
     fill(255);
-    rect(windowWidth/2,mySize/2,100,mySize);
+    rect(windowWidth / 2, mySize / 2, 200, mySize);
     fill(0);
-    text(floor(deviceRotationX)+"°",windowWidth/2,mySize);
-  }else if(deviceRotationX>0){
-     fill(0);
-     rect(windowWidth/2,mySize/2,100,mySize);
-      fill(0);
-      
-    text(floor(deviceRotationX)+"°",windowWidth/2,windowHeight);
+    text(floor(deviceRotationX) + "°", windowWidth / 2, mySize);
+  } else if (deviceRotationX > 0) {
+    fill(255);
+    rect(windowWidth / 2, windowHeight-mySize / 2, 200, mySize);
+    fill(0);
+    text(floor(deviceRotationX) + "°", windowWidth / 2, windowHeight);
   }
-  
-  if(deviceRotationY<0){
-    text(floor(deviceRotationY)+"°",0,windowHeight/2);
-  }else if(deviceRotationY>0){
-    text(floor(deviceRotationY)+"°",windowWidth-mySize,windowHeight/2);
+
+  if (deviceRotationY < 0) {
+    text(floor(deviceRotationY) + "°", 0, windowHeight / 2);
+  } else if (deviceRotationY > 0) {
+    text(floor(deviceRotationY) + "°", windowWidth - mySize, windowHeight / 2);
   }
-  
-  text(floor(vx),windowWidth/2-mySize,windowHeight/2);
-  text(floor(vy),windowWidth/2,windowHeight/2);
-  
+
+  text(floor(vx), windowWidth / 2 - mySize, windowHeight / 2);
+  text(floor(vy), windowWidth / 2, windowHeight / 2);
+
   //text(floor(ax),windowWidth/2-mySize,windowHeight/2+mySize);
   //text(floor(ay),windowWidth/2,windowHeight/2+mySize);
 }
 
 
-function setRotations(){
+function setRotations() {
   deviceRotationX = rotationX;
   deviceRotationY = rotationY;
 }
@@ -110,5 +110,5 @@ function ballMove() {
 }
 
 function deviceShaken() {
-  backgroundColor = color(random(150,250));
+  backgroundColor = color(random(150, 250));
 }
