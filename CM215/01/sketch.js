@@ -60,7 +60,11 @@ function drawInfos(){
   
   text(floor(vx),windowWidth/2-mySize,windowHeight/2);
   text(floor(vy),windowWidth/2,windowHeight/2);
+  
+  text(floor(ax),windowWidth/2-mySize,windowHeight/2+mySize);
+  text(floor(ay),windowWidth/2,windowHeight/2+mySize);
 }
+
 
 function setRotations(){
   deviceRotationX = rotationX;
