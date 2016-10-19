@@ -42,18 +42,19 @@ function draw() {
 }
 
 function drawInfos(){
-  textSize(30);
+  var mySize = 60
+  textSize(mySize);
   
   if(deviceRotationX<0){
-    text(floor(deviceRotationX),windowWidth/2,30);
+    text(floor(deviceRotationX),windowWidth/2,mySize);
   }else if(deviceRotationX>0){
-    text(floor(deviceRotationX),windowWidth/2,windowHeight-30);
+    text(floor(deviceRotationX),windowWidth/2,windowHeight);
   }
   
   if(deviceRotationY<0){
-    text(floor(deviceRotationY),30,windowHeight/2);
+    text(floor(deviceRotationY),0,windowHeight/2);
   }else if(deviceRotationY>0){
-    text(floor(deviceRotationY),windowWidth-30,windowHeight/2);
+    text(floor(deviceRotationY),windowWidth-mySize,windowHeight/2);
   }
 }
 
