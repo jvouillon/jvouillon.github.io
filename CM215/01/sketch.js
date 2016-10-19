@@ -44,6 +44,7 @@ function draw() {
 function drawInfos(){
   var mySize = 60
   textSize(mySize);
+  fill(0);
   
   if(deviceRotationX<0){
     text(floor(deviceRotationX),windowWidth/2,mySize);
@@ -56,6 +57,9 @@ function drawInfos(){
   }else if(deviceRotationY>0){
     text(floor(deviceRotationY),windowWidth-mySize,windowHeight/2);
   }
+  
+  text(floor(vx),windowWidth/2-mySize,windowHeight/2);
+  text(floor(vy),windowWidth/2,windowHeight/2);
 }
 
 function setRotations(){
@@ -95,5 +99,5 @@ function ballMove() {
 }
 
 function deviceShaken() {
-  backgroundColor = color(random(0,255),random(0,255),random(0,255));
+  backgroundColor = color(random(150,250));
 }
