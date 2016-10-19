@@ -44,7 +44,7 @@ function draw() {
 }
 
 function drawInfos() {
-  var mySize = 60
+  var mySize = 20
   textSize(mySize);
 
 
