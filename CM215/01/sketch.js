@@ -24,6 +24,7 @@ function setup() {
 
   backgroundColor = color(255, 200, 200);
   rectMode(CENTER);
+  textAlign(CENTER);
 }
 
 function draw() {
