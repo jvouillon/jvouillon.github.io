@@ -1,17 +1,19 @@
-// Position Variables
+// Ball Position
 var x = 0;
 var y = 0;
 
-// Speed - Velocity
+// Ball Velocity
 var vx = 0;
 var vy = 0;
 
-// Acceleration
+// Ball Acceleration
 var ax = 0;
 var ay = 0;
 
-var vMultiplier = 0.01;
-var bMultiplier = 0.6;
+var vMultiplier = 0.01; // deplacement
+var bMultiplier = 0.6; // rebond
+
+var deviceRotationX, deviceRotationY;
 
 var backgroundColor;
 
@@ -19,12 +21,15 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   x = windowWidth / 2;
   y = windowHeight / 2;
-backgroundColor = color(255,200,200);
+
+  backgroundColor = color(255,200,200);
 }
 
 function draw() {
   background(backgroundColor);
 
+  setRotations();
+  drawInfos();
   ballMove();
 
   noStroke();
@@ -36,10 +41,31 @@ function draw() {
   ellipse(x + 5, y - 17, 20, 20);
 }
 
+function drawInfos(){
+  textSize(30);
+  
+  if(deviceRotationX>0){
+    text(deviceRotationX,windowWidth/2,30);
+  }else if(deviceRotationX<0){
+    text(deviceRotationX,windowWidth/2,windowHeight-30);
+  }
+  
+  if(deviceRotationY>0){
+    text(deviceRotationY,30,windowHeight/2);
+  }else if(deviceRotationY<0){
+    text(deviceRotationY,windowWidth-30,windowHeight/2);
+  }
+}
+
+function setRotations(){
+  deviceRotationX = rotationX;
+  deviceRotationY = rotationY;
+}
+
 function ballMove() {
 
-  ax = rotationY * vMultiplier;
-  ay = rotationX * vMultiplier;
+  ax = deviceRotationY * vMultiplier;
+  ay = deviceRotationX * vMultiplier;
 
   vx += ax;
   vy += ay;
