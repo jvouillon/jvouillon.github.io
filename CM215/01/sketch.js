@@ -44,25 +44,32 @@ function draw() {
 function drawInfos(){
   var mySize = 60
   textSize(mySize);
-  fill(0);
+ 
   
   if(deviceRotationX<0){
-    text(floor(deviceRotationX),windowWidth/2,mySize);
+    fill(255);
+    rect(windowWidth/2,mySize/2,100,mySize);
+    fill(0);
+    text(floor(deviceRotationX)+"°",windowWidth/2,mySize);
   }else if(deviceRotationX>0){
-    text(floor(deviceRotationX),windowWidth/2,windowHeight);
+     fill(0);
+     rect(windowWidth/2,mySize/2,100,mySize);
+      fill(0);
+      
+    text(floor(deviceRotationX)+"°",windowWidth/2,windowHeight);
   }
   
   if(deviceRotationY<0){
-    text(floor(deviceRotationY),0,windowHeight/2);
+    text(floor(deviceRotationY)+"°",0,windowHeight/2);
   }else if(deviceRotationY>0){
-    text(floor(deviceRotationY),windowWidth-mySize,windowHeight/2);
+    text(floor(deviceRotationY)+"°",windowWidth-mySize,windowHeight/2);
   }
   
   text(floor(vx),windowWidth/2-mySize,windowHeight/2);
   text(floor(vy),windowWidth/2,windowHeight/2);
   
-  text(floor(ax),windowWidth/2-mySize,windowHeight/2+mySize);
-  text(floor(ay),windowWidth/2,windowHeight/2+mySize);
+  //text(floor(ax),windowWidth/2-mySize,windowHeight/2+mySize);
+  //text(floor(ay),windowWidth/2,windowHeight/2+mySize);
 }
 
 
