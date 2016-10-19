@@ -44,16 +44,16 @@ function draw() {
 function drawInfos(){
   textSize(30);
   
-  if(deviceRotationX>0){
-    text(deviceRotationX,windowWidth/2,30);
-  }else if(deviceRotationX<0){
-    text(deviceRotationX,windowWidth/2,windowHeight-30);
+  if(deviceRotationX<0){
+    text(floor(deviceRotationX),windowWidth/2,30);
+  }else if(deviceRotationX>0){
+    text(floor(deviceRotationX),windowWidth/2,windowHeight-30);
   }
   
-  if(deviceRotationY>0){
-    text(deviceRotationY,30,windowHeight/2);
-  }else if(deviceRotationY<0){
-    text(deviceRotationY,windowWidth-30,windowHeight/2);
+  if(deviceRotationY<0){
+    text(floor(deviceRotationY),30,windowHeight/2);
+  }else if(deviceRotationY>0){
+    text(floor(deviceRotationY),windowWidth-30,windowHeight/2);
   }
 }
 
