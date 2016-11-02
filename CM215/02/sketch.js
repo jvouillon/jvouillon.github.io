@@ -79,20 +79,20 @@ function ballMove() {
   vy += ay;
 
   // Bounce when touch the edge of the canvas
-  if (x < ballradius) {
-    x = ballradius;
+  if (x < ballRadius) {
+    x = ballRadius;
     vx = -vx * bMultiplier;
   }
-  if (y < ballradius) {
-    y = ballradius;
+  if (y < ballRadius) {
+    y = ballRadius;
     vy = -vy * bMultiplier;
   }
-  if (x > width - ballradius) {
-    x = width - ballradius;
+  if (x > width - ballRadius) {
+    x = width - ballRadius;
     vx = -vx * bMultiplier;
   }
-  if (y > height - ballradius) {
-    y = height - ballradius;
+  if (y > height - ballRadius) {
+    y = height - ballRadius;
     vy = -vy * bMultiplier;
   }
 
