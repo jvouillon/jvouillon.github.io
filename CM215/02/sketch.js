@@ -67,8 +67,8 @@ function drawInfos() {
 
 
 function setRotations() {
-  deviceRotationX = rotationX;
-  deviceRotationY = rotationY;
+  deviceRotationX = floor(rotationX);
+  deviceRotationY = floor(rotationY);
 }
 
 function ballMove() {
