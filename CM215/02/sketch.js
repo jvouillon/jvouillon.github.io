@@ -62,7 +62,7 @@ function draw() {
 function drawInfos() {
   var mySize = 20
   textSize(mySize);
-  text("version: 0", 10, 10)
+  text("version: 1", 10, 10)
 }
 
 
