@@ -62,7 +62,7 @@ function draw() {
 function drawInfos() {
   var mySize = 20
   textSize(mySize);
-  text("version: 1", 10, 10)
+  text("version: 2", 10, 10)
 }
 
 
@@ -79,19 +79,19 @@ function ballMove() {
   vy += ay;
 
   // Bounce when touch the edge of the canvas
-  if (x < ballRadius) {
+  if (x <= ballRadius) {
     x = ballRadius;
     vx = -vx * bMultiplier;
   }
-  if (y < ballRadius) {
+  if (y <= ballRadius) {
     y = ballRadius;
     vy = -vy * bMultiplier;
   }
-  if (x > width - ballRadius) {
+  if (x >= width - ballRadius) {
     x = width - ballRadius;
     vx = -vx * bMultiplier;
   }
-  if (y > height - ballRadius) {
+  if (y >= height - ballRadius) {
     y = height - ballRadius;
     vy = -vy * bMultiplier;
   }
