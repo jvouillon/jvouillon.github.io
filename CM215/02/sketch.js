@@ -60,9 +60,9 @@ function draw() {
 }
 
 function drawInfos() {
-  var mySize = 20
+  var mySize = 12
   textSize(mySize);
-  text("version: 2", 10, 10)
+  text("version: 2", 20, 20)
 }
 
 
