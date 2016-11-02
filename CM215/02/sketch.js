@@ -57,6 +57,7 @@ function draw() {
 function drawInfos() {
   var mySize = 20
   textSize(mySize);
+  text("version: 0",10,10)
 }
 
 
@@ -71,9 +72,6 @@ function ballMove() {
 
   vx += ax;
   vy += ay;
-
-  y = y + vy;
-  x = x + vx;
 
   // Bounce when touch the edge of the canvas
   if (x < 0) {
@@ -92,6 +90,11 @@ function ballMove() {
     y = height - 20;
     vy = -vy * bMultiplier;
   }
+  
+  y = y + vy;
+  x = x + vx;
+
+  
 }
 
 function drawBall(){
