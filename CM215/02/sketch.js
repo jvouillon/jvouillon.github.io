@@ -25,7 +25,7 @@ function setup() {
   x = windowWidth / 2;
   y = windowHeight / 2;
 
-  backgroundColor = color(255, 200, 200);
+  backgroundColor = color(255, 255, 200);
   rectMode(CENTER);
   textAlign(CENTER);
   
