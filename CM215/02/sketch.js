@@ -1,3 +1,6 @@
+var ballRadius = 30;
+var ballSize;
+
 // Ball Position
 var x = 0;
 var y = 0;
@@ -25,23 +28,25 @@ function setup() {
   x = windowWidth / 2;
   y = windowHeight / 2;
 
+  ballSize = 2 * ballRadius;
+
   backgroundColor = color(255, 255, 200);
   rectMode(CENTER);
   textAlign(CENTER);
-  
+
   obstacleSize = 40;
-  
-  obstacle_1x = random(obstacleSize,windowWidth-obstacleSize);
-  obstacle_1y = random(obstacleSize,windowHeight-obstacleSize);
-  obstacle_1Color = color(255,0,0);
-  
-  obstacle_2x = random(obstacleSize,windowWidth-obstacleSize);
-  obstacle_2y = random(obstacleSize,windowHeight-obstacleSize);
-  obstacle_2Color = color(0,255,0);
-  
-  obstacle_3x = random(obstacleSize,windowWidth-obstacleSize);
-  obstacle_3y = random(obstacleSize,windowHeight-obstacleSize);
-  obstacle_3Color = color(0,0,255);
+
+  obstacle_1x = random(obstacleSize, windowWidth - obstacleSize);
+  obstacle_1y = random(obstacleSize, windowHeight - obstacleSize);
+  obstacle_1Color = color(255, 0, 0);
+
+  obstacle_2x = random(obstacleSize, windowWidth - obstacleSize);
+  obstacle_2y = random(obstacleSize, windowHeight - obstacleSize);
+  obstacle_2Color = color(0, 255, 0);
+
+  obstacle_3x = random(obstacleSize, windowWidth - obstacleSize);
+  obstacle_3y = random(obstacleSize, windowHeight - obstacleSize);
+  obstacle_3Color = color(0, 0, 255);
 }
 
 function draw() {
@@ -57,7 +62,7 @@ function draw() {
 function drawInfos() {
   var mySize = 20
   textSize(mySize);
-  text("version: 0",10,10)
+  text("version: 0", 10, 10)
 }
 
 
@@ -74,47 +79,43 @@ function ballMove() {
   vy += ay;
 
   // Bounce when touch the edge of the canvas
-  if (x < 0) {
-    x = 0;
+  if (x < ballradius) {
+    x = ballradius;
     vx = -vx * bMultiplier;
   }
-  if (y < 0) {
-    y = 0;
+  if (y < ballradius) {
+    y = ballradius;
     vy = -vy * bMultiplier;
   }
-  if (x > width - 20) {
-    x = width - 20;
+  if (x > width - ballradius) {
+    x = width - ballradius;
     vx = -vx * bMultiplier;
   }
-  if (y > height - 20) {
-    y = height - 20;
+  if (y > height - ballradius) {
+    y = height - ballradius;
     vy = -vy * bMultiplier;
   }
-  
+
   y = y + vy;
   x = x + vx;
 
-  
+
 }
 
-function drawBall(){
+function drawBall() {
   noStroke();
-  fill(60);
-  ellipse(x, y + 5, 60, 60);
   fill(150);
-  ellipse(x, y, 60, 60);
-  fill(255);
-  ellipse(x + 5, y - 17, 20, 20);
+  ellipse(x, y, ballSize, ballSize);
 }
 
-function drawObstacles(){
+function drawObstacles() {
   noStroke();
   fill(obstacle_1Color);
   ellipse(obstacle_1x, obstacle_1y, obstacleSize, obstacleSize);
-  
+
   fill(obstacle_2Color);
   ellipse(obstacle_2x, obstacle_2y, obstacleSize, obstacleSize);
-  
+
   fill(obstacle_3Color);
   ellipse(obstacle_3x, obstacle_3y, obstacleSize, obstacleSize);
 }
