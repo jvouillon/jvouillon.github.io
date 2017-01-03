@@ -1,0 +1,123 @@
+/***********************************************************/
+/*      DESKTOP                                            */
+
+@media screen and (min-width: 1200px) {
+	#desktop_1 {
+		background-color: #900;
+		color: #fff;
+	}
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1200px) and (min-device-width: 1024px) {
+	#desktop_2 {
+		background-color: #900;
+		color: #fff;
+	}
+}	
+
+@media screen and (max-width: 800px) and (min-device-width: 1024px){
+	#desktop_3 {
+		background-color: #900;
+		color: #fff;
+}
+	 
+	
+}	
+
+/***********************************************************/
+/*      IPAD                                               */
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+	#ipad_1 {
+		background-color: #900;
+		color: #fff;
+}
+	 
+	
+}	
+
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
+	  #ipad_2 {
+	background-color: #900;
+	color: #fff;
+}
+	 
+	
+}	
+
+/***********************************************************/
+/*      IPHONE                                             */
+
+@media screen and (max-width: 568px) and (orientation: landscape){
+	  #iphone_1 {
+	background-color: #990;
+	color: #fff;
+}
+.myDisplay{
+	font-size: smaller;
+}
+}
+
+
+
+@media screen and (max-width: 480px) and (orientation: landscape){
+	  #iphone_1 {
+	background-color: #900;
+	color: #fff;
+}
+.myDisplay{
+	font-size: smaller;
+}
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait){
+	  #iphone_2 {
+	background-color: #900;
+	color: #fff;
+}
+
+.myDisplay{
+	font-size: larger;
+}
+}
+
+
+/***********************************************************/
+/*      PRINT                                              */
+
+@media only print {
+  body {
+	width: 100%;
+	background-color: #FFF;
+	font-family: Georgia, serif;
+	font-size: 36px;
+	color: #000;
+	
+  }
+}
+
+/***********************************************************/
+
+body {
+	text-align: center;
+	margin: 0px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+}
+
+.myDisplay {
+	height: auto;
+	width: 90%;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-bottom: 10px;
+	margin-left: auto;
+	border: thin solid #333;
+	padding: 10px;
+	background-color: #FFF;
+	color: #666;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.33) 0px 3px 6px 0px;
+	
+}
