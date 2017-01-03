@@ -1,14 +1,11 @@
 var ballRadius = 30;
 var ballSize;
-
 // Ball Position
 var x = 0;
 var y = 0;
-
 // Ball Velocity
 var vx = 0;
 var vy = 0;
-
 // Ball Acceleration
 var ax = 0;
 var ay = 0;
@@ -22,7 +19,7 @@ var backgroundColor;
 var obstacle_1x, obstacle_1y, obstacle_2x, obstacle_2y, obstacle_3x, obstacle_3y;
 var obstacle_1Color, obstacle_2Color, obstacle_3Color;
 var obstacleSize;
-
+/************************************************************/
 function setup() {
   createCanvas(windowWidth, windowHeight);
   x = windowWidth / 2;
@@ -48,7 +45,7 @@ function setup() {
   obstacle_3y = random(obstacleSize, windowHeight - obstacleSize);
   obstacle_3Color = color(0, 0, 255);
 }
-
+/************************************************************/
 function draw() {
   background(backgroundColor);
 
@@ -58,19 +55,18 @@ function draw() {
   ballMove();
   drawBall();
 }
-
+/************************************************************/
 function drawInfos() {
   var mySize = 12
   textSize(mySize);
   text("version: 3", 20, 20)
 }
-
-
+/************************************************************/
 function setRotations() {
   deviceRotationX = floor(rotationX);
   deviceRotationY = floor(rotationY);
 }
-
+/************************************************************/
 function ballMove() {
   ax = deviceRotationY * vMultiplier;
   ay = deviceRotationX * vMultiplier;
@@ -81,8 +77,6 @@ function ballMove() {
   y = y + vy;
   x = x + vx;
 
-
-  // Bounce when touch the edge of the canvas
   if (x <= ballRadius) {
     x = ballRadius;
     vx = -vx * bMultiplier;
@@ -99,17 +93,14 @@ function ballMove() {
     y = height - ballRadius;
     vy = -vy * bMultiplier;
   }
-
- 
-
 }
-
+/************************************************************/
 function drawBall() {
   noStroke();
   fill(150);
   ellipse(x, y, ballSize, ballSize);
 }
-
+/************************************************************/
 function drawObstacles() {
   noStroke();
   fill(obstacle_1Color);
@@ -121,7 +112,7 @@ function drawObstacles() {
   fill(obstacle_3Color);
   ellipse(obstacle_3x, obstacle_3y, obstacleSize, obstacleSize);
 }
-
+/************************************************************/
 function deviceShaken() {
   //backgroundColor = color(random(150, 250));
 }

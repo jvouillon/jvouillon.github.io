@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="5">
+<title>Test LocalStorage > ESCLAVE</title>
+
+<style>
+body{
+	font-family: verdana;
+	font-size: 20px;
+}
+</style>
+
+</head>
+
+<body>
+<div id="firstname"></div>
+<div id="lastname"></div>
+<div id="score"></div>
+<div id="logo_team1"></div>
+
+<script type="text/javascript">
+document.getElementById("firstname").innerHTML = localStorage.firstname;
+document.getElementById("lastname").innerHTML = localStorage.lastname;
+document.getElementById("score").innerHTML = localStorage.score;
+
+var image = '<img src="'+localStorage.logoteam1+'">';
+document.getElementById("logo_team1").innerHTML = image;
+</script>
+</body>
+</html>

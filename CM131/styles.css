@@ -1,0 +1,228 @@
+/* ************************************************ */
+/*                                                  */
+/* styles pour les liens situés dans le bloc nav    */
+/* ( le menu latéral à gauche... )                  */
+/*                                                  */
+/* ************************************************ */
+/*                                                  */
+/* Il est important de respecter l'ordre :          */
+/* link, visited, hover, active                     */
+/*                                                  */
+/* ************************************************ */
+nav a{
+	text-decoration: none; /* enlève le souligné du lien */
+	font-size: 20px;
+	display: block;
+	width:200px;
+	text-align: right;
+}
+nav a:link{
+	/* état par défaut du lien */
+	color:#000;
+}
+nav a:visited{
+	/* état visité du lien */
+	color:#000;
+}
+nav a:hover{
+	/* état survolé du lien */
+	border-bottom: 1px dotted #000;
+	color:#000;
+}
+nav a:active{
+	/* état cliqué - bouton de souris enfoncé - du lien */
+	background:#f00;
+}
+/* ************************************************ */
+/*                                                  */
+/* styles pour les liens situés dans le bloc        */
+/* id = "texte"                                     */
+/*                                                  */
+/* ************************************************ */
+
+#texte a:visited{color:#000;}
+#texte a:hover{color:#00f;}
+
+/* ************************************************ */
+/*                                                  */
+/* styles pour les images liens                     */
+/* exemple :                                        */
+/* <a href=""><img src=""></a>                      */
+/*                                                  */
+/* ************************************************ */
+
+a:link img{width:50px;height:50px;}
+a:hover img{width:80px;height:80px;}
+
+/* ************************************************ */
+/*                                                  */
+/* styles pour les liens situés dans le bloc aside  */
+/* (menu réseaux sociaux)                           */
+/*                                                  */
+/* ************************************************ */
+aside a{
+	width:50px;
+	height:50px;
+	background:#fff;
+	display:block;
+	/*  IMPORTANT:    */
+	/*  display:block permet d'afficher le lien, sous forme d'un bloc  */
+	/*  ce qui permet de lui donner des dimensions, même si le lien est vide */
+}
+/* ************************************************ */
+/*                                                  */
+/* Technique des sprites:                           */
+/* une image, contenant les différents états 		*/
+/* du bouton, est utilisée en arrière plan.         */
+/* Il suffit alors de translater l'arrière-plan     */
+/* de la valeur voulue, pour afficher le graphique  */
+/* correspondant à l'état voulu: link, hover, etc.  */
+/*                                                  */
+/* ************************************************ */
+aside #twitter a:link {background:url(icons/sprite_twitter.png);}
+aside #twitter a:visited{background-position-x: -70px;}
+aside #twitter a:hover {background-position-x: -100px;}
+aside #twitter a:active{background-position-x: -150px;}
+
+aside #facebook a:link{background:url(icons/sprite_twitter.png);background-position: 0 25px;}
+aside #facebook a:visited{background-position: -100px 25px;}
+aside #facebook a:hover{background-position: -150px 25px;}
+
+	
+/* ************************************************ */
+/*                                                  */
+/* styles pour les balises - TAGs                   */
+/*                                                  */
+/* ************************************************ */
+html{min-height:100vh;height:100%;}
+body{
+	font-family:verdana;
+	/* pour les arrière-plans multiples voir le lien ci-dessous: */
+	/* http://www.w3schools.com/css/css_background.asp */
+	background-image:url(images/cup.png), url(images/stain.png);
+	background-repeat: no-repeat, no-repeat;
+	background-position: -200px 200px, 0 400px;
+	background-attachment: fixed;
+	
+	margin: 0; /* permet de caler le contenu de la page contre les bords de la fenêtre */
+	box-shadow: 0 0 200px #000 inset; /* ombre portée intérieure */
+	height:100%;
+	min-height:100vh; /* permet de forcer la hauteur du body à la hauteur de la fenêtre */
+}
+/* ************************************************ */
+/*                                                  */
+/* nouvelles balises HTML5                          */
+/*                                                  */
+/* ************************************************ */
+header{
+	width:800px;
+	height:120px;
+	
+	margin-top:-30px;
+	margin-bottom:20px;
+	padding-bottom:0;
+	
+	border-radius:0 0 30px 30px; /* coins arrondis */
+	
+	text-align:center;
+	font-size:120px;
+	font-family:impact;
+	
+	overflow:hidden; /* masque ce qui dépasse du DIV */
+}
+nav{
+	width:200px;
+	height:400px;
+	border-right:1px solid #000;
+	position:absolute;
+	top: 170px;
+	left: 0;
+
+}
+aside{
+	width:60px;
+	height:200px;
+	background-color: rgba(100,100,255,0.7);
+	position:fixed;
+	top:250px;
+	left:0;
+	border-radius: 0 15px 15px 0;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.8);
+}
+footer{
+	width:760px;
+	height:20px;
+	margin-top:20px;
+	padding:20px;
+	text-align:center;
+}
+/* ************************************************ */
+/*                                                  */
+/* styles pour les IDs                              */
+/*                                                  */
+/* ************************************************ */
+#texte{
+	width:560px; /* 760 + 20 + 20 = 800 */
+	height:auto; /* hauteur s'adapte au contenu */
+	padding:20px;
+	margin-left:200px;
+}
+
+#wrapper{width:800px;margin:auto;position:relative;}
+/* ************************************************ */
+/*                                                  */
+/* Exemple de relations de voisinage / siblings     */
+/*                                                  */
+/* ************************************************ */
+
+/* style du header quand il est dans l'élément page01: */
+#page_01 header{color:#f00;} 
+
+/* style du header quand il est dans l'élément page00 */
+/* et dans l'élément page02 : */
+#page_00 header, #page_02 header{color:#00f;}
+
+/* note: #page_00, #page_01 et #page_02 sont les IDs des body */
+
+/* ************************************************ */
+/*                                                  */
+/* styles pour les classes                          */
+/*                                                  */
+/* ************************************************ */
+
+/* pour l'image dans le texte */
+.float_left{
+	float:right;
+	margin-right:10px;
+	margin-bottom:5px;
+}
+
+ul{
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+li{
+	padding:0;
+	margin:0;
+}
+#menu{
+	width:800px;
+	height:30px;
+	background-color: #ccc;
+}
+#menu li{
+	float:left;
+	width:198px;
+	text-align: center;
+	border-left:1px solid #000;
+	height:30px;
+}
+
+#page_about #btn_about a:link{background:#f00;}
+
+/* ************************************************ */
+/*                                                  */
+/* That's all folks!                                */
+/*                                                  */
+/* ************************************************ */
