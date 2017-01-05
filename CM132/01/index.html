@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>CM132-01</title>
+
+<style>
+/* Technique GoogleFont */
+@import url('https://fonts.googleapis.com/css?family=Kumar+One');
+
+/* Technique @font-face */
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('webfontkit/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('webfontkit/kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#font1{font-family: 'kaushan_scriptregular';}
+#font2{font-family: 'Kumar One', Times;}
+
+	body{font-family: verdana;}
+	#qrcode{display:none;}
+	
+	@media print{
+		body{
+			font-family: times;
+			margin-left: 20%;
+		}
+		nav{display:none;}
+		#qrcode{display:block;}
+	}
+</style>
+
+</head>
+	<body>
+		<nav>Ce texte n'apparaitra pas, lors de l'impression de la page...</nav>
+		<h1>Bonne année 2017!</h1>	
+		<p id="font1">Ce texte s'affiche avec une police importée, grâce à @font-face: kaushan_scriptregular</p>
+		<pre>
+@font-face {
+    font-family: 'kaushan_scriptregular';
+    src: url('webfontkit/kaushanscript-regular-webfont.woff2') format('woff2'),
+         url('webfontkit/kaushanscript-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+		</pre>
+		<p id="font2">Ce texte s'affiche avec une police en ligne, grâce à @import: Kumar One</p>
+		<pre>
+@import url('https://fonts.googleapis.com/css?family=Kumar+One');
+		</pre>
+		<div id="qrcode"><img src="qr_code.jpg" width="20%"></div>
+	</body>
+</html>
