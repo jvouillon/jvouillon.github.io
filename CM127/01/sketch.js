@@ -1,14 +1,33 @@
+//la fonction setup() est appelée une seule fois
+// et sert à initialiser certains réglages
 function setup() {
+  //createCanvas: permet de spécifier les dimensipons du canvas
+  //windowWidth/windowHeight:largeur et hauteur de la fenêtre du mavigateur
   createCanvas(windowWidth,windowHeight);
 }
 
+// La fonction draw() est appellée 60 fois par seconde!
 function draw() {
+  //background 
   //background(255);
-  fill(255,255,0,200);
+  
+  //couleur de remplissage RGB+Alpha
+  fill(random(0,255),random(0,255),random(0,255),random(0,255));
+  
+  //couleur du contour RGB
   stroke(0,0,255);
+  
+  //largeur du contour en pixel
   strokeWeight(5);
-  ellipse(mouseX,mouseY,100,100);
-  rect(100,100,100,100);
-  line(100,100,200,200);
-  line(0,0,windowWidth,windowHeight);
+  
+  //pas de contour!
+  noStroke();
+  
+  //dessine une ellipse
+  //de diamètre aléatoire compris entre 10 et 100
+  //et positionnée aux coordonnées de la souris
+  //ellipse(mouseX,mouseY,random(10,100));
+  
+  rect(mouseX,mouseY,100,100);
+  //line(0,0,mouseX,mouseY);
 }
