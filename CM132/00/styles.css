@@ -38,7 +38,7 @@
 /*      IPHONE                                             */
 
 @media screen and (max-width: 568px) and (orientation: landscape){
-	#iphone_1 {
+	#iphone_se_land {
 		background-color: #990;
 		color: #fff;
 	}
@@ -46,25 +46,35 @@
 		font-size: smaller;
 	}
 }
-@media screen and (max-width: 480px) and (orientation: landscape){
-	#iphone_1 {
+@media screen and (max-width: 568px) and (orientation: portrait){
+	#iphone_se_port {
+		background-color: #990;
+		color: #fff;
+	}
+	.myDisplay{
+		font-size: smaller;
+	}
+}
+/***********************************************************/
+/*      IPHONE                                             */
+
+@media screen and (max-width: 320px) and (orientation: landscape){
+	#iphone_land {
 		background-color: #900;
 		color: #fff;
 	}
 	.myDisplay{
 		font-size: smaller;
 	}
-	body{width: 320px;}
 }
-@media screen and (max-width: 480px) and (orientation: portrait){
-	#iphone_2 {
+@media screen and (max-width:320px) and (orientation: portrait){
+	#iphone_port {
 		background-color: #399;
 		color: #fff;
 	}
 	.myDisplay{
 		font-size: larger;
 	}
-	body{width: 320px;}
 }
 /***********************************************************/
 /*      PRINT                                              */
