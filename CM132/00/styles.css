@@ -54,11 +54,11 @@
 	.myDisplay{
 		font-size: smaller;
 	}
-	body{width: 320px}
+	body{width: 320px;}
 }
 @media screen and (max-width: 480px) and (orientation: portrait){
 	#iphone_2 {
-		background-color: #960;
+		background-color: #390;
 		color: #fff;
 	}
 	.myDisplay{
