@@ -1,3 +1,5 @@
+// Sujet: boucles de répétition...
+//
 var rayon1, rayon2, segments;
 var posx, posy;
 

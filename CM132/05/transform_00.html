@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>transformation 00</title>
+
+ <script src="libraries/p5.js" type="text/javascript"></script>
+ <script src="libraries/p5.dom.js" type="text/javascript"></script>
+ <script src="libraries/p5.sound.js" type="text/javascript"></script>
+ <script src="sketch.js" type="text/javascript"></script>
+	
+</head>
+
+<style>
+html{
+	width:100%;
+	height:100%;
+}
+
+body{
+	font-family:verdana;
+	background-color: #eee;
+	width:100%;
+	height:100%;
+	margin:0;
+}
+
+canvas{
+	width:100%;height:100%;
+	top:0;left:0;
+	position:fixed;z-index:-999;
+	background-color:#fff;
+}
+
+main{margin-top:50px;position:relative;}
+
+#background{
+	width:100%;
+	height:100%;
+	box-shadow: 0 0 100px #000 inset;
+	position:fixed;
+	top:0;
+	left:0;
+	z-index:-100;
+}
+#myTitle{
+	position:fixed;
+	font-family:impact;
+	font-size:500px;
+	color:#ddd;
+	top:200px;
+	right:-300px;
+	transform:rotate(-90deg);
+	z-index:-99;
+}
+.dummy{
+	position:absolute;
+	width:200px;
+	height:200px;
+	background-color:#99f;
+	box-shadow:0 6px 20px #000;
+	padding:0;
+	border: solid 10px #fff;
+	font-family:impact;
+	font-size: 200px;
+	color:#fff;
+}
+
+.id1{
+	transform:rotate(10deg);
+	top:120px;
+	left:100px;
+}
+.id2{
+	transform:rotate(-15deg);
+	top:240px;
+	left:80px;
+}
+.id3{
+	transform:rotate(20deg);
+	top:380px;
+	left:120px;
+}
+.dummy:hover{
+	z-index:99;
+	background-color:#fa0;
+	transform:scale(1.2,1.2) translate(20px);
+}
+.dummy:hover .infos{
+	display:block;
+}
+.dummy:active{
+	background-color:#f60;
+}
+.infos{
+	width:400px;
+	height:100px;
+	position:absolute;
+	top:50px;
+	left:200px;
+	display:none;
+	border:none;
+}
+
+.top, .bottom{
+	width:400px;
+	height:50px;
+	background-color:#666;
+	position:absolute;
+	left:0;
+}
+.top{
+	top:0;
+	transform:skew(-45deg);
+	border-radius: 6px 10px 0 0;
+}
+.bottom{
+	top:50px;
+	transform:skew(45deg);
+	border-radius: 0 0 10px 6px;
+}
+
+.innerTop, .innerBottom{
+	width:380px;
+	height:43px;
+	background-color:#fff;
+	position:absolute;
+	left:10px;
+}
+.innerTop{
+	top:7px;
+	border-radius: 7px 3px 0 0;
+}
+.innerBottom{
+	top:0px;
+	border-radius: 0 0 3px 7px;
+}
+
+.infosText{
+	position:absolute;
+	width:300px;
+	height:50px;
+	padding:10px;
+	top:10px;
+	left:40px;
+	color:#666;
+	font-family:verdana;
+	font-size: 14px;
+}
+
+.slogan{
+	position:fixed;
+	bottom:80px;
+	left:-250px;
+	width:800px;
+	height:180px;
+	background-color: #fff;
+	font-family:impact;
+	font-size: 150px;
+	color:#666;
+	padding-left:200px;
+	transform:rotate(45deg);
+	box-shadow: 0 0 9px #ccc;
+	z-index:-98;
+}
+.heart{
+	display:inline;
+	margin-left:10px;
+	margin-right:140px;
+	position:relative;
+}
+.half{
+	position:absolute;
+	top:0;
+	width:100px;
+	height:150px;
+	background-color: #f00;
+	border-radius:50px 50px 0 0;
+	transform-origin: 50px 100px;
+}
+.right{transform:rotate(45deg);border-radius:50px 50px 5px 0;}
+.left{transform:rotate(-45deg);border-radius:50px 50px 0 5px;}
+</style>
+
+<body>
+	<div id="background"></div>
+	<div id="myTitle">CSS3</div>
+	<div class="slogan">I
+	<div class="heart">
+		<div class="half right"></div>
+		<div class="half left"></div>
+	</div>
+	CSS!
+	</div>
+<main>
+	<div id="id1" class="id1 dummy">1
+		<div class="infos">
+			<div class="top"><div class="innerTop"></div></div>
+			<div class="bottom"><div class="innerBottom"></div></div>
+			<div class="infosText">Infos...</div>
+		</div>
+	</div>
+	<div id="id2" class="id2 dummy">2
+		<div class="infos">
+			<div class="top"><div class="innerTop"></div></div>
+			<div class="bottom"><div class="innerBottom"></div></div>
+			<div class="infosText">Infos...</div>
+		</div>
+	</div>
+	<div id="id3" class="id3 dummy">3
+		<div class="infos">
+			<div class="top"><div class="innerTop"></div></div>
+			<div class="bottom"><div class="innerBottom"></div></div>
+			<div class="infosText">Infos...</div>
+		</div>
+	</div>
+</main>
+
+<div class="slogan">I
+	<div class="heart">
+		<div class="half right"></div>
+		<div class="half left"></div>
+	</div>
+	CSS!
+</div>
+</body>
+</html>

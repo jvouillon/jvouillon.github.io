@@ -28,6 +28,7 @@ function draw() {
   //et positionnée aux coordonnées de la souris
   //ellipse(mouseX,mouseY,random(10,100));
   
+  //dessine un rectangle aux coordonnées de la souris
   rect(mouseX,mouseY,100,100);
   //line(0,0,mouseX,mouseY);
 }
