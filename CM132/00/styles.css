@@ -58,7 +58,7 @@
 }
 @media screen and (max-width: 480px) and (orientation: portrait){
 	#iphone_2 {
-		background-color: #900;
+		background-color: #960;
 		color: #fff;
 	}
 	.myDisplay{
