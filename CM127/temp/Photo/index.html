@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Photo</title>
+    <script src="libraries/p5.js" type="text/javascript"></script>
+
+    <script src="libraries/p5.dom.js" type="text/javascript"></script>
+    <script src="libraries/p5.sound.js" type="text/javascript"></script>
+
+    <script src="sketch.js" type="text/javascript"></script>
+
+    <style>
+      body {padding: 0; margin: 0; font-family:verdana;}
+      canvas {vertical-align: top;}
+    </style>
+  </head>
+  <body>
+	  
+	  	<p>Version:1.2</p>
+	<p><input type="file" accept="image/*" onchange="picChange(event)"/></p>
+	<div id="test"></div>
+	
+	<script>
+	var picURL;
+		function picChange(evt){ 
+			var fileInput = evt.target.files;
+			if(fileInput.length>0){
+				var windowURL = window.URL || window.webkitURL; 
+				picURL = windowURL.createObjectURL(fileInput[0]);
+				//document.getElementById("test").innerHTML = "<img src='"+picURL+"'>";
+			}
+		}
+		</script>
+  </body>
+</html>

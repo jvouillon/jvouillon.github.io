@@ -19,11 +19,13 @@ img{width:200px;border:4px solid #fff;box-shadow:0 3px 9px #000;}
 	<div id="test"></div>
 	
 	<script>
+	var picURL;
+	
 		function picChange(evt){ 
 			var fileInput = evt.target.files;
 			if(fileInput.length>0){
 				var windowURL = window.URL || window.webkitURL; 
-				var picURL = windowURL.createObjectURL(fileInput[0]);
+				picURL = windowURL.createObjectURL(fileInput[0]);
 				document.getElementById("test").innerHTML = "<img src='"+picURL+"'>";
 			}
 		}
