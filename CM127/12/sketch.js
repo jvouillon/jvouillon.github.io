@@ -14,7 +14,7 @@ function preload() {
 //***************************************************
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  maxBalls = 150;
+  maxBalls = 100;
   gravity = 0.1;
   timer = 0;
 
