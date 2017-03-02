@@ -43,7 +43,7 @@ function afficheTexte() {
   fill(255);
   text("Particules: " + maxBalls, 10, 20);
   text("Time: " + floor(timer / 60) + " sec", 10, 35);
-  text("Rev: 1" , 10, 50);
+  text("Rev: 1.1" , 10, 50);
 }
 //***************************************************
 function Ball() {
