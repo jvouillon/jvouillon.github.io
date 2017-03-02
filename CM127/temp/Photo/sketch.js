@@ -19,6 +19,5 @@ function draw() {
    image(imgLoaded,mouseX,mouseY,100,100);
  }
  
-  ellipse(300,200,100);
  //}
 }
