@@ -11,7 +11,7 @@ function draw() {
  //if (picURL){
  //image(img, 0, 0);
  if(picURL && !imgLoaded){
-  loadImage("leaf.png", function(img){imgLoaded=img;});
+  loadImage(picURL, function(img){imgLoaded=img;});
   console.log("load image...");
  }
  
