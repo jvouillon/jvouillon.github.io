@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="apple-mobile-web-app-title" content="Photo!">
 <meta name="apple-mobile-web-app-capable" content="yes">
+
+<style>
+img{width:200px;margin:auto;}
+</style>
 </head>
 
 <body>
@@ -18,7 +22,7 @@
 			if(fileInput.length>0){
 				var windowURL = window.URL || window.webkitURL; 
 				var picURL = windowURL.createObjectURL(fileInput[0]);
-				document.getElementById("test").innerHTML = "<img src='"+picURL+"'> width='200px'";
+				document.getElementById("test").innerHTML = "<img src='"+picURL+"'>";
 			}
 		}
 	</script>
