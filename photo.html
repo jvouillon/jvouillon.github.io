@@ -32,7 +32,7 @@ var windowURL = window.URL || window.webkitURL;
 //picture url
 var picURL = windowURL.createObjectURL(fileInput[0]);
 alert(picURL);
-document.getElementById("test").innerHTML = "<img src='"+picURL+"'>";
+document.getElementById("test").innerHTML = "<img src='"+picURL+"'> width='200px'";
 }
 
 }
