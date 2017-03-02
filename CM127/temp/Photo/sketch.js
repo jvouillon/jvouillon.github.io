@@ -16,7 +16,7 @@ function draw() {
  }
  
  if(imgLoaded){
-   image(imgLoaded,mouseX,mouseY);
+   image(imgLoaded,mouseX,mouseY,100,100);
  }
  
   ellipse(300,200,100);
