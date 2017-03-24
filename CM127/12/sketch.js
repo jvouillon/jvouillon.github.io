@@ -14,7 +14,7 @@ function preload() {
 //***************************************************
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  maxBalls = 150;
+  maxBalls = 100;
   gravity = 0.1;
   timer = 0;
 
@@ -43,6 +43,8 @@ function afficheTexte() {
   fill(255);
   text("Particules: " + maxBalls, 10, 20);
   text("Time: " + floor(timer / 60) + " sec", 10, 35);
+  text("Canvas: " + windowWidth + " x " + windowHeight , 10, 50);
+  text("Rev: 1.7" , 10, 65);
 }
 //***************************************************
 function Ball() {
@@ -54,7 +56,7 @@ function Ball() {
     this.posx = random(windowWidth / 2 - dx, windowWidth / 2 + dx);
     this.posy = windowHeight;
     this.vx = random(-1, 1);
-    this.vy = random(-13, -3);
+    this.vy = random(map(mouseY,0,windowHeight,-13,-4), -3);
     this.taille = random(20, 50);
     this.angle = random(0, 360);
     this.vangle = random(-5, 5);

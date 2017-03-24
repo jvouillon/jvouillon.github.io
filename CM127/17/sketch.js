@@ -34,13 +34,11 @@ function draw() {
   fire = keyIsDown(32);
   
   if(needUpdateBallsArray){updateBallsArray()}
-  
-  //console.log(nbBalls);
 }
 //***************************************************
 function drawGun() {
   stroke(100);
-  strokeWeight(4);
+  strokeWeight(8);
   line(gunx, windowHeight, gunx, windowHeight - 20);
   gunx += gunvx;
   gunvx *= 1.02;
@@ -65,7 +63,7 @@ function Ball() {
 
   this.drawBall = function() {
     if (this.life > 0) {
-      strokeWeight(2);
+      strokeWeight(4);
       noFill();
       stroke(this.couleur);
       line(this.posx, this.posy, this.posx, this.posy - 2);
