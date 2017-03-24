@@ -1,0 +1,14 @@
+body{
+	font-family: Verdana,Arial,Helvetica,sans-serif;
+	background-color: #000;
+	margin:0;
+}
+#container{width:800px;height:480px;margin:auto;margin-top:50px;}
+/* fix for scroll bars on webkit & Mac OS X Lion */ 
+::-webkit-scrollbar {
+	background-color: rgba(0,0,0,0.5);
+	width: 0.75em;
+}
+::-webkit-scrollbar-thumb {
+	background-color:  rgba(255,255,255,0.5);
+}
