@@ -1,0 +1,140 @@
+html{
+	height:100%;
+}
+body{
+	height:100%;
+	font-family: verdana;
+	margin:0;
+}
+/********************************************************/
+#background{
+	width:1030px;
+	height:780px;
+	position:fixed;
+	top:0;
+	left:0;
+	background-image:url(background.jpg);
+	background-size: 1030px 780px;
+	z-index:-99;
+}
+/********************************************************/
+#halfTop{
+	width:50%;
+	height:50px;
+	position:fixed;
+	left:0;
+	top:0;
+}
+#halfBottom{
+	width:50%;
+	height:50px;
+	position:fixed;
+	left:0;
+	bottom:0;
+}
+/********************************************************/
+#header{
+	position:absolute;
+	text-align:center;
+	width:800px;
+	right:-400px;
+	color:#fff;
+}
+#header h2{
+	margin-top:-10px;
+}
+/********************************************************/
+#selectYear{
+	width:200px;
+	position: absolute;
+	bottom:0;
+	right:-100px;
+	background:#000;
+	border-radius: 5px 5px 0 0;
+	box-shadow:0 3px 6px #000;
+	padding:5px;
+}
+	
+select, #btnSubmit{
+	height:auto;
+	padding:5px 25px;
+	font-size: 16px;
+	text-align: center;
+	color:#666;
+	border: none;
+}
+select{
+	background:#eee;
+	border-radius: 2px;
+	-webkit-appearance:none;
+	float: left;
+}
+#btnSubmit{
+	margin-left:100px;
+	background:#fff;
+	border-radius: 5px;
+}
+/********************************************************/
+#thumbnails{
+	width:6400px;
+	width:8600px;
+	padding-top:15%;
+	height:85%;
+}
+.thumbnail{
+	width:90px;
+	height:120px;
+	margin:5px 5px 45px 5px;
+	padding:5px;
+	background:#ddd;
+	border: solid 1px #666;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+	float:left;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.name{
+	width:105px;
+	height:20px;
+	margin-top:125px;
+	margin-left:-6px;
+	padding:5px;
+	color:#fff;
+	font-size: 9px;
+	text-align:center;
+}
+/********************************************************/
+.zoomIn, .zoomOut{
+	width:560px;
+	height:700px;
+	top:10px;
+	right:-285px;
+	background:rgba(150,150,150,0.8);
+	position:absolute;
+	border: solid 5px #fff;
+	box-shadow:0 5px 20px #000;
+}
+#picture{
+	position:absolute;
+	width:520px;
+	height:620px;
+	top:20px;
+	left:20px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+#zoomText{
+	position:absolute;
+	width:500px;
+	padding:10px;
+	bottom:5px;
+	left:20px;
+	color:#eee;
+	text-align:center;
+}
+.zoomIn{display:block;}
+.zoomOut{display:none;}
+/********************************************************/
+
+
