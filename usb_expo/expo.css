@@ -6,10 +6,6 @@ body{
 	font-family: verdana;
 	margin:0;
 	background-color: #0D9CBF;
-	background-image:url(background.jpg);
-	background-position: fixed;
-	background-size: cover;
-	background-attachment: center;
 }
 /********************************************************/
 #background{
