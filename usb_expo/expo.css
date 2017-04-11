@@ -5,14 +5,18 @@ body{
 	height:100%;
 	font-family: verdana;
 	margin:0;
+	background-color: #0D9CBF;
+	background-image:url(background.jpg);
+	background-position: fixed;
+	background-size: cover;
+	background-attachment: center;
 }
 /********************************************************/
 #background{
 	width:1030px;
 	height:780px;
 	position:fixed;
-	top:0;
-	left:0;
+	top:0;left:0;
 	background-image:url(background.jpg);
 	background-size: 1030px 780px;
 	z-index:-99;
