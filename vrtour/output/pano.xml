@@ -15,6 +15,7 @@
   <hotspots height="20" width="180" wordwrap="1">
     <label textcolor="0x000000" borderalpha="1" backgroundcolor="0xffffff" border="1" borderradius="1" height="20" bordercolor="0x000000" enabled="1" textalpha="1" width="180" backgroundalpha="1" wordwrap="1" background="1"/>
     <polystyle borderalpha="1" backgroundcolor="0x0000ff" handcursor="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.2509803921568627"/>
+    <hotspot pan="173.72" title="New student" description="" target="" id="Point01" skinid="ht_image" url="images/p1-1.jpg" tilt="-7.75"/>
   </hotspots>
   <media/>
   <transition softedge="0" blendtime="1" zoomoutpause="1" zoomspeed="2" zoomout="0" enabled="0" type="crossdissolve" blendcolor="0x000000" zoomfov="20" zoomin="0"/>
