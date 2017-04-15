@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama id="node1" apprev="15722" appversion="5.1">
+  <input levelingroll="0" levelingpitch="0" overlap="1" height="1000" levelbias="0.400" levelbiashidpi="0.400" leveltilesize="510" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" width="1000">
+    <level height="1000" preload="0" predecode="0" width="1000"/>
+    <level height="500" preload="1" predecode="1" width="500"/>
+    <preview strip="1" color="0x808080"/>
+  </input>
+  <view pannorth="0" fovmode="0">
+    <start fov="70" pan="0" projection="4" tilt="0"/>
+    <flyin fov="170" pan="0" projection="9" tilt="-90"/>
+    <min fov="5" pan="0" tilt="-90"/>
+    <max fov="120" pan="360" fovfisheye="360" tilt="90" fovstereographic="270" scaletofit="1"/>
+  </view>
+  <userdata longitude="" description="" copyright="" comment="" title="" latitude="" tags="images" author="" datetime="" source="" info="" customnodeid=""/>
+  <hotspots height="20" wordwrap="1" width="180">
+    <label backgroundcolor="0xffffff" borderalpha="1" textalpha="1" background="1" border="1" height="20" bordercolor="0x000000" textcolor="0x000000" borderradius="1" backgroundalpha="1" wordwrap="1" enabled="1" width="180"/>
+    <polystyle backgroundcolor="0x0000ff" borderalpha="1" bordercolor="0x0000ff" mode="0" backgroundalpha="0.2509803921568627" handcursor="1"/>
+    <hotspot description="" target="_blank" id="Point01" pan="-99.24" title="Parlour" skinid="ht_url" url="pano-2/pano.xml" tilt="-7.97"/>
+  </hotspots>
+  <media/>
+  <transition zoomin="0" zoomspeed="2" blendcolor="0x000000" softedge="0" zoomfov="20" zoomoutpause="1" type="crossdissolve" blendtime="1" zoomout="0" enabled="0"/>
+  <control contextprojections="0" lockedkeyboardzoom="0" dblclickfullscreen="0" lockedkeyboard="0" hideabout="0" sensitivity="8" rubberband="0" contextfullscreen="0" speedwheel="1" lockedmouse="0" simulatemass="1" invertwheel="0" lockedwheel="0" invertcontrol="1"/>
+</panorama>
