@@ -20,7 +20,7 @@
     <image pan="173.340" rotz="0.000" stretch="1.000" handcursor="0" id="p1-1" height="1000" clickmode="0" tilt="-3.340" fov="24.110" width="799" rotx="0.000" roty="0.000">
       <source url="media/p1-1.jpg"/>
     </image>
-    <image pan="12.500" rotz="0.000" stretch="1.000" handcursor="0" id="Element01" height="701" clickmode="1" tilt="-2.550" fov="26.010" width="1000" rotx="3.000" roty="31.000">
+    <image pan="6.580" rotz="0.000" stretch="1.000" handcursor="0" id="Element01" height="701" clickmode="1" tilt="-4.290" fov="34.930" width="1000" rotx="0.000" roty="3.000">
       <source url="media/p1-2.jpg"/>
     </image>
   </media>
