@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.1/15722
-// Filename: cardboard.ggsk
-// Generated sam. avr. 15 19:14:54 2017
+// Filename: SBRNAA.ggsk
+// Generated sam. avr. 15 21:46:11 2017
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -275,11 +275,16 @@ function pano2vrSkin(player,base) {
 			}
 			this.__div.onmouseover=function (e) {
 				me.player.setActiveHotspot(me.hotspot);
+				me.elementMouseOver['_div']=true;
 				me.skin.hotspotProxyOver(me.hotspot.id);
 			}
 			this.__div.onmouseout=function (e) {
 				me.player.setActiveHotspot(null);
+				me.elementMouseOver['_div']=false;
 				me.skin.hotspotProxyOut(me.hotspot.id);
+			}
+			this.__div.ontouchend=function (e) {
+				me.elementMouseOver['_div']=false;
 			}
 			this.__div.ggUpdatePosition=function (useTransition) {
 			}
@@ -348,9 +353,93 @@ function pano2vrSkin(player,base) {
 			this._ht_node_image.ggUpdatePosition=function (useTransition) {
 			}
 			this.__div.appendChild(this._ht_node_image);
+			this._tt_ht_image=document.createElement('div');
+			this._tt_ht_image__text=document.createElement('div');
+			this._tt_ht_image.className='ggskin ggskin_textdiv';
+			this._tt_ht_image.ggTextDiv=this._tt_ht_image__text;
+			this._tt_ht_image.ggId="tt_ht_image";
+			this._tt_ht_image.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+			this._tt_ht_image.ggVisible=true;
+			this._tt_ht_image.className='ggskin ggskin_text ';
+			this._tt_ht_image.ggType='text';
+			hs ='';
+			hs+='z-index: 100;';
+			hs+='height : 17px;';
+			hs+='left : -47px;';
+			hs+='position : absolute;';
+			hs+='top : 18px;';
+			hs+='visibility : inherit;';
+			hs+='width : 95px;';
+			hs+='pointer-events:auto;';
+			this._tt_ht_image.setAttribute('style',hs);
+			this._tt_ht_image.style[domTransform + 'Origin']='50% 50%';
+			hs ='position:absolute;';
+			hs+='cursor: default;';
+			hs+='left: 0px;';
+			hs+='top:  0px;';
+			hs+='width: auto;';
+			hs+='height: auto;';
+			hs+='background: #ffffff;';
+			hs+='background: rgba(255,255,255,0.666667);';
+			hs+='border: 1px solid #000000;';
+			hs+='border-radius: 5px;';
+			hs+=cssPrefix + 'border-radius: 5px;';
+			hs+='color: rgba(0,0,0,1);';
+			hs+='text-align: center;';
+			hs+='white-space: nowrap;';
+			hs+='padding: 3px 6px 3px 6px;';
+			hs+='overflow: hidden;';
+			this._tt_ht_image__text.setAttribute('style',hs);
+			this._tt_ht_image__text.innerHTML=me.hotspot.title;
+			this._tt_ht_image.appendChild(this._tt_ht_image__text);
+			me._tt_ht_image.ggIsActive=function() {
+				if ((this.parentNode) && (this.parentNode.ggIsActive)) {
+					return this.parentNode.ggIsActive();
+				}
+				return false;
+			}
+			me._tt_ht_image.ggElementNodeId=function() {
+				if ((this.parentNode) && (this.parentNode.ggElementNodeId)) {
+					return this.parentNode.ggElementNodeId();
+				}
+				return me.ggNodeId;
+			}
+			me._tt_ht_image.ggCurrentLogicStateVisible = -1;
+			this._tt_ht_image.ggUpdateConditionTimer=function () {
+				var newLogicStateVisible;
+				if (
+					(me.elementMouseOver['_div'] == true)
+				)
+				{
+					newLogicStateVisible = 0;
+				}
+				else {
+					newLogicStateVisible = -1;
+				}
+				if (me._tt_ht_image.ggCurrentLogicStateVisible != newLogicStateVisible) {
+					me._tt_ht_image.ggCurrentLogicStateVisible = newLogicStateVisible;
+					me._tt_ht_image.style[domTransition]='';
+					if (me._tt_ht_image.ggCurrentLogicStateVisible == 0) {
+						me._tt_ht_image.style.visibility=(Number(me._tt_ht_image.style.opacity)>0||!me._tt_ht_image.style.opacity)?'inherit':'hidden';
+						me._tt_ht_image.ggVisible=true;
+					}
+					else {
+						me._tt_ht_image.style.visibility=(Number(me._tt_ht_image.style.opacity)>0||!me._tt_ht_image.style.opacity)?'inherit':'hidden';
+						me._tt_ht_image.ggVisible=true;
+					}
+				}
+			}
+			this._tt_ht_image.ggUpdatePosition=function (useTransition) {
+				this.style[domTransition]='none';
+				this.ggTextDiv.style.left=((99-this.ggTextDiv.offsetWidth)/2) + 'px';
+			}
+			this.__div.appendChild(this._tt_ht_image);
 			this.hotspotTimerEvent=function() {
 				setTimeout(function() { me.hotspotTimerEvent(); }, 10);
+				if (me.elementMouseOver['_div']) {
+				}
 				me._ht_node_image.ggUpdateConditionTimer();
+				me._tt_ht_image.ggUpdateConditionTimer();
 			}
 			this.hotspotTimerEvent();
 		}
