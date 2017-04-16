@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.1/15722
 // Filename: SBRNAA.ggsk
-// Generated sam. avr. 15 21:46:11 2017
+// Generated sam. avr. 15 21:55:31 2017
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -358,36 +358,38 @@ function pano2vrSkin(player,base) {
 			this._tt_ht_image.className='ggskin ggskin_textdiv';
 			this._tt_ht_image.ggTextDiv=this._tt_ht_image__text;
 			this._tt_ht_image.ggId="tt_ht_image";
+			this._tt_ht_image.ggTop=-11;
 			this._tt_ht_image.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 			this._tt_ht_image.ggVisible=true;
 			this._tt_ht_image.className='ggskin ggskin_text ';
 			this._tt_ht_image.ggType='text';
 			hs ='';
 			hs+='z-index: 100;';
-			hs+='height : 17px;';
-			hs+='left : -47px;';
+			hs+='height : 9px;';
+			hs+='left : 16px;';
 			hs+='position : absolute;';
-			hs+='top : 18px;';
+			hs+='top : -11px;';
 			hs+='visibility : inherit;';
-			hs+='width : 95px;';
+			hs+='width : 65px;';
 			hs+='pointer-events:auto;';
+			hs+='font-size:8px;';
 			this._tt_ht_image.setAttribute('style',hs);
 			this._tt_ht_image.style[domTransform + 'Origin']='50% 50%';
 			hs ='position:absolute;';
 			hs+='cursor: default;';
 			hs+='left: 0px;';
 			hs+='top:  0px;';
-			hs+='width: auto;';
-			hs+='height: auto;';
+			hs+='width: 65px;';
+			hs+='height: 9px;';
 			hs+='background: #ffffff;';
 			hs+='background: rgba(255,255,255,0.666667);';
 			hs+='border: 1px solid #000000;';
 			hs+='border-radius: 5px;';
 			hs+=cssPrefix + 'border-radius: 5px;';
 			hs+='color: rgba(0,0,0,1);';
-			hs+='text-align: center;';
+			hs+='text-align: left;';
 			hs+='white-space: nowrap;';
-			hs+='padding: 3px 6px 3px 6px;';
+			hs+='padding: 2px 4px 2px 4px;';
 			hs+='overflow: hidden;';
 			this._tt_ht_image__text.setAttribute('style',hs);
 			this._tt_ht_image__text.innerHTML=me.hotspot.title;
@@ -430,8 +432,16 @@ function pano2vrSkin(player,base) {
 				}
 			}
 			this._tt_ht_image.ggUpdatePosition=function (useTransition) {
-				this.style[domTransition]='none';
-				this.ggTextDiv.style.left=((99-this.ggTextDiv.offsetWidth)/2) + 'px';
+				if (useTransition==='undefined') {
+					useTransition = false;
+				}
+				if (!useTransition) {
+					this.style[domTransition]='none';
+				}
+				if (this.parentNode) {
+					var h=this.parentNode.offsetHeight;
+						this.style.top=(this.ggTop - 0 + h/2) + 'px';
+				}
 			}
 			this.__div.appendChild(this._tt_ht_image);
 			this.hotspotTimerEvent=function() {
