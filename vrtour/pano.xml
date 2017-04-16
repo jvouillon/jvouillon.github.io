@@ -20,7 +20,14 @@
       <hotspot url="{node5}" skinid="ht_node" id="Point02" tilt="2.18" pan="34.53" title="Room" description="" target="120.836/-5.35289/70"/>
       <hotspot url="{node3}" skinid="ht_node" id="Point03" tilt="-8.36" pan="36.36" title="Détente" description="" target="154.94/-10.3259/70"/>
     </hotspots>
-    <media/>
+    <media>
+      <image stretch="1.000" fov="23.756" height="500" id="Element01" width="287" tilt="-10.570" clickmode="0" pan="173.110" handcursor="0" rotx="-5.000" roty="0.000" rotz="0.000">
+        <source url="media/p1-1.jpg"/>
+      </image>
+      <image stretch="1.000" fov="25.389" height="462" id="Element02" width="600" tilt="-3.050" clickmode="0" pan="12.100" handcursor="0" rotx="0.000" roty="22.000" rotz="0.000">
+        <source url="media/p1-2.jpg"/>
+      </image>
+    </media>
     <transition zoomoutpause="1" softedge="0" blendtime="1" type="crossdissolve" zoomspeed="2" zoomout="0" enabled="0" zoomin="0" zoomfov="20" blendcolor="0x000000"/>
     <control sensitivity="8" simulatemass="1" rubberband="0" speedwheel="1" lockedmouse="0" invertwheel="0" invertcontrol="1" contextfullscreen="0" lockedwheel="0" contextprojections="0" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0" lockedkeyboard="0"/>
   </panorama>

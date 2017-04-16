@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.1/15722
 // Filename: SBRNAA.ggsk
-// Generated sam. avr. 15 21:55:31 2017
+// Generated dim. avr. 16 11:09:36 2017
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -246,7 +246,7 @@ function pano2vrSkin(player,base) {
 			return me.skin.findElements(id,regex);
 		}
 		
-		{
+		if (hotspot.skinid=='ht_node') {
 			this.__div=document.createElement('div');
 			this.__div.ggId="ht_node";
 			this.__div.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
@@ -358,7 +358,7 @@ function pano2vrSkin(player,base) {
 			this._tt_ht_image.className='ggskin ggskin_textdiv';
 			this._tt_ht_image.ggTextDiv=this._tt_ht_image__text;
 			this._tt_ht_image.ggId="tt_ht_image";
-			this._tt_ht_image.ggTop=-11;
+			this._tt_ht_image.ggTop=-20;
 			this._tt_ht_image.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
 			this._tt_ht_image.ggVisible=true;
 			this._tt_ht_image.className='ggskin ggskin_text ';
@@ -366,11 +366,11 @@ function pano2vrSkin(player,base) {
 			hs ='';
 			hs+='z-index: 100;';
 			hs+='height : 9px;';
-			hs+='left : 16px;';
+			hs+='left : 8px;';
 			hs+='position : absolute;';
-			hs+='top : -11px;';
+			hs+='top : -20px;';
 			hs+='visibility : inherit;';
-			hs+='width : 65px;';
+			hs+='width : 55px;';
 			hs+='pointer-events:auto;';
 			hs+='font-size:8px;';
 			this._tt_ht_image.setAttribute('style',hs);
@@ -379,7 +379,7 @@ function pano2vrSkin(player,base) {
 			hs+='cursor: default;';
 			hs+='left: 0px;';
 			hs+='top:  0px;';
-			hs+='width: 65px;';
+			hs+='width: 55px;';
 			hs+='height: 9px;';
 			hs+='background: #ffffff;';
 			hs+='background: rgba(255,255,255,0.666667);';
@@ -452,6 +452,43 @@ function pano2vrSkin(player,base) {
 				me._tt_ht_image.ggUpdateConditionTimer();
 			}
 			this.hotspotTimerEvent();
+		} else
+		{
+			this.__div=document.createElement('div');
+			this.__div.ggId="ht_image";
+			this.__div.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
+			this.__div.ggVisible=true;
+			this.__div.className='ggskin ggskin_hotspot ';
+			this.__div.ggType='hotspot';
+			hs ='';
+			hs+='height : 5px;';
+			hs+='left : 132px;';
+			hs+='position : absolute;';
+			hs+='top : 201px;';
+			hs+='visibility : inherit;';
+			hs+='width : 5px;';
+			hs+='pointer-events:auto;';
+			this.__div.setAttribute('style',hs);
+			this.__div.style[domTransform + 'Origin']='50% 50%';
+			me.__div.ggIsActive=function() {
+				return me.player.getCurrentNode()==this.ggElementNodeId();
+			}
+			me.__div.ggElementNodeId=function() {
+				return me.hotspot.url.substr(1, me.hotspot.url.length - 2);
+			}
+			this.__div.onclick=function (e) {
+				me.skin.hotspotProxyClick(me.hotspot.id);
+			}
+			this.__div.onmouseover=function (e) {
+				me.player.setActiveHotspot(me.hotspot);
+				me.skin.hotspotProxyOver(me.hotspot.id);
+			}
+			this.__div.onmouseout=function (e) {
+				me.player.setActiveHotspot(null);
+				me.skin.hotspotProxyOut(me.hotspot.id);
+			}
+			this.__div.ggUpdatePosition=function (useTransition) {
+			}
 		}
 	};
 	this.addSkinHotspot=function(hotspot) {
