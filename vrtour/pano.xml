@@ -17,11 +17,12 @@
       <label textcolor="0x000000" backgroundcolor="0xffffff" border="1" borderradius="1" height="20" background="1" width="180" bordercolor="0x000000" enabled="1" textalpha="1" backgroundalpha="1" wordwrap="1" borderalpha="1"/>
       <polystyle backgroundcolor="0x0000ff" mode="0" bordercolor="0x0000ff" handcursor="1" backgroundalpha="0.2509803921568627" borderalpha="1"/>
       <hotspot url="{node2}" skinid="ht_node" id="Point01" tilt="-6.74" pan="-99.1" title="Parlour" description="" target="-52.0376/-8.30241/70"/>
-      <hotspot url="{node5}" skinid="ht_node" id="Point02" tilt="2.18" pan="34.53" title="Room" description="" target="120.836/-5.35289/70"/>
+      <hotspot url="{node5}" skinid="ht_node" id="Point02" tilt="2.18" pan="34.53" title="Room" description="" target="-157.437/-15.2501/70"/>
       <hotspot url="{node3}" skinid="ht_node" id="Point03" tilt="-8.36" pan="36.36" title="Détente" description="" target="154.94/-10.3259/70"/>
+      <hotspot url="images/p1-1.jpg" skinid="ht_image" id="Point04" tilt="-6.01" pan="148.19" title="test" description="" target=""/>
     </hotspots>
     <media>
-      <image stretch="1.000" fov="23.760" height="500" id="Element01" width="287" tilt="-10.570" clickmode="1" pan="173.110" handcursor="0" rotx="-5.000" roty="0.000" rotz="0.000">
+      <image stretch="1.000" fov="23.760" height="500" id="Element01" width="287" tilt="-10.580" clickmode="1" pan="172.940" handcursor="0" rotx="-5.000" roty="0.000" rotz="0.000">
         <source url="media/p1-1.jpg"/>
       </image>
       <image stretch="1.000" fov="25.390" height="462" id="Element02" width="600" tilt="-3.050" clickmode="1" pan="12.100" handcursor="0" rotx="0.000" roty="22.000" rotz="0.000">
@@ -47,7 +48,7 @@
     <hotspots height="20" width="180" wordwrap="1">
       <label textcolor="0x000000" backgroundcolor="0xffffff" border="1" borderradius="1" height="20" background="1" width="180" bordercolor="0x000000" enabled="1" textalpha="1" backgroundalpha="1" wordwrap="1" borderalpha="1"/>
       <polystyle backgroundcolor="0x0000ff" mode="0" bordercolor="0x0000ff" handcursor="1" backgroundalpha="0.2509803921568627" borderalpha="1"/>
-      <hotspot url="{node1}" skinid="ht_node" id="Point01" tilt="-4.14" pan="130.29" title="Lobby" description="" target="-99.8688/-13.6077/70"/>
+      <hotspot url="{node1}" skinid="ht_node" id="Point01" tilt="-4.14" pan="130.29" title="Lobby" description="" target="-99.8688/-19.7006/70"/>
     </hotspots>
     <media>
       <image stretch="1.000" fov="49.820" height="305" id="Element01" width="600" tilt="7.070" clickmode="4" pan="-156.190" handcursor="0" rotx="5.000" roty="-8.000" rotz="3.000">
@@ -56,7 +57,7 @@
       <image stretch="1.000" fov="30.271" height="474" id="Element02" width="600" tilt="-0.030" clickmode="4" pan="89.640" handcursor="0" rotx="4.000" roty="-26.000" rotz="2.000">
         <source url="media/p2-2.jpg"/>
       </image>
-      <image stretch="1.000" fov="30.000" height="391" id="Element03" width="600" tilt="6.520" clickmode="0" pan="-43.990" handcursor="0" rotx="0.000" roty="17.000" rotz="-1.000">
+      <image stretch="1.000" fov="30.000" height="391" id="Element03" width="600" tilt="6.520" clickmode="4" pan="-43.990" handcursor="0" rotx="0.000" roty="17.000" rotz="-1.000">
         <source url="media/p2-3.jpg"/>
       </image>
     </media>
@@ -84,10 +85,10 @@
       <hotspot url="{node6}" skinid="ht_node" id="Point03" tilt="2.6" pan="136.49" title="Chapel" description="" target="-11.8174/1.31295/70"/>
     </hotspots>
     <media>
-      <image stretch="1.000" fov="35.946" height="393" id="Element01" width="600" tilt="4.520" clickmode="1" pan="99.900" handcursor="0" rotx="7.000" roty="-25.000" rotz="0.000">
+      <image stretch="1.000" fov="23.510" height="393" id="Element01" width="600" tilt="0.510" clickmode="4" pan="112.460" handcursor="0" rotx="7.000" roty="16.000" rotz="0.000">
         <source url="media/p3-1.jpg"/>
       </image>
-      <image stretch="1.000" fov="38.924" height="429" id="Element02" width="600" tilt="4.720" clickmode="1" pan="178.970" handcursor="0" rotx="3.000" roty="7.000" rotz="0.000">
+      <image stretch="1.000" fov="35.410" height="429" id="Element02" width="600" tilt="5.400" clickmode="4" pan="-173.740" handcursor="0" rotx="8.000" roty="-30.000" rotz="4.000">
         <source url="media/p3-2.jpg"/>
       </image>
     </media>
@@ -112,7 +113,14 @@
       <polystyle backgroundcolor="0x0000ff" mode="0" bordercolor="0x0000ff" handcursor="1" backgroundalpha="0.2509803921568627" borderalpha="1"/>
       <hotspot url="{node3}" skinid="ht_node" id="Point01" tilt="-6.83" pan="-90.51" title="Détente" description="" target="-107.338/-20.3012/70"/>
     </hotspots>
-    <media/>
+    <media>
+      <image stretch="1.000" fov="34.320" height="469" id="Element01" width="600" tilt="3.450" clickmode="4" pan="3.370" handcursor="0" rotx="0.000" roty="6.000" rotz="0.000">
+        <source url="media/p4-2.jpg"/>
+      </image>
+      <image stretch="1.000" fov="34.860" height="455" id="Element02" width="600" tilt="2.110" clickmode="4" pan="-65.760" handcursor="0" rotx="-9.000" roty="-8.000" rotz="0.000">
+        <source url="media/p4-1.jpg"/>
+      </image>
+    </media>
     <transition zoomoutpause="1" softedge="0" blendtime="1" type="crossdissolve" zoomspeed="2" zoomout="0" enabled="0" zoomin="0" zoomfov="20" blendcolor="0x000000"/>
     <control sensitivity="8" simulatemass="1" rubberband="0" speedwheel="1" lockedmouse="0" invertwheel="0" invertcontrol="1" contextfullscreen="0" lockedwheel="0" contextprojections="0" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0" lockedkeyboard="0"/>
   </panorama>
@@ -134,7 +142,17 @@
       <polystyle backgroundcolor="0x0000ff" mode="0" bordercolor="0x0000ff" handcursor="1" backgroundalpha="0.2509803921568627" borderalpha="1"/>
       <hotspot url="{node1}" skinid="ht_node" id="Point01" tilt="-1.64" pan="-58.41" title="Lobby" description="" target="36.0383/-2.62293/70"/>
     </hotspots>
-    <media/>
+    <media>
+      <image stretch="1.000" fov="47.839" height="466" id="Element01" width="600" tilt="-32.160" clickmode="4" pan="-144.480" handcursor="0" rotx="-33.000" roty="8.000" rotz="4.000">
+        <source url="media/P5-2.jpg"/>
+      </image>
+      <image stretch="1.000" fov="34.320" height="600" id="Element02" width="418" tilt="-30.320" clickmode="4" pan="38.950" handcursor="0" rotx="-31.000" roty="4.000" rotz="3.000">
+        <source url="media/P5-3.jpg"/>
+      </image>
+      <image stretch="1.000" fov="28.650" height="481" id="Element03" width="600" tilt="-9.230" clickmode="4" pan="120.520" handcursor="0" rotx="-10.000" roty="0.000" rotz="0.000">
+        <source url="media/P5-1.jpg"/>
+      </image>
+    </media>
     <transition zoomoutpause="1" softedge="0" blendtime="1" type="crossdissolve" zoomspeed="2" zoomout="0" enabled="0" zoomin="0" zoomfov="20" blendcolor="0x000000"/>
     <control sensitivity="8" simulatemass="1" rubberband="0" speedwheel="1" lockedmouse="0" invertwheel="0" invertcontrol="1" contextfullscreen="0" lockedwheel="0" contextprojections="0" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0" lockedkeyboard="0"/>
   </panorama>
@@ -156,7 +174,20 @@
       <polystyle backgroundcolor="0x0000ff" mode="0" bordercolor="0x0000ff" handcursor="1" backgroundalpha="0.2509803921568627" borderalpha="1"/>
       <hotspot url="{node3}" skinid="ht_node" id="Point01" tilt="-7.31" pan="167.11" title="Détente" description="" target="-90.9393/-16.5681/70"/>
     </hotspots>
-    <media/>
+    <media>
+      <image stretch="1.000" fov="30.000" height="482" id="Element01" width="600" tilt="1.850" clickmode="4" pan="38.920" handcursor="0" rotx="0.000" roty="11.000" rotz="0.000">
+        <source url="media/p6-2.jpg"/>
+      </image>
+      <image stretch="1.000" fov="30.000" height="600" id="Element02" width="471" tilt="-4.810" clickmode="4" pan="-12.370" handcursor="0" rotx="0.000" roty="0.000" rotz="0.000">
+        <source url="media/p6-4.jpg"/>
+      </image>
+      <image stretch="1.000" fov="35.680" height="477" id="Element03" width="600" tilt="-0.670" clickmode="4" pan="90.460" handcursor="0" rotx="0.000" roty="9.000" rotz="0.000">
+        <source url="media/p6-3.jpg"/>
+      </image>
+      <image stretch="1.000" fov="44.590" height="425" id="Element04" width="600" tilt="-20.230" clickmode="4" pan="-109.710" handcursor="0" rotx="-10.000" roty="-1.000" rotz="1.000">
+        <source url="media/p6-1.jpg"/>
+      </image>
+    </media>
     <transition zoomoutpause="1" softedge="0" blendtime="1" type="crossdissolve" zoomspeed="2" zoomout="0" enabled="0" zoomin="0" zoomfov="20" blendcolor="0x000000"/>
     <control sensitivity="8" simulatemass="1" rubberband="0" speedwheel="1" lockedmouse="0" invertwheel="0" invertcontrol="1" contextfullscreen="0" lockedwheel="0" contextprojections="0" hideabout="0" lockedkeyboardzoom="0" dblclickfullscreen="0" lockedkeyboard="0"/>
   </panorama>
