@@ -1,7 +1,7 @@
 // Garden Gnome Software - Skin
 // Pano2VR 5.1/15722
 // Filename: SBRNAA.ggsk
-// Generated lun. avr. 17 19:00:15 2017
+// Generated mar. avr. 18 15:54:44 2017
 
 function pano2vrSkin(player,base) {
 	var ggSkinVars = [];
@@ -702,60 +702,6 @@ function pano2vrSkin(player,base) {
 				me._tt_ht_image0.ggUpdateConditionTimer();
 			}
 			this.hotspotTimerEvent();
-		} else
-		if (hotspot.skinid=='ht_image') {
-			this.__div=document.createElement('div');
-			this.__div.ggId="ht_image";
-			this.__div.ggParameter={ rx:0,ry:0,a:0,sx:1,sy:1 };
-			this.__div.ggVisible=true;
-			this.__div.className='ggskin ggskin_hotspot ';
-			this.__div.ggType='hotspot';
-			hs ='';
-			hs+='height : 5px;';
-			hs+='left : 132px;';
-			hs+='position : absolute;';
-			hs+='top : 201px;';
-			hs+='visibility : inherit;';
-			hs+='width : 5px;';
-			hs+='pointer-events:auto;';
-			this.__div.setAttribute('style',hs);
-			this.__div.style[domTransform + 'Origin']='50% 50%';
-			me.__div.ggIsActive=function() {
-				return me.player.getCurrentNode()==this.ggElementNodeId();
-			}
-			me.__div.ggElementNodeId=function() {
-				return me.hotspot.url.substr(1, me.hotspot.url.length - 2);
-			}
-			this.__div.onclick=function (e) {
-				me.skin._popup_image.ggText=me.player.getBasePath()+""+me.hotspot.url;
-				me.skin._popup_image__img.src=me.skin._popup_image.ggText;
-				me.skin._popup_image.style[domTransition]='none';
-				me.skin._popup_image.style.visibility=(Number(me.skin._popup_image.style.opacity)>0||!me.skin._popup_image.style.opacity)?'inherit':'hidden';
-				me.skin._popup_image.ggVisible=true;
-				me.skin._image_popup.style[domTransition]='none';
-				me.skin._image_popup.style.visibility=(Number(me.skin._image_popup.style.opacity)>0||!me.skin._image_popup.style.opacity)?'inherit':'hidden';
-				me.skin._image_popup.ggVisible=true;
-				me.skin._screentint_image.style[domTransition]='none';
-				me.skin._screentint_image.style.visibility=(Number(me.skin._screentint_image.style.opacity)>0||!me.skin._screentint_image.style.opacity)?'inherit':'hidden';
-				me.skin._screentint_image.ggVisible=true;
-				me.skin._image_popup_close.style[domTransition]='none';
-				me.skin._image_popup_close.style.visibility=(Number(me.skin._image_popup_close.style.opacity)>0||!me.skin._image_popup_close.style.opacity)?'inherit':'hidden';
-				me.skin._image_popup_close.ggVisible=true;
-				me.skin.hotspotProxyClick(me.hotspot.id);
-			}
-			this.__div.onmouseover=function (e) {
-				me.player.setActiveHotspot(me.hotspot);
-				me.skin.__div.style[domTransition]='none';
-				me.skin.__div.style.visibility=(Number(me.skin.__div.style.opacity)>0||!me.skin.__div.style.opacity)?'inherit':'hidden';
-				me.skin.__div.ggVisible=true;
-				me.skin.hotspotProxyOver(me.hotspot.id);
-			}
-			this.__div.onmouseout=function (e) {
-				me.player.setActiveHotspot(null);
-				me.skin.hotspotProxyOut(me.hotspot.id);
-			}
-			this.__div.ggUpdatePosition=function (useTransition) {
-			}
 		} else
 		{
 			this.__div=document.createElement('div');
