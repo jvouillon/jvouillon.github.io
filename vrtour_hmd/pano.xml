@@ -1,178 +1,178 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<tour apprev="15722" start="node1" appversion="5.1">
+<tour start="node1" appversion="5.1" apprev="15722">
   <panorama id="node1" hideabout="1">
-    <input levelbiashidpi="0.400" levelingroll="0" width="1000" height="1000" levelingpitch="0" levelbias="0.400" overlap="1" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510">
-      <level preload="0" width="1000" height="1000" predecode="0"/>
-      <level preload="1" width="500" height="500" predecode="1"/>
+    <input leveltilesize="510" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingroll="0" levelingpitch="0" levelbiashidpi="0.400" width="1000" levelbias="0.400" overlap="1" height="1000">
+      <level preload="0" width="1000" predecode="0" height="1000"/>
+      <level preload="1" width="500" predecode="1" height="500"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start tilt="-6.67" fov="70" projection="4" pan="-45.64"/>
-      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
-      <min tilt="-90" fov="5" pan="0"/>
-      <max fovstereographic="270" tilt="90" fovfisheye="360" fov="120" scaletofit="1" pan="360"/>
+      <start fov="70" tilt="-6.67" projection="4" pan="-45.64"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min fov="5" tilt="-90" pan="0"/>
+      <max fovfisheye="360" fovstereographic="270" fov="120" tilt="90" pan="360" scaletofit="1"/>
     </view>
-    <userdata copyright="" description="" info="" author="" latitude="" comment="" source="" datetime="" title="Lobby" tags="images" customnodeid="" longitude=""/>
-    <hotspots width="180" height="20" wordwrap="1">
-      <label backgroundalpha="1" textalpha="1" borderalpha="1" enabled="1" width="180" border="1" height="20" background="1" backgroundcolor="0xffffff" textcolor="0x000000" bordercolor="0x000000" borderradius="1" wordwrap="1"/>
-      <polystyle backgroundalpha="0.2509803921568627" mode="0" borderalpha="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" handcursor="1"/>
-      <hotspot target="-83.6428/-4.06408/70" id="Point01" description="" tilt="-6.74" skinid="ht_node" url="{node2}" title="Parlour" pan="-99.1"/>
-      <hotspot target="121.252/-14.1536/70" id="Point02" description="" tilt="2.18" skinid="ht_node" url="{node5}" title="Room" pan="34.53"/>
-      <hotspot target="118.697/-10.0133/70" id="Point03" description="" tilt="-8.36" skinid="ht_node" url="{node3}" title="Détente" pan="36.36"/>
+    <userdata title="entrance / entrée" longitude="" source="" tags="images" customnodeid="" copyright="" latitude="" datetime="" info="" description="" comment="" author=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label borderradius="1" bordercolor="0x000000" textalpha="1" background="1" backgroundcolor="0xffffff" enabled="1" width="180" textcolor="0x000000" borderalpha="1" wordwrap="1" backgroundalpha="1" border="1" height="20"/>
+      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>
+      <hotspot id="Point01" title="parlour / salle de réception" url="{node2}" tilt="-6.74" target="-83.6428/-4.06408/70" description="" pan="-99.1" skinid="ht_node"/>
+      <hotspot id="Point02" title="residence's rooms / chambres de la résidence" url="{node5}" tilt="2.18" target="121.252/-14.1536/70" description="" pan="34.53" skinid="ht_node"/>
+      <hotspot id="Point03" title="common room / salle de détente" url="{node3}" tilt="-8.36" target="118.697/-10.0133/70" description="" pan="36.36" skinid="ht_node"/>
     </hotspots>
     <media>
-      <sound field="35.000" id="Element01" mode="3" ambientlevel="0.000" tilt="-1.550" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="3.560">
+      <sound id="Element01" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-1.550" loop="0" pan="3.560">
         <source url="media/p1-Law-entry.mp3"/>
       </sound>
-      <sound field="35.000" id="Element02" mode="3" ambientlevel="0.000" tilt="-9.670" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="172.740">
+      <sound id="Element02" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-9.670" loop="0" pan="172.740">
         <source url="media/p1-Turnbull-Entry.mp3"/>
       </sound>
     </media>
-    <transition type="crossdissolve" zoomout="0" blendcolor="0x000000" enabled="1" softedge="0" zoomoutpause="1" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2"/>
-    <control invertcontrol="1" hideabout="1" sensitivity="8" rubberband="0" speedwheel="1" lockedmouse="0" contextfullscreen="0" simulatemass="1" lockedkeyboard="0" invertwheel="0" contextprojections="0" lockedkeyboardzoom="0" lockedwheel="0" dblclickfullscreen="0"/>
+    <transition blendcolor="0x000000" softedge="0" zoomspeed="2" zoomout="0" enabled="1" zoomin="0" type="crossdissolve" zoomfov="20" zoomoutpause="1" blendtime="1"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" invertcontrol="1" hideabout="1" rubberband="0" lockedwheel="0" speedwheel="1" contextfullscreen="0" sensitivity="8" lockedkeyboardzoom="0" contextprojections="0" dblclickfullscreen="0" simulatemass="1"/>
   </panorama>
   <panorama id="node2" hideabout="1">
-    <input levelbiashidpi="0.400" levelingroll="0" width="1000" height="1000" levelingpitch="0" levelbias="0.400" overlap="1" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510">
-      <level preload="0" width="1000" height="1000" predecode="0"/>
-      <level preload="1" width="500" height="500" predecode="1"/>
+    <input leveltilesize="510" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingroll="0" levelingpitch="0" levelbiashidpi="0.400" width="1000" levelbias="0.400" overlap="1" height="1000">
+      <level preload="0" width="1000" predecode="0" height="1000"/>
+      <level preload="1" width="500" predecode="1" height="500"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start tilt="0" fov="70" projection="4" pan="0"/>
-      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
-      <min tilt="-90" fov="5" pan="0"/>
-      <max fovstereographic="270" tilt="90" fovfisheye="360" fov="120" scaletofit="1" pan="360"/>
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min fov="5" tilt="-90" pan="0"/>
+      <max fovfisheye="360" fovstereographic="270" fov="120" tilt="90" pan="360" scaletofit="1"/>
     </view>
-    <userdata copyright="" description="" info="" author="" latitude="" comment="" source="" datetime="" title="Parlour" tags="images" customnodeid="" longitude=""/>
-    <hotspots width="180" height="20" wordwrap="1">
-      <label backgroundalpha="1" textalpha="1" borderalpha="1" enabled="1" width="180" border="1" height="20" background="1" backgroundcolor="0xffffff" textcolor="0x000000" bordercolor="0x000000" borderradius="1" wordwrap="1"/>
-      <polystyle backgroundalpha="0.2509803921568627" mode="0" borderalpha="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" handcursor="1"/>
-      <hotspot target="-99.8688/-19.7006/70" id="Point01" description="" tilt="-4.14" skinid="ht_node" url="{node1}" title="Lobby" pan="130.29"/>
+    <userdata title="parlour / salle de réception" longitude="" source="" tags="images" customnodeid="" copyright="" latitude="" datetime="" info="" description="" comment="" author=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label borderradius="1" bordercolor="0x000000" textalpha="1" background="1" backgroundcolor="0xffffff" enabled="1" width="180" textcolor="0x000000" borderalpha="1" wordwrap="1" backgroundalpha="1" border="1" height="20"/>
+      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>
+      <hotspot id="Point01" title="entrance / entrée" url="{node1}" tilt="-4.14" target="-99.8688/-19.7006/70" description="" pan="130.29" skinid="ht_node"/>
     </hotspots>
     <media>
-      <sound field="35.000" id="Element01" mode="3" ambientlevel="0.000" tilt="-17.750" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="-17.940">
+      <sound id="Element01" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-17.750" loop="0" pan="-17.940">
         <source url="media/p2-Winter-parlour.mp3"/>
       </sound>
     </media>
-    <transition type="crossdissolve" zoomout="0" blendcolor="0x000000" enabled="1" softedge="0" zoomoutpause="1" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2"/>
-    <control invertcontrol="1" hideabout="1" sensitivity="8" rubberband="0" speedwheel="1" lockedmouse="0" contextfullscreen="0" simulatemass="1" lockedkeyboard="0" invertwheel="0" contextprojections="0" lockedkeyboardzoom="0" lockedwheel="0" dblclickfullscreen="0"/>
+    <transition blendcolor="0x000000" softedge="0" zoomspeed="2" zoomout="0" enabled="1" zoomin="0" type="crossdissolve" zoomfov="20" zoomoutpause="1" blendtime="1"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" invertcontrol="1" hideabout="1" rubberband="0" lockedwheel="0" speedwheel="1" contextfullscreen="0" sensitivity="8" lockedkeyboardzoom="0" contextprojections="0" dblclickfullscreen="0" simulatemass="1"/>
   </panorama>
   <panorama id="node3" hideabout="1">
-    <input levelbiashidpi="0.400" levelingroll="0" width="1000" height="1000" levelingpitch="0" levelbias="0.400" overlap="1" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510">
-      <level preload="0" width="1000" height="1000" predecode="0"/>
-      <level preload="1" width="500" height="500" predecode="1"/>
+    <input leveltilesize="510" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingroll="0" levelingpitch="0" levelbiashidpi="0.400" width="1000" levelbias="0.400" overlap="1" height="1000">
+      <level preload="0" width="1000" predecode="0" height="1000"/>
+      <level preload="1" width="500" predecode="1" height="500"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start tilt="0" fov="70" projection="4" pan="0"/>
-      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
-      <min tilt="-90" fov="5" pan="0"/>
-      <max fovstereographic="270" tilt="90" fovfisheye="360" fov="120" scaletofit="1" pan="360"/>
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min fov="5" tilt="-90" pan="0"/>
+      <max fovfisheye="360" fovstereographic="270" fov="120" tilt="90" pan="360" scaletofit="1"/>
     </view>
-    <userdata copyright="" description="" info="" author="" latitude="" comment="" source="" datetime="" title="Détente" tags="images" customnodeid="" longitude=""/>
-    <hotspots width="180" height="20" wordwrap="1">
-      <label backgroundalpha="1" textalpha="1" borderalpha="1" enabled="1" width="180" border="1" height="20" background="1" backgroundcolor="0xffffff" textcolor="0x000000" bordercolor="0x000000" borderradius="1" wordwrap="1"/>
-      <polystyle backgroundalpha="0.2509803921568627" mode="0" borderalpha="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" handcursor="1"/>
-      <hotspot target="34.2049/-9.48644/70" id="Point01" description="" tilt="-4.36" skinid="ht_node" url="{node1}" title="Lobby" pan="-46.27"/>
-      <hotspot target="-34.8684/-9.80524/70" id="Point02" description="" tilt="-8.16" skinid="ht_node" url="{node4}" title="Auditorium" pan="136.91"/>
-      <hotspot target="-11.8174/1.31295/70" id="Point03" description="" tilt="2.6" skinid="ht_node" url="{node6}" title="Chapel" pan="136.49"/>
+    <userdata title="common room / salle de détente" longitude="" source="" tags="images" customnodeid="" copyright="" latitude="" datetime="" info="" description="" comment="" author=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label borderradius="1" bordercolor="0x000000" textalpha="1" background="1" backgroundcolor="0xffffff" enabled="1" width="180" textcolor="0x000000" borderalpha="1" wordwrap="1" backgroundalpha="1" border="1" height="20"/>
+      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>
+      <hotspot id="Point01" title="entrance / entrée" url="{node1}" tilt="-4.36" target="34.2049/-9.48644/70" description="" pan="-46.27" skinid="ht_node"/>
+      <hotspot id="Point02" title="classroom / salle de classe" url="{node4}" tilt="-8.16" target="-34.8684/-9.80524/70" description="" pan="136.91" skinid="ht_node"/>
+      <hotspot id="Point03" title="chapel / chapelle" url="{node6}" tilt="2.6" target="-11.8174/1.31295/70" description="" pan="136.49" skinid="ht_node"/>
     </hotspots>
     <media>
-      <sound field="35.000" id="Element01" mode="3" ambientlevel="0.000" tilt="-1.640" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="-77.470">
+      <sound id="Element01" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-1.640" loop="0" pan="-77.470">
         <source url="media/p3-salledetente.mp3"/>
       </sound>
-      <sound field="35.000" id="Element02" mode="3" ambientlevel="0.000" tilt="-10.890" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="-177.320">
+      <sound id="Element02" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-10.890" loop="0" pan="-177.320">
         <source url="media/p3-Delaquis-Cuisine.mp3"/>
       </sound>
     </media>
-    <transition type="crossdissolve" zoomout="0" blendcolor="0x000000" enabled="1" softedge="0" zoomoutpause="1" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2"/>
-    <control invertcontrol="1" hideabout="1" sensitivity="8" rubberband="0" speedwheel="1" lockedmouse="0" contextfullscreen="0" simulatemass="1" lockedkeyboard="0" invertwheel="0" contextprojections="0" lockedkeyboardzoom="0" lockedwheel="0" dblclickfullscreen="0"/>
+    <transition blendcolor="0x000000" softedge="0" zoomspeed="2" zoomout="0" enabled="1" zoomin="0" type="crossdissolve" zoomfov="20" zoomoutpause="1" blendtime="1"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" invertcontrol="1" hideabout="1" rubberband="0" lockedwheel="0" speedwheel="1" contextfullscreen="0" sensitivity="8" lockedkeyboardzoom="0" contextprojections="0" dblclickfullscreen="0" simulatemass="1"/>
   </panorama>
   <panorama id="node4" hideabout="1">
-    <input levelbiashidpi="0.400" levelingroll="0" width="1000" height="1000" levelingpitch="0" levelbias="0.400" overlap="1" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510">
-      <level preload="0" width="1000" height="1000" predecode="0"/>
-      <level preload="1" width="500" height="500" predecode="1"/>
+    <input leveltilesize="510" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingroll="0" levelingpitch="0" levelbiashidpi="0.400" width="1000" levelbias="0.400" overlap="1" height="1000">
+      <level preload="0" width="1000" predecode="0" height="1000"/>
+      <level preload="1" width="500" predecode="1" height="500"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start tilt="0" fov="70" projection="4" pan="0"/>
-      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
-      <min tilt="-90" fov="5" pan="0"/>
-      <max fovstereographic="270" tilt="90" fovfisheye="360" fov="120" scaletofit="1" pan="360"/>
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min fov="5" tilt="-90" pan="0"/>
+      <max fovfisheye="360" fovstereographic="270" fov="120" tilt="90" pan="360" scaletofit="1"/>
     </view>
-    <userdata copyright="" description="" info="" author="" latitude="" comment="" source="" datetime="" title="Auditorium" tags="images" customnodeid="" longitude=""/>
-    <hotspots width="180" height="20" wordwrap="1">
-      <label backgroundalpha="1" textalpha="1" borderalpha="1" enabled="1" width="180" border="1" height="20" background="1" backgroundcolor="0xffffff" textcolor="0x000000" bordercolor="0x000000" borderradius="1" wordwrap="1"/>
-      <polystyle backgroundalpha="0.2509803921568627" mode="0" borderalpha="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" handcursor="1"/>
-      <hotspot target="-107.338/-20.3012/70" id="Point01" description="" tilt="-6.83" skinid="ht_node" url="{node3}" title="Détente" pan="-90.51"/>
+    <userdata title="classroom / salle de classe" longitude="" source="" tags="images" customnodeid="" copyright="" latitude="" datetime="" info="" description="" comment="" author=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label borderradius="1" bordercolor="0x000000" textalpha="1" background="1" backgroundcolor="0xffffff" enabled="1" width="180" textcolor="0x000000" borderalpha="1" wordwrap="1" backgroundalpha="1" border="1" height="20"/>
+      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>
+      <hotspot id="Point01" title="common room / salle de détente" url="{node3}" tilt="-6.83" target="-107.338/-20.3012/70" description="" pan="-90.51" skinid="ht_node"/>
     </hotspots>
     <media>
-      <sound field="35.000" id="Element01" mode="3" ambientlevel="0.000" tilt="-4.990" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="-34.980">
+      <sound id="Element01" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-4.990" loop="0" pan="-34.980">
         <source url="media/p4-auditorium.mp3"/>
       </sound>
-      <sound field="35.000" id="Element02" mode="3" ambientlevel="0.000" tilt="-5.290" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="-166.510">
+      <sound id="Element02" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-5.290" loop="0" pan="-166.510">
         <source url="media/p4-Turnbull-Classroom.mp3"/>
       </sound>
     </media>
-    <transition type="crossdissolve" zoomout="0" blendcolor="0x000000" enabled="1" softedge="0" zoomoutpause="1" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2"/>
-    <control invertcontrol="1" hideabout="1" sensitivity="8" rubberband="0" speedwheel="1" lockedmouse="0" contextfullscreen="0" simulatemass="1" lockedkeyboard="0" invertwheel="0" contextprojections="0" lockedkeyboardzoom="0" lockedwheel="0" dblclickfullscreen="0"/>
+    <transition blendcolor="0x000000" softedge="0" zoomspeed="2" zoomout="0" enabled="1" zoomin="0" type="crossdissolve" zoomfov="20" zoomoutpause="1" blendtime="1"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" invertcontrol="1" hideabout="1" rubberband="0" lockedwheel="0" speedwheel="1" contextfullscreen="0" sensitivity="8" lockedkeyboardzoom="0" contextprojections="0" dblclickfullscreen="0" simulatemass="1"/>
   </panorama>
   <panorama id="node5" hideabout="1">
-    <input levelbiashidpi="0.400" levelingroll="0" width="1000" height="1000" levelingpitch="0" levelbias="0.400" overlap="1" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510">
-      <level preload="0" width="1000" height="1000" predecode="0"/>
-      <level preload="1" width="500" height="500" predecode="1"/>
+    <input leveltilesize="510" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingroll="0" levelingpitch="0" levelbiashidpi="0.400" width="1000" levelbias="0.400" overlap="1" height="1000">
+      <level preload="0" width="1000" predecode="0" height="1000"/>
+      <level preload="1" width="500" predecode="1" height="500"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start tilt="0" fov="70" projection="4" pan="0"/>
-      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
-      <min tilt="-90" fov="5" pan="0"/>
-      <max fovstereographic="270" tilt="90" fovfisheye="360" fov="120" scaletofit="1" pan="360"/>
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min fov="5" tilt="-90" pan="0"/>
+      <max fovfisheye="360" fovstereographic="270" fov="120" tilt="90" pan="360" scaletofit="1"/>
     </view>
-    <userdata copyright="" description="" info="" author="" latitude="" comment="" source="" datetime="" title="Room" tags="images" customnodeid="" longitude=""/>
-    <hotspots width="180" height="20" wordwrap="1">
-      <label backgroundalpha="1" textalpha="1" borderalpha="1" enabled="1" width="180" border="1" height="20" background="1" backgroundcolor="0xffffff" textcolor="0x000000" bordercolor="0x000000" borderradius="1" wordwrap="1"/>
-      <polystyle backgroundalpha="0.2509803921568627" mode="0" borderalpha="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" handcursor="1"/>
-      <hotspot target="36.0383/-2.62293/70" id="Point01" description="" tilt="-1.64" skinid="ht_node" url="{node1}" title="Lobby" pan="-58.41"/>
+    <userdata title="residence's rooms / chambres de la résidence" longitude="" source="" tags="images" customnodeid="" copyright="" latitude="" datetime="" info="" description="" comment="" author=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label borderradius="1" bordercolor="0x000000" textalpha="1" background="1" backgroundcolor="0xffffff" enabled="1" width="180" textcolor="0x000000" borderalpha="1" wordwrap="1" backgroundalpha="1" border="1" height="20"/>
+      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>
+      <hotspot id="Point01" title="entrance / entrée" url="{node1}" tilt="-1.64" target="36.0383/-2.62293/70" description="" pan="-58.41" skinid="ht_node"/>
     </hotspots>
     <media>
-      <sound field="35.000" id="Element01" mode="3" ambientlevel="0.000" tilt="-5.250" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="-13.460">
+      <sound id="Element01" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-5.250" loop="0" pan="-13.460">
         <source url="media/p5-phone.mp3"/>
       </sound>
-      <sound field="35.000" id="Element02" mode="3" ambientlevel="0.000" tilt="-7.370" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="-145.090">
+      <sound id="Element02" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-7.370" loop="0" pan="-145.090">
         <source url="media/p5-Turnbull-chambres.mp3"/>
       </sound>
     </media>
-    <transition type="crossdissolve" zoomout="0" blendcolor="0x000000" enabled="1" softedge="0" zoomoutpause="1" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2"/>
-    <control invertcontrol="1" hideabout="1" sensitivity="8" rubberband="0" speedwheel="1" lockedmouse="0" contextfullscreen="0" simulatemass="1" lockedkeyboard="0" invertwheel="0" contextprojections="0" lockedkeyboardzoom="0" lockedwheel="0" dblclickfullscreen="0"/>
+    <transition blendcolor="0x000000" softedge="0" zoomspeed="2" zoomout="0" enabled="1" zoomin="0" type="crossdissolve" zoomfov="20" zoomoutpause="1" blendtime="1"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" invertcontrol="1" hideabout="1" rubberband="0" lockedwheel="0" speedwheel="1" contextfullscreen="0" sensitivity="8" lockedkeyboardzoom="0" contextprojections="0" dblclickfullscreen="0" simulatemass="1"/>
   </panorama>
   <panorama id="node6" hideabout="1">
-    <input levelbiashidpi="0.400" levelingroll="0" width="1000" height="1000" levelingpitch="0" levelbias="0.400" overlap="1" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" leveltilesize="510">
-      <level preload="0" width="1000" height="1000" predecode="0"/>
-      <level preload="1" width="500" height="500" predecode="1"/>
+    <input leveltilesize="510" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingroll="0" levelingpitch="0" levelbiashidpi="0.400" width="1000" levelbias="0.400" overlap="1" height="1000">
+      <level preload="0" width="1000" predecode="0" height="1000"/>
+      <level preload="1" width="500" predecode="1" height="500"/>
       <preview color="0x808080" strip="1"/>
     </input>
     <view fovmode="0" pannorth="0">
-      <start tilt="0" fov="70" projection="4" pan="0"/>
-      <flyin tilt="-90" fov="170" projection="9" pan="0"/>
-      <min tilt="-90" fov="5" pan="0"/>
-      <max fovstereographic="270" tilt="90" fovfisheye="360" fov="120" scaletofit="1" pan="360"/>
+      <start fov="70" tilt="0" projection="4" pan="0"/>
+      <flyin fov="170" tilt="-90" projection="9" pan="0"/>
+      <min fov="5" tilt="-90" pan="0"/>
+      <max fovfisheye="360" fovstereographic="270" fov="120" tilt="90" pan="360" scaletofit="1"/>
     </view>
-    <userdata copyright="" description="" info="" author="" latitude="" comment="" source="" datetime="" title="Chapel" tags="images" customnodeid="" longitude=""/>
-    <hotspots width="180" height="20" wordwrap="1">
-      <label backgroundalpha="1" textalpha="1" borderalpha="1" enabled="1" width="180" border="1" height="20" background="1" backgroundcolor="0xffffff" textcolor="0x000000" bordercolor="0x000000" borderradius="1" wordwrap="1"/>
-      <polystyle backgroundalpha="0.2509803921568627" mode="0" borderalpha="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff" handcursor="1"/>
-      <hotspot target="-90.9393/-16.5681/70" id="Point01" description="" tilt="-7.31" skinid="ht_node" url="{node3}" title="Détente" pan="167.11"/>
+    <userdata title="chapel / chapelle" longitude="" source="" tags="images" customnodeid="" copyright="" latitude="" datetime="" info="" description="" comment="" author=""/>
+    <hotspots width="180" wordwrap="1" height="20">
+      <label borderradius="1" bordercolor="0x000000" textalpha="1" background="1" backgroundcolor="0xffffff" enabled="1" width="180" textcolor="0x000000" borderalpha="1" wordwrap="1" backgroundalpha="1" border="1" height="20"/>
+      <polystyle bordercolor="0x0000ff" backgroundcolor="0x0000ff" mode="0" handcursor="1" borderalpha="1" backgroundalpha="0.2509803921568627"/>
+      <hotspot id="Point01" title="common room / salle de détente" url="{node3}" tilt="-7.31" target="-90.9393/-16.5681/70" description="" pan="167.11" skinid="ht_node"/>
     </hotspots>
     <media>
-      <sound field="35.000" id="Element01" mode="3" ambientlevel="0.000" tilt="-3.270" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="36.900">
+      <sound id="Element01" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-3.270" loop="0" pan="36.900">
         <source url="media/p6-Delaquis-Chapelle.mp3"/>
       </sound>
-      <sound field="35.000" id="Element02" mode="3" ambientlevel="0.000" tilt="-4.460" pansize="10.000" tiltsize="10.000" loop="0" level="1.000" pan="-111.400">
+      <sound id="Element02" level="1.000" tiltsize="10.000" field="35.000" mode="3" pansize="10.000" ambientlevel="0.000" tilt="-4.460" loop="0" pan="-111.400">
         <source url="media/p6-Knight-chapelle.mp3"/>
       </sound>
     </media>
-    <transition type="crossdissolve" zoomout="0" blendcolor="0x000000" enabled="1" softedge="0" zoomoutpause="1" zoomfov="20" blendtime="1" zoomin="0" zoomspeed="2"/>
-    <control invertcontrol="1" hideabout="1" sensitivity="8" rubberband="0" speedwheel="1" lockedmouse="0" contextfullscreen="0" simulatemass="1" lockedkeyboard="0" invertwheel="0" contextprojections="0" lockedkeyboardzoom="0" lockedwheel="0" dblclickfullscreen="0"/>
+    <transition blendcolor="0x000000" softedge="0" zoomspeed="2" zoomout="0" enabled="1" zoomin="0" type="crossdissolve" zoomfov="20" zoomoutpause="1" blendtime="1"/>
+    <control lockedkeyboard="0" lockedmouse="0" invertwheel="0" invertcontrol="1" hideabout="1" rubberband="0" lockedwheel="0" speedwheel="1" contextfullscreen="0" sensitivity="8" lockedkeyboardzoom="0" contextprojections="0" dblclickfullscreen="0" simulatemass="1"/>
   </panorama>
 </tour>
