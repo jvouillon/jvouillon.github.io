@@ -15,6 +15,7 @@ function setup() {
 
 function draw() {
   background(255);
+  fill(100);
   text("version:1.0", 20, 20);
   
   fill(255, 0, 0);
