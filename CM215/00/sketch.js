@@ -9,14 +9,14 @@ function setup() {
   ellipseMode(CENTER);
   stroke(100);
   strokeWeight(4);
-  touchSize = 60;
-  textSize = 80;
+  touchSize = 100;
+  textSize(50);
 }
 
 function draw() {
   background(200);
   fill(100);
-  text("version:1.0", 20, 20);
+  text("version:1.1", 20, 20);
   
   fill(255, 0, 0);
   beginShape();
@@ -29,9 +29,9 @@ function draw() {
 noFill();
   for (var i = 0; i < touches.length; i++) {
     ellipse(touches[i].x, touches[i].y, touchSize, touchSize);
-    text("#"+i, touches[i].x+100, touches[i].y);
-    text("x: "+touches[i].x, touches[i].x+100, touches[i].y+100);
-    text("y: "+touches[i].y, touches[i].x+100, touches[i].y+200);
+    text("#"+i, touches[i].x+150, touches[i].y-150);
+    text("x: "+touches[i].x, touches[i].x+150, touches[i].y-100);
+    text("y: "+touches[i].y, touches[i].x+150, touches[i].y-50);
     
     if ((i + 1) < touches.length) {
       line(touches[i].x, touches[i].y, touches[i + 1].x, touches[i + 1].y);

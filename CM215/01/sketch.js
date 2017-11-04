@@ -29,11 +29,13 @@ function setup() {
 
 function draw() {
   background(backgroundColor);
-
   setRotations();
   drawInfos();
-  ballMove();
+  moveBall();
+  drawBall();
+}
 
+function drawBall() {
   noStroke();
   fill(60);
   ellipse(x, y + 5, 60, 60);
@@ -55,7 +57,7 @@ function drawInfos() {
     text(floor(deviceRotationX) + "°", windowWidth / 2, mySize);
   } else if (deviceRotationX > 0) {
     fill(255);
-    rect(windowWidth / 2, windowHeight-mySize / 2, 200, mySize);
+    rect(windowWidth / 2, windowHeight - mySize / 2, 200, mySize);
     fill(0);
     text(floor(deviceRotationX) + "°", windowWidth / 2, windowHeight);
   }
@@ -79,8 +81,7 @@ function setRotations() {
   deviceRotationY = rotationY;
 }
 
-function ballMove() {
-
+function moveBall() {
   ax = deviceRotationY * vMultiplier;
   ay = deviceRotationX * vMultiplier;
 
