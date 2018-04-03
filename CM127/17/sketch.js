@@ -1,5 +1,6 @@
 // Sujet: objets et tableaux...
-//
+// SPACE BAR to shoot
+// LEFT / RIGHT ARROWs to move
 var balls = [], needUpdateBallsArray;
 var fire, nbBalls, maxBalls;
 var gunx, gunvx, reload;

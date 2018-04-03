@@ -9,7 +9,7 @@ var exhaust = [],
   maxExhaust;
 var mines = [],
   maxMines;
-var shipx, shipy, shipvx, shipvy, shipSize;
+var shipx, shipy, shipvx, shipvy, shipaccx, shipaccy, shipSize;
 var mainLoop, timer, score, damages, energy, ammo, hitpercent, hits;
 //***************************************************
 function setup() {
@@ -27,6 +27,8 @@ function initGame() {
   shipy = windowHeight / 2; // initial position
   shipvx = 0;
   shipvy = 0;
+  shipaccx = 0;
+  shipaccy = 0;
   shipSize = 10;
 
   maxStars = 40;
@@ -34,14 +36,14 @@ function initGame() {
   maxMines = 10;
   nbLasers = 0;
   totalLasers = 0;
-  maxLasers = 100;
+  maxLasers = 1000;
   reload = 0;
-  reloadTime = 5; //delay between 2 fires
+  reloadTime = 3; //delay between 2 fires
   needUpdateLasersArray = false; // update array when laser exits window or explode
   fire = false;
 
   mainLoop = true;
-  timer = 10 * 60;
+  timer = 60 * 60;
   score = 0;
   damages = 0;
   energy = 100;
@@ -60,6 +62,7 @@ function initGame() {
 //***************************************************
 function draw() {
   clear();
+  updateController();
   if (mainLoop) {
     updateGame();
     updateLasers();
@@ -292,7 +295,7 @@ function Mine() {
   }
 }
 //***************************************************
-function initMines(){
+function initMines() {
   for (var i = 0; i < maxMines; i++) {
     mines[i] = new Mine();
     mines[i].init();
@@ -366,6 +369,19 @@ function updateShip() {
   }
   shipx += shipvx;
   shipy += shipvy;
+
+  if (shipaccx != 0) {
+    shipvx += shipaccx * 0.2;
+  } else {
+    shipvx = 0;
+  }
+
+  if (shipaccy != 0) {
+    shipvy += shipaccy * 0.2;
+  } else {
+    shipvy = 0;
+  }
+
   drawShip(shipx, shipy);
 }
 //***************************************************
@@ -408,30 +424,64 @@ function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
 //***************************************************
+function updateController() {
+  if (keyIsPressed) {
+    //console.log(keyCode);
+    switch (keyCode) {
+      case 97: //a - DOWN
+        shipaccy = 1;
+        //shipaccx = 0;
+        break;
+      case 119: //w -UP
+        shipaccy = -1;
+        //shipaccx = 0;
+        break;
+      case 115://s - LEFT
+        shipaccx = -1;
+        //shipaccy = 0;
+        break;
+      case 100://d - RIGHT
+        shipaccx = 1;
+        //shipaccy = 0;
+        break;
+      default:
+        if (!mainLoop) initGame();
+        break;
+    }
+  } else {
+    shipaccx = 0;
+    shipaccy = 0;
+  }
+}
+//***************************************************
+/*
 function keyPressed() {
   switch (keyCode) {
     case DOWN_ARROW:
-      shipvy += 2;
+      shipaccy = 1;
+      shipaccx = 0;
       break;
     case UP_ARROW:
-      shipvy -= 2;
+      shipaccy = -1;
+      shipaccx = 0;
       break;
     case LEFT_ARROW:
-      shipvx -= 5;
+      shipaccx = -1;
+      shipaccy = 0;
       break;
     case RIGHT_ARROW:
-      shipvx += 5;
+      shipaccx = 1;
+      shipaccy = 0;
       break;
     default:
-      if (!mainLoop) {
-        initGame();
-      }
+      if (!mainLoop) initGame();
       break;
   }
 }
 //***************************************************
 function keyReleased() {
-  shipvx = 0;
-  shipvy = 0;
+  shipaccx = 0;
+  shipaccy = 0;
 }
+*/
 //***************************************************
