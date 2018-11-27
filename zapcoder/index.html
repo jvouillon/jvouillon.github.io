@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ZapCoder</title>
+<style>
+body{
+	margin:0;
+	background: #999;
+}
+#zapcoder, #ring0, #ring1{
+ 	width:100px;
+ 	height:100px;
+}
+#zapcoder{
+	margin:auto;
+	margin-top: 100px;
+	position: relative;
+	border-radius:50%;
+	box-shadow: 0 2px 9px #333;
+	background-image: url(graphics/zapcoder.svg);
+}
+#ring0, #ring1{
+	position: absolute;
+	transform-origin: 50% 50%;
+	transition: transform 0.5s ease-in-out;
+}
+#ring0{
+	background-image: url(graphics/ring_0.svg);
+	transform: rotate(27deg);
+}
+#ring1{
+	background-image: url(graphics/ring_1.svg);
+	transform: rotate(-27deg);
+}
+#btnCW, #btnCCW{
+	width:45px;
+ 	height:100px;
+	position:absolute;
+	cursor:pointer;
+}
+#btnCW{
+	right:0;
+}
+#btnCCW{
+	left:0;
+}
+</style>
+</head>
+
+<body>
+	<div id="zapcoder">
+		<div id="ring0"></div>
+		<div id="ring1"></div>
+		<div id="btnCW" onclick="turnCW()"></div>
+		<div id="btnCCW" onclick="turnCCW()"></div>
+	</div>
+	<script type="text/javascript">
+		var angleRing1 = -27;
+		var angleRing0 = 27;
+		var angleInc = 9;
+		
+		function turnCW(){
+			angleRing1 += angleInc;
+			document.getElementById("ring1").style.transform = "rotate("+angleRing1+"deg)";
+		}
+		function turnCCW(){
+			angleRing0 -= angleInc;
+			turnRing()
+		}
+		function turnRing(){
+			document.getElementById("ring0").style.transform = "rotate("+angleRing0+"deg)";
+		}
+	</script>
+</body>
+</html>
