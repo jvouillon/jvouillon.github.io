@@ -2,26 +2,53 @@
 <html>
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+ <meta name="apple-mobile-web-app-title" content="ZapCoder">
+ <meta name="apple-mobile-web-app-capable" content="yes">
 <title>ZapCoder</title>
 <style>
 body{
 	margin:0;
 	background: #999;
 }
+#half{
+	width:100vw;
+	height:50vh;
+	position:absolute;
+	bottom:0;
+	border-top:1px solid #555;
+}
+#container{
+	width:80vw;
+	height:80vw;
+	margin:auto;
+	margin-top:calc( 50vh - 40vw );
+	position: relative;
+	border:1px solid #555;
+	border-radius:50%;
+}
+
 #zapcoder, #ring0, #ring1{
- 	width:100px;
- 	height:100px;
+	border-radius:50%;
+	position: absolute;
+	overflow:hidden;
 }
 #zapcoder{
-	margin:auto;
-	margin-top: 100px;
-	position: relative;
-	border-radius:50%;
+ 	width:80%;
+ 	height:80%;
+}
+#ring0, #ring1{
+ 	width:100%;
+ 	height:100%;
+}
+
+#zapcoder{
+	top: 10%;
+	left: 10%;
 	box-shadow: 0 2px 9px #333;
 	background-image: url(graphics/zapcoder.svg);
 }
 #ring0, #ring1{
-	position: absolute;
 	transform-origin: 50% 50%;
 	transition: transform 0.5s ease-in-out;
 }
@@ -34,8 +61,8 @@ body{
 	transform: rotate(-27deg);
 }
 #btnCW, #btnCCW{
-	width:45px;
- 	height:100px;
+	width:45%;
+ 	height:100%;
 	position:absolute;
 	cursor:pointer;
 }
@@ -49,12 +76,16 @@ body{
 </head>
 
 <body>
-	<div id="zapcoder">
-		<div id="ring0"></div>
-		<div id="ring1"></div>
-		<div id="btnCW" onclick="turnCW()"></div>
-		<div id="btnCCW" onclick="turnCCW()"></div>
+
+	<div id="container">
+		<div id="zapcoder">
+			<div id="ring0"></div>
+			<div id="ring1"></div>
+			<div id="btnCW" onclick="turnCW()"></div>
+			<div id="btnCCW" onclick="turnCCW()"></div>
+		</div>
 	</div>
+
 	<script type="text/javascript">
 		var angleRing1 = -27;
 		var angleRing0 = 27;
