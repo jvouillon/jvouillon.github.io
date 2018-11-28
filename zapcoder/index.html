@@ -38,19 +38,20 @@ body{
 	transition: transform 0.5s ease-in-out;
 }
 #zapcoder{
-	box-shadow: 0 2px 9px #333;
+	box-shadow: 0 2px 9px #333, 0 -5px 30px #333 inset;
 	background-image: url(graphics/zapcoder.svg);
+	transform: rotate(0deg);
 }
 #ring0{
-	background-image: url(graphics/ring_0.svg);
-	transform: rotate(27deg);
+	background-image: url(graphics/ring_1.svg);
+	transform: rotate(0deg);
 }
 #ring1{
-	background-image: url(graphics/ring_1.svg);
-	transform: rotate(-27deg);
+	background-image: url(graphics/ring_0.svg);
+	transform: rotate(0deg);
 }
 #btnCW, #btnCCW{
-	width:45%;
+	width:25%;
  	height:100%;
 	position:absolute;
 	cursor:pointer;
@@ -72,8 +73,9 @@ body{
 		<div id="btnCCW" onclick="turnCCW()"></div>
 	</div>
 	<script type="text/javascript">
-		var angleRing1 = -27;
-		var angleRing0 = 27;
+		var angleBolt = 0;
+		var angleRing0 = 0;
+		var angleRing1 = 0;
 		var angleInc = 9;
 		
 		function turnCW(){
