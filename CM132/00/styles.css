@@ -1,113 +1,73 @@
-/***********************************************************/
-/*      DESKTOP                                            */
-@media screen and (min-width: 1200px) {
-	#desktop_1 {
-		background-color: #900;
-		color: #fff;
-	}
+.myDisplay {
+	box-sizing: border-box;
+	height: auto;
+	width:90%;
+	margin:auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: thin solid #333;
+	padding: 10px;
+	background-color: #FFF;
+	color: #aaa;
+	border-radius: 10px;
+	box-shadow: rgba(0, 0, 0, 0.33) 0px 3px 6px 0px;
+	transition: width 0.5s linear 0s;
 }
-@media screen and (min-width: 800px) and (max-width: 1200px) and (min-device-width: 1024px) {
-	#desktop_2 {
-		background-color: #900;
-		color: #fff;
-	}
-}	
-@media screen and (max-width: 800px) and (min-device-width: 1024px){
-	#desktop_3 {
-		background-color: #900;
-		color: #fff;
-	}
+/***********************************************************/
+/*      LAPTOP + DESKTOP                                   */
+@media screen and (min-width: 1025px) {
+	#laptop {background-color: #900; color: #fff;}
+	.myDisplay {width:1024px;}
 }	
 /***********************************************************/
-/*      IPAD                                               */
+/*      TABLETs                                            */
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
-	#ipad_1 {
-		background-color: #900;
-		color: #fff;
-	}
+	#tabletlandscape {background-color: #900; color: #fff;}
+	.myDisplay {width:1024px;}
 }	
 
 @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait){
-	#ipad_2 {
-		background-color: #900;
-		color: #fff;
-	}	
+	#tabletportrait {background-color: #900; color: #fff;}
+	.myDisplay {width:768px;}	
 }	
 
 /***********************************************************/
-/*      IPHONE SE                                          */
-
-@media screen and (max-width: 568px) and (orientation: landscape){
-	#iphone_se_land {
-		background-color: #990;
-		color: #fff;
-	}
-	.myDisplay{
-		font-size: smaller;
-	}
+/*      PHONEs                                             */
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape){
+	#phonelandscape {background-color: #900; color: #fff;}
+	.myDisplay {width:568px;}
 }
-@media screen and (max-width: 568px) and (orientation: portrait){
-	#iphone_se_port {
-		background-color: #990;
-		color: #fff;
-	}
-	.myDisplay{
-		font-size: smaller;
-	}
-}
-/***********************************************************/
-/*      IPHONE                                             */
-
-@media screen and (max-width: 480px) and (orientation: landscape){
-	#iphone_land {
-		background-color: #900;
-		color: #fff;
-	}
-	.myDisplay{
-		font-size: smaller;
-	}
-}
-@media screen and (max-width:480px) and (orientation: portrait){
-	#iphone_port {
-		background-color: #939;
-		color: #fff;
-	}
-	.myDisplay{
-		font-size: larger;
-	}
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
+	#phoneportrait {background-color: #900; color: #fff;}
+	.myDisplay {width:320px;}
 }
 /***********************************************************/
 /*      PRINT                                              */
 @media only print {
   body {
 	width: 100%;
-	background-color: #FFF;
+	background-color: #fff;
 	font-family: Georgia, serif;
 	font-size: 36px;
 	color: #000;
-	
   }
 }
 /***********************************************************/
 /*     REGLES COMMUNES                                     */
 body {
-	text-align: center;
 	margin: 0px;
+	background-color: #eee;
 	font-family: Verdana, Geneva, sans-serif;
 	font-size: 14px;
+	text-align: center;
 }
 
-.myDisplay {
-	height: auto;
-	width: 90%;
-	margin-top: 10px;
-	margin-right: auto;
-	margin-bottom: 10px;
-	margin-left: auto;
-	border: thin solid #333;
-	padding: 10px;
-	background-color: #FFF;
-	color: #666;
-	border-radius: 10px;
-	box-shadow: rgba(0, 0, 0, 0.33) 0px 3px 6px 0px;
+#infos{
+	width:90px;
+	padding:5px;
+	margin:auto;
+	color:#666;
+	background-color:#ccc;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 0 0 20px #666 inset;
 }

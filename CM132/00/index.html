@@ -1,31 +1,28 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-<meta name="apple-mobile-web-app-title" content="CM132">
-<meta name="apple-mobile-web-app-capable" content="yes">
-
-<title>CM-119 | media queries</title>
+<title>CM-132 | Design pour le Web II - mediaqueries</title>
 <link href="styles.css" rel="stylesheet" type="text/css" />
-
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
 
 </head>
 
-<body>
+<body onload="displaySize()" onresize="displaySize()">
 
+<div id="infos">Width</div>
+<div class="myDisplay" id="laptop">Desktop + Laptop [1024+]</div>
+<div class="myDisplay" id="tabletlandscape">Tablet Landscape[1024]</div>
+<div class="myDisplay" id="tabletportrait">Tablet Portrait [768]</div>
+<div class="myDisplay" id="phonelandscape">Phone Landscape[568]</div>
+<div class="myDisplay" id="phoneportrait">Phone Portrait [320]</div>
 
-<div class="myDisplay" id="desktop_1">1200 &lt; Desktop</div>
-<div class="myDisplay" id="desktop_2">800 &lt; Desktop &lt; 1200</div>
-<div class="myDisplay" id="desktop_3">Desktop &lt; 800</div>
-<div class="myDisplay" id="ipad_1">iPad Land.</div>
-<div class="myDisplay" id="ipad_2">iPad Port.</div>
-
-<div class="myDisplay" id="iphone_se_land">iPhone SE Land.</div>
-<div class="myDisplay" id="iphone_se_port">iPhone SE Port.</div>
-
-<div class="myDisplay" id="iphone_land">iPhone Land.</div>
-<div class="myDisplay" id="iphone_port">iPhone Port.</div>
+<script>
+function displaySize(){
+	var infos = window.innerWidth + " px";
+	document.getElementById("infos").innerHTML = window.innerWidth + " px";
+}
+</script>
 </body>
 </html>
