@@ -1,195 +1,24 @@
 <!-- ********************************************** -->
 <!-- 	Psycho 										-->
-<!--	Test d’association implicite				==>
+<!--	Test d’association implicite				-->
 <!-- 	janvier 2019 								-->
 <!-- ********************************************** -->
 <!DOCTYPE HTML>
 <html>
-<head>
-<meta charset="utf-8">
-<script src="FileSaver.js" type="text/javascript"></script>
-<title>Psycho: test d’association implicite</title>
-<!-- *********************************************** -->
-<style>
-body{
-	margin:0;
-	background-color: #666;
-	font-family: Helvetica;
-}
-#game{
-	width:400px;
-	height:400px;
-	margin:auto;
-	margin-top:30px;
-	border-radius:40px;
-	text-align:center;
-	background-color: #333;
-	color:#ccc;
-	font-size: 60px;
-	line-height: 380px;
-	box-shadow: 0 0 135px #000 inset, 0 1px 3px #ccc;
-}
-
-#debug{
-	width:360px;
-	height:10px;
-	color: #999;
-	padding:20px;
-	margin:auto;
-	margin-top:20px;
-	border-radius:10px;
-	font-size: 16px;;
-	text-align:center;
-}
-</style>
-<!-- *********************************************** -->
-</head>
-<body>
-	<div id="game"></div>
-	<div id="debug">Barre espace pour commencer</div>
-	
-	<script type="text/javascript">
-	/************************************************/
-	var textArray = ["texte","arbre","chat","photo","mot"];
-	var imageArray = ['medias/01.jpg','medias/02.jpg','medias/03.jpg','medias/04.jpg','medias/05.jpg'];	
-	var indexTextArray, indexImageArray;
-	var startTime, stopTime;
-	var typeDisplayed, itemDisplayed;
-	var currentTest, maxTest;
-	var testRunning;
-	var testReport, testError;
-	var timer, maxTimer, timerLoop;
-	/************************************************/
-	function getKeyCode(keycode){
-		switch(keycode){
-			case 32:		// SPACE BAR
-				initTest();
-				break;
-			case 69:		// e
-				endTest(0);
-				break;
-			case 73:		// i
-				endTest(1);
-				break;
-			default:
-				// alert("keycode: "+keycode);
-				break;
-		}
-	}
-	/************************************************/
-	function initTest(){
-		if(!testRunning){
-			initReport();
-			initVariables();
-			startTimer();
-		}
-	}
-	/************************************************/
-	function initVariables(){
-		indexTextArray = 0;
-		indexImageArray = 0;
-		currentTest = 0;
-		maxTest = 10;
-		maxTimer = 6;
-		testRunning = true;
-	}
-	/************************************************/
-	function startTest(){
-		clearText();
-		clearImage();
-		if(currentTest++ < maxTest){
-			displayItem();
-		}
-		else{
-			testRunning = false;
-			saveReport();
-			displayDebug("Barre espace pour commencer")
-		}
-	}
-	/************************************************/
-	function displayItem(){
-		typeDisplayed = Math.floor(Math.random()*2);
-		
-		if(typeDisplayed)displayImage();
-		else displayText();
-		testError = 0;
-		startTime = new Date();
-	}
-	/************************************************/
-	function endTest(type){
-		if(testRunning){
-			if(type==typeDisplayed){
-				stopTime = new Date();
-				updateReport();
-				startTest();
-			}else{
-				testError++;
-			}
-		}
-	}
-	/************************************************/
-	function initReport(){
-		testReport = "no,item affiché,temps(ms),erreurs\n";
-	}
-	/************************************************/
-	function updateReport(){
-		testReport += currentTest + "," + itemDisplayed + "," + (stopTime - startTime) + "," + testError + "\n"; 
-	}
-	/************************************************/
-	function saveReport(){
-		var blob = new Blob([testReport], {type: "text/plain;charset=utf-8"});
-		var timeStamp = new Date();
-		var fileName = "rapport_"+timeStamp.getHours()+"_"+timeStamp.getMinutes()+".csv";
-		saveAs(blob, fileName);
-	}
-	/************************************************/
-	function displayText(){
-		itemDisplayed = textArray[indexTextArray];
-		document.getElementById("game").innerHTML = itemDisplayed;
-		indexTextArray = ++indexTextArray % textArray.length;
-	}
-	function clearText(){
-		document.getElementById("game").innerHTML = "";
-	}
-	/************************************************/
-	function displayImage(){
-		itemDisplayed = imageArray[indexImageArray]
-		document.getElementById("game").style.backgroundImage = "url('"+itemDisplayed+"')";
-		indexImageArray = ++indexImageArray % imageArray.length;
-	}
-	function clearImage(){
-		document.getElementById("game").style.backgroundImage = "none";
-	}
-	/************************************************/
-	function displayDebug(debugString){
-		document.getElementById("debug").innerHTML = debugString;
-	}
-	function clearDebug(){
-		document.getElementById("debug").innerHTML = "";
-	}
-	/************************************************/
-	function startTimer(){
-		timer = maxTimer;
-		displayTimer();
-		timerLoop = setInterval(loopTimer, 1000)
-	}
-	function loopTimer(){
-		if(timer-- >0)displayTimer();
-		else stopTimer();
-	}
-	function displayTimer(){
-		document.getElementById("game").innerHTML = timer.toString();
-	}
-	function stopTimer(){
-		clearInterval(timerLoop);
-		displayDebug("Test en cours...")
-		startTest();
-	}
-	/************************************************/
-	document.addEventListener('keydown', function(event) {
-		getKeyCode(event.keyCode);
-	});
-	/************************************************/
-	</script>
-</body>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="styles.css" type="text/css" />
+		<script src="FileSaver.js" type="text/javascript"></script>
+		<script src="openfile.js" type="text/javascript"></script>
+		<script src="scripts.js" type="text/javascript"></script>
+		<title>Psycho: test d’association implicite</title>
+	</head>
+	<body>
+		<div id="container">
+			<div id="game"></div>
+			<div id="left"></div>
+			<div id="right"></div>
+			<div id="debug">Barre espace pour commencer</div>
+		</div>
+	</body>
 </html>
