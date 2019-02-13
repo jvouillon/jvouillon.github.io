@@ -3,11 +3,11 @@
 /*	Test d’association implicite				*/
 /* 	janvier 2019 								*/
 /************************************************/
-var textArray = ["Joie ","Amour","Paix","Merveilleux","Plaisir","Magnifique","Rires","Heureux","Douleur","Épouvantable","Horrible","Méchant","Mal","Affreux","Échec","Blessure"];
+var textArray = ["Joie","Douleur","Amour","Épouvantable","Paix","Horrible","Merveilleux","Méchant","Plaisir","Mal","Magnifique","Affreux","Rires","Échec","Heureux","Blessure"];
 
-var textCatArray =["bon","bon","bon","bon","bon","bon","bon","bon","mauvais","mauvais","mauvais","mauvais","mauvais","mauvais","mauvais","mauvais"];
-var imageArray = ["medias/of1.jpg","medias/of2.jpg","medias/of3.jpg","medias/om1.jpg","medias/om2.jpg","medias/om3.jpg","medias/yf1.jpg","medias/yf4.jpg","medias/yf5.jpg","medias/ym2.jpg","medias/ym3.jpg","medias/ym5.jpg"];	
-var imageCatArray = ["vieux","vieux","vieux","vieux","vieux","vieux","jeune","jeune","jeune","jeune","jeune","jeune"];
+var textCatArray =["bon","mauvais","bon","mauvais","bon","mauvais","bon","mauvais","bon","mauvais","bon","mauvais","bon","mauvais","bon","mauvais"];
+var imageArray = ["medias/of1.jpg","medias/ym2.jpg","medias/om1.jpg","medias/yf1.jpg","medias/of2.jpg","medias/ym3.jpg","medias/om2.jpg","medias/yf4.jpg","medias/of3.jpg","medias/ym3.jpg","medias/om3.jpg","medias/yf5.jpg"];	
+var imageCatArray = ["vieux","jeune","vieux","jeune","vieux","jeune","vieux","jeune","vieux","jeune","vieux","jeune"];
 var imageCat = ["vieux","jeune"];
 var textCat = ["bon","mauvais"];
 var btnCat = [];
@@ -133,6 +133,7 @@ function displayCat(leftCat,rightCat){
 function prepareTest(){
 	clearText();
 	clearImage();
+	clearError();
 	setTimeout(startTest, 300);
 }
 function startTest(){
@@ -151,19 +152,28 @@ function endTest(type){
 			updateReport();
 			prepareTest();
 		}else{
-			testError++;
+			addError();
 		}
 	}
 }
 function matchingCat(type){
 	var match = false;
 	for (var i=0;i<btnCat[type].length;i++){
-		if(btnCat[type][i]==imageCatArray[indexImageArray] || btnCat[type][i]==textCatArray[indexTextArray]){
+		if((typeDisplayed && btnCat[type][i]==imageCatArray[indexImageArray])||(!typeDisplayed && btnCat[type][i]==textCatArray[indexTextArray])){
 			match = true;
 			break;
 		}
 	}
 	return(match);
+}
+/************************************************/
+function clearError(){
+	testError = 0;
+	document.getElementById("error").style.display = "none";
+}
+function addError(){
+	testError++;
+	document.getElementById("error").style.display = "block";
 }
 /************************************************/
 function displayItem(){
@@ -188,7 +198,6 @@ function displayItem(){
 	}
 	if(typeDisplayed)displayImage();
 	else displayText();
-	testError = 0;
 	startTime = new Date();
 }
 /************************************************/
