@@ -15,7 +15,9 @@ var currentBloc, maxBloc;
 var indexTextArray, indexImageArray;
 var startTime, stopTime;
 var typeDisplayed, itemDisplayed;
-var currentTest, maxTest;
+var currentTest, maxTest, maxImage, maxText;
+var maxImageArray = [20,0,20,28,20];	// max images per bloc
+var maxTextArray = [0,20,20,0,20];		// max texts per bloc
 var testRunning, keyEnabled;
 var testReport, testError;
 var timer, maxTimer, timerLoop;
@@ -57,8 +59,9 @@ function initBloc(){
 	startBloc();
 }
 function startBloc(){
-	if( currentBloc++<maxBloc){
+	if(currentBloc<maxBloc){
 		initVariables();
+		currentBloc++;
 		initCat();
 		startTimer();
 	}else{
@@ -74,7 +77,9 @@ function initVariables(){
 	indexTextArray = 0;
 	indexImageArray = 0;
 	currentTest = 0;
-	maxTest = 8;
+	maxImage = maxImageArray[currentBloc];
+	maxText = maxTextArray[currentBloc];
+	maxTest = maxImage + maxText;
 	maxTimer = 5;
 }
 /************************************************/
@@ -185,13 +190,17 @@ function displayItem(){
 			typeDisplayed = 0;	// textes
 			break;
 		case 3:
-			typeDisplayed = Math.floor(Math.random()*2); 	// images et textes
+			if(!maxText) typeDisplayed = 1;
+			else if (!maxImage) typeDisplayed = 0;
+			else typeDisplayed = Math.floor(Math.random()*2); 	// images et textes
 			break;
 		case 4:
 			typeDisplayed = 1;
 			break;
 		case 5:
-			typeDisplayed = Math.floor(Math.random()*2);
+			if(!maxText) typeDisplayed = 1;
+			else if (!maxImage) typeDisplayed = 0;
+			else typeDisplayed = Math.floor(Math.random()*2); 	// images et textes
 			break;
 		default:
 			break;
@@ -215,20 +224,20 @@ function saveReport(){
 }
 /************************************************/
 function displayText(){
+	maxText--;
 	indexTextArray = Math.floor(Math.random()*textArray.length);
 	itemDisplayed = textArray[indexTextArray];
 	document.getElementById("game").innerHTML = itemDisplayed;
-	//indexTextArray = ++indexTextArray % textArray.length;
 }
 function clearText(){
 	document.getElementById("game").innerHTML = "";
 }
 /************************************************/
 function displayImage(){
-	indexImageArray = Math.floor(Math.random()*imageArray.length);	// acces aléatoire
+	maxImage--;
+	indexImageArray = Math.floor(Math.random()*imageArray.length);
 	itemDisplayed = imageArray[indexImageArray]
 	document.getElementById("game").style.backgroundImage = "url('"+itemDisplayed+"')";
-	//indexImageArray = ++indexImageArray % imageArray.length;		// acces sequentiel
 }
 function clearImage(){
 	document.getElementById("game").style.backgroundImage = "none";
