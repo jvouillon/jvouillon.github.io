@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+<!-- ************************************************************** -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		
+<link rel="apple-touch-icon" href="../images/icon-114x114.jpg"/>
+
+<link rel="apple-touch-startup-image" href="../images/splash_ipad_landscape.jpg" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+<link rel="apple-touch-startup-image" href="../images/splash_ipad_portrait.jpg" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait)" />
+<link rel="apple-touch-startup-image" href="../images/splash_iphone_portrait.jpg" media="screen and (max-device-width: 320px)" />
+
+<!-- ************************************************************** -->	
+<link href="../styles.css" rel="stylesheet" type="text/css" />
+
+<!-- ************************************************************** -->
+<script type="text/javascript" src="../js/scripts.js"></script>
+<script type="text/javascript" src="../js/pano2vr_player.js"></script>
+
+<!-- ************************************************************** -->
+<title>The RAMWC collection : North American AT-6 Harvard</title>
+
+
+
+
+</head>
+
+<body onorientationchange="hideUrlBar();">
+
+<script type="text/javascript" src="pano2vr_player.js"></script>
+
+<div id="main">
+
+ <div id="header">
+ virtual cockpits
+      <form name="form"id="form" >
+          <select name="jumpMenu" id="jumpMenu" onchange="MM_jumpMenu(this)">
+            
+            <option value="../auster/index.html">Auster</option>
+            <option value="../beech18/index.html">Beech Expeditor</option>
+            <option value="../aircruiser/index.html">Bellanca AirCruiser</option>
+            <option value="../freighter/index.html" >Bristol Freighter</option>              
+            <option value="../tigermoth/index.html" >De Havilland Tiger Moth</option>             
+            <option value="../foxmoth/index.html">De Havilland Fox Moth</option>
+            <option value="../vampire/index.html">De Havilland Vampire</option>
+            
+            <option value="../beaver/index.html">De Havilland Beaver</option>
+            <option value="../fairchild71/index.html">Fairchild 71C</option>
+            <option value="../super71/index.html">Fairchild Super 71</option>
+            <option value="../fairchild24/index.html">Fairchild 24W46</option>
+
+            <option value="../superuniversal/index.html">Fokker Super Universal</option>
+            <option value="../junker/index.html">Junker 52</option>
+            <option value="../electra/index.html">Lookheed Electra</option>
+            <option value="../harvard/index.html" selected>North American Harvard</option>
+            <option value="../yale/index.html">North American Yale</option>
+            <option value="../voodoo/index.html" >Voodoo (sim.)</option>
+            <option value="../vedette/index.html">Vickers Vedette</option>
+            <option value="../waco/index.html">Waco</option>
+	
+	  		<option value="../virtualcockpits.html">*** Visiting aircraft ***</option>
+	    	<option value="../lancaster/index.html">Avro Lancaster</option>
+	   		<option value="../stearman/index.html">Boeing Stearman</option>
+          </select> 
+          
+          <select name="jumpNode" id="jumpNode" onchange="MM_jumpMenu(this)">  
+            <option value="index.html" selected>Front Seat</option>
+           <option value="harvard_2.html">Rear Seat</option>
+          </select>  
+      </form> 
+      
+      
+  </div>
+
+<!-- ******************************* QTVR ******************************* --> 
+<div id="container">
+		This content requires HTML5/CSS3, WebGL, or Adobe Flash Player Version 9 or higher.
+		</div>
+		<script type="text/javascript">
+	
+			// create the panorama player with the container
+			pano=new pano2vrPlayer("container");
+			pano.readConfigUrl("harvard_1_out.xml");
+			// hide the URL bar on the iPhone
+			hideUrlBar();
+			
+		</script>
+		<noscript>
+			<p><b>Please enable Javascript!</b></p>
+		</noscript>
+<!-- ******************************* fin QTVR ******************************* -->
+
+
+<div id="informations"><a href="http://wcam.mb.ca/1657/harvard/" target="_parent">Click to know about the current state of this aircraft</a></div>
+<div id="footer">
+<a href="http://www.royalaviationmuseum.com" target="_blank">Royal Aviation Museum of Western Canada</a>, 2012-2017.
+</div>
+</div>
+</body>
+</html>

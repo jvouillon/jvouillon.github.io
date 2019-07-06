@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<panorama>
+<!-- Pano2VR 3.1.4 panorama configuration -->
+<view fovmode="0">
+<start pan="34" tilt="-9.3" fov="60"/>
+<min pan="0" tilt="-90" fov="20"/>
+<max pan="360" tilt="90" fov="90"/>
+</view>
+<input tilesize="956" tilescale="1.01046" tile0url="images/vampire_o_0.jpg" tile1url="images/vampire_o_1.jpg" tile2url="images/vampire_o_2.jpg" tile3url="images/vampire_o_3.jpg" tile4url="images/vampire_o_4.jpg" tile5url="images/vampire_o_5.jpg" />
+<userdata title="" description="" author="" datetime="" copyright="" source="" info="" comment="" />
+<control sensitivity="8" simulatemass="1" lockedmouse="0" lockedkeyboard="0" lockedwheel="0" invertwheel="0" speedwheel="1" dblclickfullscreen="1" invertcontrol="1" />
+<sounds>
+</sounds>
+</panorama>
