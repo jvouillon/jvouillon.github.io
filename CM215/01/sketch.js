@@ -77,8 +77,8 @@ function drawInfos() {
 
 
 function setRotations() {
-  deviceRotationX = rotationX;
-  deviceRotationY = rotationY;
+  deviceRotationX = accelerationX;
+  deviceRotationY = accelerationY;
 }
 
 function moveBall() {
@@ -113,4 +113,4 @@ function moveBall() {
 
 function deviceShaken() {
   backgroundColor = color(random(150, 250));
-}
+  }
