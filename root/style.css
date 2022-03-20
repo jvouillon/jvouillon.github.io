@@ -1,0 +1,925 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200&display=swap');
+font-family: 'Work Sans', sans-serif;
+}
+html{
+  font-size: 62.5%;
+}
+ul, h1, h3, .infoText, .language, .copyright{
+  font-family: 'Work Sans', sans-serif;
+}
+h1, h3, #page_portfolio .main, .wrapper, .info, .page4, .pageEnd{
+  align-items: center;
+}
+.headMain, #page_home .main, #page_about .main, #page_contact .main, .info, footer, .pageEnd{
+  position: relative;
+}
+header, ul li a, #page_portfolio .main{
+  background-color: #fff;
+}
+ul li a, h1, h3, .mediaLink{
+  color: #000;
+}
+#page_home .main, #page_about .main, #page_contact .main{
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+}
+#page_home #btn_home a, #page_portfolio #btn_portfolio a, #page_about #btn_about a, #page_contact #btn_contact a, .contactForm .contactButton{
+  background-color: #000;
+  color: #fff;
+}
+.mediaLink i, .copyright{
+  color: #fff;
+}
+#navTop a{
+  width: 20rem;
+  margin-right:0.4rem;
+}
+header{
+  width: 100%;
+  height: 4.2rem;
+  top: 0;
+  position: sticky;
+  overflow: hidden;
+  z-index: 100;
+}
+.headMain{
+  margin: auto;
+}
+.logoA, .logoB{
+  margin: 0.9rem;
+  float: left;
+  position: absolute;
+}
+.logoB{
+  top: -0.02rem;
+}
+.logoA img, .logoB img{
+  width: auto;
+}
+.logoA img{
+  height: 2.4rem;
+  transition: 0.4s;
+}
+.logoB img{
+  height: 2.47rem;
+  transition: 0.4s;
+}
+.logoB img:hover{
+  height: 2.44rem;
+  opacity: 0;
+}
+ul{
+  float: right;
+  list-style-type: none;
+  margin-top: 1.3rem;
+  margin-right: 0.6rem;
+}
+ul li{
+  display: inline-block;
+}
+ul li a{
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 0.2rem 0.8rem;
+  border: 0.09rem solid #000;
+  transition: color 0.3s ease;
+}
+ul li a:hover{
+  background-color: #000;
+  color: #fff;
+  transition: 0.6s ease;
+}
+ul li a:active{
+  background-color: #fff;
+  color: #000;
+}
+.main{
+  width: 100%;
+}
+#page_home .main, #page_contact .main{
+  min-height: 20rem;
+}
+#page_contact .main{
+  min-height: 70rem;
+}
+#page_about .main{
+  min-height: 30rem;
+}
+#page_portfolio .main{
+  width: 100%;
+  height: 100%;
+  padding: 10rem 0;
+  display: flex;
+  flex-direction: column;
+}
+h1{
+  font-size: 6rem;
+  font-weight: bolder;
+  padding: 0 3rem;
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  border-top: 0.4rem solid #000;
+  border-bottom: 0.4rem solid #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+h3{
+  font-size: 2rem;
+  padding: 0 3rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#toPortfolio{
+  text-decoration: none;
+  transition: color 0.3s ease;
+  color: #000;
+}
+#toPortfolio:hover{
+  color:#da4;
+  transition: 0.6s ease;
+}
+.heading1Home{
+  font-size: 7rem;
+  padding: 3rem 2rem;
+  padding-bottom: 6rem;
+  margin-top: 16rem;
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+.heading3Home{
+  font-size: 2.2rem;
+  font-weight: 300;
+  margin-top: -6rem;
+}
+.heading1Portfolio{
+  padding: 3rem 3rem;
+  margin-top: -6rem;
+  margin-bottom: 4rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  text-align:center;
+}
+.wrapper{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 1rem;
+  background-color: transparent;
+}
+.info:hover{
+  overflow: hidden;
+}
+.infoText{
+  text-align: center;
+  letter-spacing: 0.1rem;
+  position: absolute;
+  top: -15rem;
+  transition: top 0.3s;
+  z-index: 10;
+}
+.info:hover .infoText{
+  top: 40%;
+  transition: top 0.3s 0.3s;
+}
+.workName{
+  font-size: 3rem;
+  max-width: 34rem;
+  font-weight: 700;
+  color: transparent;
+  text-transform: capitalize;
+}
+.info:hover .workName{
+  color: #000;
+}
+.workTool{
+  font-size: 1.8rem;
+  color: transparent;
+}
+.info:hover .workTool{
+  color: #555;
+}
+.infoImg{
+  box-shadow: 0.3rem 0.5rem 0.7rem #777;
+  width: 36rem;
+  height: auto;
+  transition: opacity 0.3s;
+  transition: box-shadow 0.5s;
+}
+.info:hover .infoImg{
+  opacity: 0.1;
+  box-shadow: 1rem 1rem 1rem #777;
+}
+.heading1About{
+  padding: 3rem 2rem;
+  margin-top: 14rem;
+  margin-left: 20rem;
+  margin-right: 20rem;
+  font-size: 4.3rem;
+  text-align:center;
+}
+.heading3About{
+  margin: 5rem;
+  margin-top: 3rem;
+  color: #000;
+  text-align: center;
+  text-transform: none;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  line-height: 3.5rem;
+  font-family: 'Helvetica Neue', sans-serif;
+}
+.heading1Contact{
+  padding: 1rem 3rem;
+  text-align:center;
+}
+.heading3Contact{
+  margin-top: 3rem;
+  color: #fff;
+}
+.page4{
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contactForm{
+  width: 50rem;
+  flex-direction: column;
+}
+.contactForm input, .contactForm textarea{
+  width: 98%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  background-color: #eee;
+  font-size: 1.5rem;
+  border: 0.2rem solid #eee;
+}
+.contactForm textarea{
+  height: 10rem;
+  max-height: 15rem;
+  max-width: 100%;
+}
+.contactForm .contactButton{
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  cursor: pointer;
+  border-color: #000;
+  margin-left: 0.7rem;
+}
+footer{
+  width: 100%;
+  background-color: #000;
+  height: 30vh;
+  border-top: solid 0.1rem #fff;
+  top: 100%;
+}
+.language{
+  background-color: #000;
+  float: right;
+  margin-top: 0.6rem;
+  margin-right: 0.8rem;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: bolder;
+  color: #ccc;
+  padding: 0.2rem 0.8rem;
+  transition: 0.6s ease;
+}
+.pageEnd{
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.language:hover{
+  text-decoration: underline;
+  color: #fff;
+}
+.socialMedia{
+  margin-bottom: 5rem;
+}
+.mediaLink{
+  margin: 0 2rem;
+  padding: 0.7rem;
+  background-color: #777;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+.mediaLink i{
+  font-size: 3rem;
+}
+.copyright{
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+  text-align: center;
+}
+@media only screen and (max-width:1024px){
+  ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 1.5rem;
+    margin-right: 0.6rem;
+    margin-left: 5rem;
+  }
+  ul li a{
+    text-decoration: none;
+    font-size: 1.067rem;
+    padding: 0.24rem 0.96rem;
+    border: 0.1rem solid #000;
+  }
+  .main{
+    width:100%;
+  }
+  #page_portfolio .main{
+    height: 100%;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  h1{
+    font-size: 4rem;
+    font-weight: bolder;
+    padding: 0 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.67rem;
+    border-top: 0.267rem solid #000;
+    border-bottom: 0.267rem solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  h3{
+    font-size: 1.33rem;
+    padding: 0 3rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #toPortfolio{
+    transition:none;
+  }
+  .heading1Home{
+    font-size: 4.67rem;
+    padding: 2rem 1.33rem;
+    padding-bottom: 4rem;
+    margin-top: 14rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  .heading3Home{
+    font-size: 1.467rem;
+    font-weight: 300;
+    margin-top: -4rem;
+}
+  .heading1About{
+    padding: 1.33rem 1.33rem;
+    margin-top: 8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 2.7267rem;
+    text-align:center;
+  }
+  .heading3About{
+    margin: 3.33rem;
+    margin-top: 2rem;
+    color: #000;
+    text-align: center;
+    text-transform: none;
+    font-weight: 133.33;
+    letter-spacing: 0.067rem;
+    line-height: 2.33rem;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  .heading1Contact{
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    text-align:center;
+  }
+  .heading3Contact{
+    margin-top: 3rem;
+    color: #fff;
+  }
+  .contactForm{
+    width: 33.33rem;
+    flex-direction: column;
+  }
+  .contactForm input, .contactForm textarea{
+    width: 98%;
+    padding: 0.333rem;
+    margin: 0.333rem 0;
+    background-color: #eee;
+    font-size: 0.5rem;
+    border: 0.1333rem solid #eee;
+  }
+  .contactForm textarea{
+    height: 6.67rem;
+    max-height: 10rem;
+    max-width: 100%;
+  }
+  .contactForm .contactButton{
+    text-transform: uppercase;
+    letter-spacing: 0.67rem;
+    cursor: pointer;
+    border-color: #000;
+    margin-left: 0.467rem;
+  }
+  .language{
+    background-color: #000;
+    float: right;
+    margin-top: 0.6rem;
+    margin-right: 0.8rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #ccc;
+    padding: 0.2rem 0.8rem;
+    transition: 0.6s ease;
+  }
+  .socialMedia{
+    margin-bottom: 4rem;
+  }
+  .mediaLink{
+    margin: 0 2rem;
+    padding: 0.7rem;
+    background-color: #777;
+    border-radius: 0.5rem;
+    display: inline-block;
+  }
+  .mediaLink i{
+    font-size: 3rem;
+  }
+  .copyright{
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+@media only screen and (max-width:768px){
+  ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 1.5rem;
+    margin-right: 0.6rem;
+    margin-left: 5rem;
+  }
+  ul li a{
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.24rem 0.96rem;
+    border: 0.086rem solid #000;
+  }
+  .main{
+    width:100%;
+  }
+  #page_portfolio .main{
+    height: 100%;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  h1{
+    font-size: 3rem;
+    font-weight: bolder;
+    padding: 0 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    border-top: 0.2rem solid #000;
+    border-bottom: 0.2rem solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  h3{
+    font-size: 1rem;
+    padding: 0 3rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #toPortfolio{
+    transition:none;
+  }
+  .heading1Home{
+    font-size: 3.5rem;
+    padding: 1.5rem 1rem;
+    padding-bottom: 3rem;
+    margin-top: 14rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  .heading3Home{
+    font-size: 1.1rem;
+    font-weight: 300;
+    margin-top: -3rem;
+}
+  .heading1About{
+    padding: 1rem 1rem;
+    margin-top: 6rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 2.15rem;
+    text-align:center;
+  }
+  .heading3About{
+    margin: 2.5rem;
+    margin-top: 1.5rem;
+    color: #000;
+    text-align: center;
+    text-transform: none;
+    font-weight: 100;
+    letter-spacing: 0.05rem;
+    line-height: 1.75rem;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  .heading1Contact{
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    text-align:center;
+  }
+  .heading3Contact{
+    margin-top: 3rem;
+    color: #fff;
+  }
+  .contactForm{
+    width: 25rem;
+    flex-direction: column;
+  }
+  .contactForm input, .contactForm textarea{
+    width: 98%;
+    padding: 0.25rem;
+    margin: 0.25rem 0;
+    background-color: #eee;
+    font-size: 0.375rem;
+    border: 0.1rem solid #eee;
+  }
+  .contactForm textarea{
+    height: 5rem;
+    max-height: 7.5rem;
+    max-width: 100%;
+  }
+  .contactForm .contactButton{
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    cursor: pointer;
+    border-color: #000;
+    margin-left: 0.35rem;
+  }
+  .language{
+    background-color: #000;
+    float: right;
+    margin-top: 0.6rem;
+    margin-right: 0.8rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #ccc;
+    padding: 0.2rem 0.8rem;
+    transition: 0.6s ease;
+  }
+  .socialMedia{
+    margin-bottom: 4rem;
+  }
+  .mediaLink{
+    margin: 0 2rem;
+    padding: 0.7rem;
+    background-color: #777;
+    border-radius: 0.5rem;
+    display: inline-block;
+  }
+  .mediaLink i{
+    font-size: 3rem;
+  }
+  .copyright{
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+@media only screen and (max-width:600px){
+  ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 1.5rem;
+    margin-right: 0.6rem;
+    margin-left: 5rem;
+  }
+  ul li a{
+    text-decoration: none;
+    font-size: 0.8rem;
+    padding: 0.12rem 0.47rem;
+    border: 0.043rem solid #000;
+  }
+  .main{
+    width:100%;
+  }
+  #page_portfolio .main{
+    height: 100%;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  h1{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    border-top: 0.1rem solid #000;
+    border-bottom: 0.1rem solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  h3{
+    font-size: 0.5rem;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #toPortfolio{
+    transition:none;
+  }
+  .heading1Home{
+    font-size: 1.75rem;
+    padding: 0.75rem 0.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 10rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  .heading3Home{
+    font-size: 0.55rem;
+    font-weight: 150;
+    margin-top: -1.5rem;
+}
+  .heading1About{
+    padding: 0.5rem 0.5rem;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.075rem;
+    text-align:center;
+  }
+  .heading3About{
+    margin: 1.25rem;
+    margin-top: 0.75rem;
+    color: #000;
+    text-align: center;
+    text-transform: none;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+    line-height: 0.875rem;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  .heading1Contact{
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    text-align:center;
+  }
+  .heading3Contact{
+    margin-top: 3rem;
+    color: #fff;
+  }
+  .contactForm{
+    width: 12.5rem;
+    flex-direction: column;
+  }
+  .contactForm input, .contactForm textarea{
+    width: 98%;
+    padding: 0.125rem;
+    margin: 0.125rem 0;
+    background-color: #eee;
+    font-size: 0.1875rem;
+    border: 0.05rem solid #eee;
+  }
+  .contactForm textarea{
+    height: 2.5rem;
+    max-height: 3.75rem;
+    max-width: 100%;
+  }
+  .contactForm .contactButton{
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    cursor: pointer;
+    border-color: #000;
+    margin-left: 0.175rem;
+  }
+  .language{
+    background-color: #000;
+    float: right;
+    margin-top: 0.6rem;
+    margin-right: 0.8rem;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bolder;
+    color: #ccc;
+    padding: 0.2rem 0.8rem;
+    transition: 0.6s ease;
+  }
+  .socialMedia{
+    margin-bottom: 5rem;
+  }
+  .mediaLink{
+    margin: 0 2rem;
+    padding: 0.7rem;
+    background-color: #777;
+    border-radius: 0.5rem;
+    display: inline-block;
+  }
+  .mediaLink i{
+    font-size: 3rem;
+  }
+  .copyright{
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    text-align: center;
+  }
+}
+@media only screen and (max-width:480px){
+  header{
+    width: 100%;
+    height: 2.3rem;
+    top: 0;
+    position: sticky;
+    overflow: hidden;
+    z-index: 100;
+  }
+  .logoA, .logoB{
+    margin-left: 0.9rem;
+    margin-top: 0.6rem;
+    float: left;
+    position: absolute;
+  }
+  .logoA img{
+    height: 0.9rem;
+    transition: 0.4s;
+  }
+  .logoB img{
+    height: 0.988rem;
+    transition: 0.4s;
+  }
+  .logoB img:hover{
+    height: 1.22rem;
+    opacity: 0;
+  }
+  ul{
+    float: right;
+    list-style-type: none;
+    margin-top: 0.5rem;
+    margin-right: 0.6rem;
+    margin-left: 5rem;
+  }
+  ul li a{
+    text-decoration: none;
+    font-size: 0.4rem;
+    padding: 0.06rem 0.235rem;
+    border: 0.043rem solid #000;
+  }
+  .main{
+    width:100%;
+  }
+  #page_portfolio .main{
+    height: 100%;
+    padding: 8rem 0;
+    display: flex;
+    flex-direction: column;
+  }
+  h1{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    border-top: 0.1rem solid #000;
+    border-bottom: 0.1rem solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  h3{
+    font-size: 0.5rem;
+    padding: 0 1.5rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #toPortfolio{
+    transition:none;
+  }
+  .heading1Home{
+    font-size: 1.75rem;
+    padding: 0.75rem 0.5rem;
+    padding-bottom: 1.5rem;
+    margin-top: 10rem;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+  .heading3Home{
+    font-size: 0.55rem;
+    font-weight: 150;
+    margin-top: -1.5rem;
+}
+  .heading1About{
+    padding: 0.5rem 0.5rem;
+    margin-top: 4rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    font-size: 1.075rem;
+    text-align:center;
+  }
+  .heading3About{
+    margin: 1.25rem;
+    margin-top: 0.75rem;
+    color: #000;
+    text-align: center;
+    text-transform: none;
+    font-weight: 200;
+    letter-spacing: 0.05rem;
+    line-height: 0.875rem;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  .heading1Contact{
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    text-align:center;
+  }
+  .heading3Contact{
+    margin-top: 3rem;
+    color: #fff;
+  }
+  .contactForm{
+    width: 12.5rem;
+    flex-direction: column;
+  }
+  .contactForm input, .contactForm textarea{
+    width: 98%;
+    padding: 0.125rem;
+    margin: 0.125rem 0;
+    background-color: #eee;
+    font-size: 0.1875rem;
+    border: 0.05rem solid #eee;
+  }
+  .contactForm textarea{
+    height: 2.5rem;
+    max-height: 3.75rem;
+    max-width: 100%;
+  }
+  .contactForm .contactButton{
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    cursor: pointer;
+    border-color: #000;
+    margin-left: 0.175rem;
+  }
+  .language{
+    background-color: #000;
+    float: right;
+    margin-top: 0.6rem;
+    margin-right: 0.8rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bolder;
+    color: #ccc;
+    padding: 0.2rem 0.8rem;
+    transition: 0.6s ease;
+  }
+  .socialMedia{
+    margin-bottom: 2rem;
+  }
+  .mediaLink{
+    margin: 0 1rem;
+    padding: 0.7rem;
+    background-color: #777;
+    border-radius: 0.5rem;
+    display: inline-block;
+  }
+  .mediaLink i{
+    font-size: 2rem;
+  }
+  .copyright{
+    font-size: 0.5rem;
+    letter-spacing: 0.1rem;
+    font-weight: 300;
+    text-align: center;
+  }
+}
