@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
-    <g transform="matrix(3.67647,0,0,3.67647,125,125)">
-        <circle cx="0" cy="0" r="33" style="fill:white;"/>
-        <path id="circle-outline" d="M0,-34C-18.778,-34 -34,-18.778 -34,0C-34,18.778 -18.778,34 0,34C18.778,34 34,18.778 34,0C34,-18.778 18.778,-34 0,-34ZM0,-32C17.673,-32 32,-17.673 32,0C32,17.673 17.673,32 0,32C-17.673,32 -32,17.673 -32,0C-32,-17.673 -17.673,-32 0,-32Z" style="fill-rule:nonzero;"/>
-        <path id="bolt-circle" d="M0,-22C-12.15,-22 -22,-12.15 -22,0C-22,12.15 -12.15,22 0,22C12.15,22 22,12.15 22,0C22,-12.15 12.15,-22 0,-22ZM-1.906,-18.656L11.688,-2.031L-0.406,8.313L7.375,18.656L-11.344,7.719L-2.844,-1.219L-11.688,-7.625L-1.906,-18.656Z" style="fill-rule:nonzero;"/>
-    </g>
-</svg>
