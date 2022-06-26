@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tour apprev="15722" appversion="5.1" start="node1">
+  <panorama id="node1" hideabout="1">
+    <input width="1000" height="1000" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="0.400" leveltileurl="tiles/node1/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" levelingroll="0">
+      <level width="1000" height="1000" predecode="0" preload="0"/>
+      <level width="500" height="500" predecode="1" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start fov="70" pan="0" projection="4" tilt="0"/>
+      <flyin fov="170" pan="0" projection="9" tilt="-90"/>
+      <min fov="5" pan="0" tilt="-90"/>
+      <max fov="120" fovstereographic="270" pan="360" fovfisheye="360" tilt="90" scaletofit="1"/>
+    </view>
+    <userdata author="" comment="" source="" latitude="" title="entrance / entrée" tags="images" datetime="" longitude="" description="" customnodeid="" copyright="" info=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" height="20" textcolor="0x000000" border="1" backgroundalpha="1" background="1" borderradius="1" borderalpha="1" textalpha="1" backgroundcolor="0xffffff" wordwrap="1" enabled="1" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" handcursor="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" pan="-99.1" title="parlour / salle de réception" id="Point01" description="" target="-52.0376/-8.30241/70" url="{node2}" tilt="-6.74"/>
+      <hotspot skinid="ht_node" pan="34.53" title="residence's rooms / chambres de la résidence" id="Point02" description="" target="-157.437/-15.2501/70" url="{node5}" tilt="2.18"/>
+      <hotspot skinid="ht_node" pan="36.36" title="common room / salle de détente" id="Point03" description="" target="154.94/-10.3259/70" url="{node3}" tilt="-8.36"/>
+      <hotspot skinid="ht_image" pan="173.86" title="" id="Point04" description="" target="" url="images/p1-1.jpg" tilt="-5.42"/>
+      <hotspot skinid="ht_image" pan="4.55" title="Titre..." id="Point05" description="Information plus complète?" target="" url="images/p1-2.jpg" tilt="-0.5"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" zoomfov="20" zoomoutpause="1" blendtime="1" zoomspeed="2" zoomin="0" type="crossdissolve" zoomout="0" enabled="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedmouse="0" contextfullscreen="0" contextprojections="0" lockedkeyboard="0" lockedkeyboardzoom="0" invertwheel="0" lockedwheel="0" dblclickfullscreen="0" simulatemass="1" rubberband="0" speedwheel="1" invertcontrol="1" sensitivity="8" hideabout="1"/>
+  </panorama>
+  <panorama id="node2" hideabout="1">
+    <input width="1000" height="1000" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="0.400" leveltileurl="tiles/node2/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" levelingroll="0">
+      <level width="1000" height="1000" predecode="0" preload="0"/>
+      <level width="500" height="500" predecode="1" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start fov="70" pan="0" projection="4" tilt="0"/>
+      <flyin fov="170" pan="0" projection="9" tilt="-90"/>
+      <min fov="5" pan="0" tilt="-90"/>
+      <max fov="120" fovstereographic="270" pan="360" fovfisheye="360" tilt="90" scaletofit="1"/>
+    </view>
+    <userdata author="" comment="" source="" latitude="" title="parlour / salle de réception" tags="images" datetime="" longitude="" description="" customnodeid="" copyright="" info=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" height="20" textcolor="0x000000" border="1" backgroundalpha="1" background="1" borderradius="1" borderalpha="1" textalpha="1" backgroundcolor="0xffffff" wordwrap="1" enabled="1" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" handcursor="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" pan="130.29" title="entrance / entrée" id="Point01" description="" target="-99.8688/-19.7006/70" url="{node1}" tilt="-4.14"/>
+      <hotspot skinid="ht_image" pan="-49.47" title="Titre..." id="Point02" description="" target="" url="images/p2-3.jpg" tilt="5.66"/>
+      <hotspot skinid="ht_image" pan="-152.31" title="Titre..." id="Point03" description="" target="" url="images/p2-1.jpg" tilt="-28.38"/>
+      <hotspot skinid="ht_image" pan="94.01" title="Titre..." id="Point04" description="" target="" url="images/p2-2.jpg" tilt="-3.12"/>
+      <hotspot skinid="ht_info" pan="155.71" title="Statue" id="Point05" description="Statue of Florence Nightingale. Given by the Canadian Legion at the School of Nursing opening in 1928. | Statue de Florence Nightingale offerte par la Légion Canadienne lors de l'ouverture de l'école en 1928." target="" url="" tilt="-22.1"/>
+      <hotspot skinid="ht_info" pan="141.12" title="Piano" id="Point06" description="Piano donated by Eaton's in 1953 for the opening of the new residence addition | Piano offert par Eaton's en 1953 à l'occasion de l'ouverture de l'extension de la résidence." target="" url="" tilt="-9.15"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" zoomfov="20" zoomoutpause="1" blendtime="1" zoomspeed="2" zoomin="0" type="crossdissolve" zoomout="0" enabled="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedmouse="0" contextfullscreen="0" contextprojections="0" lockedkeyboard="0" lockedkeyboardzoom="0" invertwheel="0" lockedwheel="0" dblclickfullscreen="0" simulatemass="1" rubberband="0" speedwheel="1" invertcontrol="1" sensitivity="8" hideabout="1"/>
+  </panorama>
+  <panorama id="node3" hideabout="1">
+    <input width="1000" height="1000" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="0.400" leveltileurl="tiles/node3/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" levelingroll="0">
+      <level width="1000" height="1000" predecode="0" preload="0"/>
+      <level width="500" height="500" predecode="1" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start fov="70" pan="0" projection="4" tilt="0"/>
+      <flyin fov="170" pan="0" projection="9" tilt="-90"/>
+      <min fov="5" pan="0" tilt="-90"/>
+      <max fov="120" fovstereographic="270" pan="360" fovfisheye="360" tilt="90" scaletofit="1"/>
+    </view>
+    <userdata author="" comment="" source="" latitude="" title="common room / salle de détente" tags="images" datetime="" longitude="" description="" customnodeid="" copyright="" info=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" height="20" textcolor="0x000000" border="1" backgroundalpha="1" background="1" borderradius="1" borderalpha="1" textalpha="1" backgroundcolor="0xffffff" wordwrap="1" enabled="1" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" handcursor="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" pan="-46.68" title="entrance / entrée" id="Point01" description="" target="34.2049/-9.48644/70" url="{node1}" tilt="-1.44"/>
+      <hotspot skinid="ht_node" pan="133.36" title="classroom / salle de classe" id="Point02" description="" target="-34.8684/-9.80524/70" url="{node4}" tilt="-7.65"/>
+      <hotspot skinid="ht_node" pan="133.73" title="chapel / chapelle" id="Point03" description="" target="-11.8174/1.31295/70" url="{node6}" tilt="0.18"/>
+      <hotspot skinid="ht_image" pan="176.5" title="Titre..." id="Point04" description="" target="" url="images/p3-2.jpg" tilt="-21.87"/>
+      <hotspot skinid="ht_image" pan="92.36" title="Titre..." id="Point05" description="" target="" url="images/p3-1.jpg" tilt="-1.94"/>
+      <hotspot skinid="ht_image" pan="-38.95" title="Mailboxes" id="Point06" description="" target="" url="images/p3-3-.jpg" tilt="-3.57"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" zoomfov="20" zoomoutpause="1" blendtime="1" zoomspeed="2" zoomin="0" type="crossdissolve" zoomout="0" enabled="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedmouse="0" contextfullscreen="0" contextprojections="0" lockedkeyboard="0" lockedkeyboardzoom="0" invertwheel="0" lockedwheel="0" dblclickfullscreen="0" simulatemass="1" rubberband="0" speedwheel="1" invertcontrol="1" sensitivity="8" hideabout="1"/>
+  </panorama>
+  <panorama id="node4" hideabout="1">
+    <input width="1000" height="1000" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="0.400" leveltileurl="tiles/node4/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" levelingroll="0">
+      <level width="1000" height="1000" predecode="0" preload="0"/>
+      <level width="500" height="500" predecode="1" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start fov="70" pan="0" projection="4" tilt="0"/>
+      <flyin fov="170" pan="0" projection="9" tilt="-90"/>
+      <min fov="5" pan="0" tilt="-90"/>
+      <max fov="120" fovstereographic="270" pan="360" fovfisheye="360" tilt="90" scaletofit="1"/>
+    </view>
+    <userdata author="" comment="" source="" latitude="" title="classroom / salle de classe" tags="images" datetime="" longitude="" description="" customnodeid="" copyright="" info=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" height="20" textcolor="0x000000" border="1" backgroundalpha="1" background="1" borderradius="1" borderalpha="1" textalpha="1" backgroundcolor="0xffffff" wordwrap="1" enabled="1" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" handcursor="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" pan="-90.51" title="common room / salle de détente" id="Point01" description="" target="-107.338/-20.3012/70" url="{node3}" tilt="-6.83"/>
+      <hotspot skinid="ht_image" pan="2.53" title="Titre..." id="Point02" description="" target="" url="images/p4-2.jpg" tilt="-5.03"/>
+      <hotspot skinid="ht_image" pan="-61.02" title="Titre..." id="Point03" description="" target="" url="images/p4-1.jpg" tilt="-6.7"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" zoomfov="20" zoomoutpause="1" blendtime="1" zoomspeed="2" zoomin="0" type="crossdissolve" zoomout="0" enabled="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedmouse="0" contextfullscreen="0" contextprojections="0" lockedkeyboard="0" lockedkeyboardzoom="0" invertwheel="0" lockedwheel="0" dblclickfullscreen="0" simulatemass="1" rubberband="0" speedwheel="1" invertcontrol="1" sensitivity="8" hideabout="1"/>
+  </panorama>
+  <panorama id="node5" hideabout="1">
+    <input width="1000" height="1000" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="0.400" leveltileurl="tiles/node5/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" levelingroll="0">
+      <level width="1000" height="1000" predecode="0" preload="0"/>
+      <level width="500" height="500" predecode="1" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start fov="70" pan="0" projection="4" tilt="0"/>
+      <flyin fov="170" pan="0" projection="9" tilt="-90"/>
+      <min fov="5" pan="0" tilt="-90"/>
+      <max fov="120" fovstereographic="270" pan="360" fovfisheye="360" tilt="90" scaletofit="1"/>
+    </view>
+    <userdata author="" comment="" source="" latitude="" title="residence's rooms / chambres de la résidence" tags="images" datetime="" longitude="" description="" customnodeid="" copyright="" info=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" height="20" textcolor="0x000000" border="1" backgroundalpha="1" background="1" borderradius="1" borderalpha="1" textalpha="1" backgroundcolor="0xffffff" wordwrap="1" enabled="1" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" handcursor="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" pan="-58.41" title="entrance / entrée" id="Point01" description="" target="36.0383/-2.62293/70" url="{node1}" tilt="-1.64"/>
+      <hotspot skinid="ht_image" pan="34.17" title="Titre..." id="Point02" description="" target="" url="images/P5-3.jpg" tilt="-2.1"/>
+      <hotspot skinid="ht_image" pan="103.22" title="Titre..." id="Point03" description="" target="" url="images/P5-1.jpg" tilt="-7.05"/>
+      <hotspot skinid="ht_image" pan="-145.58" title="Titre..." id="Point04" description="" target="" url="images/P5-2.jpg" tilt="-3.31"/>
+      <hotspot skinid="ht_info" pan="-13.79" title="infos" id="Point05" description="The phone booth..." target="" url="" tilt="-6.01"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" zoomfov="20" zoomoutpause="1" blendtime="1" zoomspeed="2" zoomin="0" type="crossdissolve" zoomout="0" enabled="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedmouse="0" contextfullscreen="0" contextprojections="0" lockedkeyboard="0" lockedkeyboardzoom="0" invertwheel="0" lockedwheel="0" dblclickfullscreen="0" simulatemass="1" rubberband="0" speedwheel="1" invertcontrol="1" sensitivity="8" hideabout="1"/>
+  </panorama>
+  <panorama id="node6" hideabout="1">
+    <input width="1000" height="1000" levelbias="0.400" overlap="1" leveltilesize="510" levelbiashidpi="0.400" leveltileurl="tiles/node6/cf_%c/l_%l/c_%x/tile_%y.jpg" levelingpitch="0" levelingroll="0">
+      <level width="1000" height="1000" predecode="0" preload="0"/>
+      <level width="500" height="500" predecode="1" preload="1"/>
+      <preview strip="1" color="0x808080"/>
+    </input>
+    <view pannorth="0" fovmode="0">
+      <start fov="70" pan="0" projection="4" tilt="0"/>
+      <flyin fov="170" pan="0" projection="9" tilt="-90"/>
+      <min fov="5" pan="0" tilt="-90"/>
+      <max fov="120" fovstereographic="270" pan="360" fovfisheye="360" tilt="90" scaletofit="1"/>
+    </view>
+    <userdata author="" comment="" source="" latitude="" title="chapel / chapelle" tags="images" datetime="" longitude="" description="" customnodeid="" copyright="" info=""/>
+    <hotspots width="180" height="20" wordwrap="1">
+      <label width="180" height="20" textcolor="0x000000" border="1" backgroundalpha="1" background="1" borderradius="1" borderalpha="1" textalpha="1" backgroundcolor="0xffffff" wordwrap="1" enabled="1" bordercolor="0x000000"/>
+      <polystyle backgroundalpha="0.2509803921568627" borderalpha="1" mode="0" handcursor="1" backgroundcolor="0x0000ff" bordercolor="0x0000ff"/>
+      <hotspot skinid="ht_node" pan="167.11" title="common room / salle de détente" id="Point01" description="" target="-90.9393/-16.5681/70" url="{node3}" tilt="-7.31"/>
+      <hotspot skinid="ht_image" pan="-11.19" title="titre..." id="Point02" description="" target="" url="images/p6-4.jpg" tilt="0.09"/>
+      <hotspot skinid="ht_image" pan="34.46" title="Titre..." id="Point03" description="" target="" url="images/p6-2.jpg" tilt="2.24"/>
+      <hotspot skinid="ht_image" pan="89.53" title="Titre" id="Point04" description="" target="" url="images/p6-1.jpg" tilt="-5.58"/>
+      <hotspot skinid="ht_image" pan="-107.6" title="Titre..." id="Point05" description="" target="" url="images/p6-3.jpg" tilt="-2.3"/>
+    </hotspots>
+    <media/>
+    <transition softedge="0" blendcolor="0x000000" zoomfov="20" zoomoutpause="1" blendtime="1" zoomspeed="2" zoomin="0" type="crossdissolve" zoomout="0" enabled="1"/>
+    <animation useinautorotation="0" syncanimationwithvideo="0"/>
+    <control lockedmouse="0" contextfullscreen="0" contextprojections="0" lockedkeyboard="0" lockedkeyboardzoom="0" invertwheel="0" lockedwheel="0" dblclickfullscreen="0" simulatemass="1" rubberband="0" speedwheel="1" invertcontrol="1" sensitivity="8" hideabout="1"/>
+  </panorama>
+</tour>
